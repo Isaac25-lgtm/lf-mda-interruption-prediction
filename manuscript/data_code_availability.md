@@ -15,8 +15,9 @@ The tagged release matching the manuscript and a Zenodo DOI are **not yet create
 - ESPEN implementation-unit geometry (2024 provisional cartography), used only to derive
   centroids, areas and spatial joins.
 
-**Dashboard.** A Streamlit dashboard reading the stored results is in `dashboard/`. A
-public URL will be added here once it has been deployed and checked. The dashboard is
+**Dashboard.** A Streamlit dashboard reading the stored results is in `dashboard/` and
+is hosted at https://lf-mda-interruption-prediction-kubq9wrtrramveajwfh8qg.streamlit.app/
+(reachable without sign-in on 12 October 2026). The dashboard is
 supplementary and does not replace the tables and figures in the paper.
 
 **Ethics.** Only aggregate programme data about administrative units were used; no

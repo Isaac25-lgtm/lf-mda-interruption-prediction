@@ -3,6 +3,8 @@
 A Streamlit research dashboard over the stored results of this study. It reads files;
 it never trains or scores a model.
 
+**Live:** https://lf-mda-interruption-prediction-kubq9wrtrramveajwfh8qg.streamlit.app/
+
 ## Run locally
 
 ```bash
@@ -42,19 +44,19 @@ Scores shown for 2019-2022 are out-of-fold development predictions. Scores for
 If `dashboard/data/iu_year.parquet` is missing, the app shows a small made-up dataset
 under a red **DEMONSTRATION — SYNTHETIC DATA** banner.
 
-## Deploy to Streamlit Community Cloud
+## Deployment on Streamlit Community Cloud
 
-Not done yet. It needs the repository owner's own sign-in.
+Deployed by the repository owner at the URL above; it redeploys on every push to
+`main`. To deploy a copy of your own:
 
 1. Go to https://share.streamlit.io and sign in.
-2. Choose **Create app**, then **Deploy a public app from GitHub**.
+2. Click **Create app**, then **Yup, I have an app**.
 3. Repository `Isaac25-lgtm/lf-mda-interruption-prediction`, branch `main`, main file
    path `dashboard/app.py`.
 4. Under **Advanced settings** choose Python 3.12. No secrets are needed.
 5. Deploy. The app installs from the root `requirements.txt`, which holds only the
    dashboard's runtime (no CatBoost, no scikit-learn).
-6. Open every page once, then add the URL to the top of the root `README.md` and change
-   the dashboard badge.
+6. Open every page once and confirm the research-only banner appears on each.
 
 The app holds about 60,000 IU-year rows in one cached table and should run within the
 free tier. If it does not, move to a managed host rather than cutting the validation

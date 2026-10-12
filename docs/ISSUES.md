@@ -44,7 +44,7 @@ that shows the problem.
 | N4 | Reading the full text of Galiwango et al. 2026 and the WHO 2025 LF progress report | Cited in the concept; not verified here |
 | N5 | Ethics exemption and journal requirements | Needed before submission |
 | N6 | Confirmation from ESPEN that the derived IU table may be public | See `docs/ETHICS_DATA_USE.md` |
-| N7 | Public dashboard deployment, tagged release, Zenodo DOI | Need the repository owner |
+| N7 | Tagged release and Zenodo DOI (the dashboard is deployed) | Need the repository owner |
 | N8 | Decision-curve analysis | Not done: no defensible threshold probability or cost of a missed interruption was available |
 | N9 | Formal sample-size calculation for clustered prediction data (Riley et al.) | Only a design-effect approximation was computed |
 | N10 | Study registration | TRIPOD+AI asks for it |

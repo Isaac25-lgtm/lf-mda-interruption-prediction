@@ -48,5 +48,7 @@ from memory and not checked.
   general; only the countries listed as supported in
   `reports/evaluation/country_transport/transport_by_country.csv` have their own estimates.
 - That context does not matter; only conflict and population density were tested.
-- Anything about collaborators, endorsements, ethics approval, journal acceptance or a
-  public dashboard, none of which exist yet.
+- Anything about collaborators, endorsements, ethics approval or journal acceptance,
+  none of which exist yet.
+- That a model is deployed. The public dashboard shows stored research results; no
+  model runs as a prediction service.

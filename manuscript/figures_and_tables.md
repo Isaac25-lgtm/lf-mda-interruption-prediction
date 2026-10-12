@@ -243,3 +243,11 @@ File: `reports/tables/tableS2_country_transport.csv`
 Predictions for each country from models trained on all other countries, development years, pooled across held-out countries.
 
 Derived from: `reports/evaluation/country_transport/transport_pooled_intervals.csv`
+
+### tableM_models_trained: Every approach trained and how it performed
+
+File: `reports/tables/tableM_models_trained.csv`
+
+All pre-specified approaches under scenario P: predictors, the setting selected on development folds, development log loss, and locked-test performance with country-cluster bootstrap intervals.
+
+Derived from: `reports/evaluation/development/selected_configs.json`, `reports/evaluation/locked_test/locked_intervals.csv`, `reports/evaluation/locked_test/locked_differences_vs_rule.csv`

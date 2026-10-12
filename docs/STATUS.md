@@ -3,8 +3,12 @@
 **Updated:** 2026-10-12 · **Lifecycle phase:** 11 of 11 reached (release), with the
 scientific limits listed below · **Protocol:** v1.1
 
-A new session can resume from this file, `docs/DECISIONS.md` and `docs/ISSUES.md`
-without any chat history.
+A new session can resume from `docs/HANDOVER.md`, this file, `docs/DECISIONS.md` and
+`docs/ISSUES.md` without any chat history.
+
+**Prediction work is closed for a scientific reason, not left unfinished.** Every
+planned stage was completed and the pre-specified success criterion was not met; see
+`docs/HANDOVER.md`, section 2.
 
 ## Where things stand
 
@@ -19,7 +23,7 @@ without any chat history.
 | Main result | No fitted model improved on the fixed history rule. Under the public-data lag, all approaches were near chance. See `reports/RESULTS_SUMMARY.md` |
 | Descriptive results | Burden, country-level clustering, recovery: `reports/descriptive/` |
 | Manuscript | Full first draft, generated: `manuscript/manuscript_draft.md` |
-| Dashboard | Runs locally (`streamlit run dashboard/app.py`); 10 pages; **not deployed** |
+| Dashboard | Live at https://lf-mda-interruption-prediction-kubq9wrtrramveajwfh8qg.streamlit.app/ (10 pages); also runs locally with `streamlit run dashboard/app.py` |
 | Tests | See "Verification" below |
 | Git | `main` on https://github.com/Isaac25-lgtm/lf-mda-interruption-prediction |
 
@@ -37,8 +41,8 @@ without any chat history.
 | 7 Machine learning | Done; one refinement round used, second declined | `docs/DECISIONS.md` |
 | 8 Locked evaluation | Done, once | `reports/evaluation/locked_test/` |
 | 9 Interpretation, tables, uncertainty | Done | `reports/tables/`, `reports/evaluation/explain/` |
-| 10 Dashboard | Done locally; deployment needs the owner | `dashboard/` |
-| 11 Release packaging | Pushed; no tag, no Zenodo DOI | this file |
+| 10 Dashboard | Done and deployed by the owner | `dashboard/`, URL above |
+| 11 Release packaging | Pushed and deployed; no tag, no Zenodo DOI | this file |
 
 ## Verification
 
@@ -60,8 +64,7 @@ streamlit run dashboard/app.py           # http://localhost:8501
    sources that were only checked by title (`docs/LITERATURE_MATRIX.md`).
 4. **Confirm with ESPEN** that the derived IU table in `dashboard/data/` may be public.
 5. **Confirm ethics and journal requirements**; complete the official TRIPOD+AI form.
-6. **Deploy the dashboard** (`dashboard/README.md`), then tag a release and archive it
-   on Zenodo.
+6. **Tag a release and archive it on Zenodo** so the manuscript can cite a fixed version.
 7. **Search Scopus, Web of Science and Google Scholar** before claiming novelty.
 
 ## Next steps a coding agent could take

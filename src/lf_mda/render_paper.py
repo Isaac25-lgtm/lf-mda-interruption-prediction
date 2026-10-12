@@ -986,6 +986,80 @@ def write_results_summary() -> None:
             readme.write_text(NL.join([head + start, text, end + tail]), encoding="utf-8")
 
 
+PREDICTORS_USED = {
+    "prevalence": "None (training prevalence for every IU)",
+    "country_prior_rate": "Country's non-delivery rate the year before",
+    "history_rule": "Fixed points: missed t-1, missed t-2 or t-3, ineffective round at t-1",
+    "logistic_parsimonious": "5: missed rounds in 3 years, cumulative rounds, last coverage, "
+                             "region and country non-delivery rates",
+    "logistic_iu_only": "IU treatment history (11 predictors)",
+    "logistic_history": "IU history plus country and region programme history (17)",
+    "logistic_history_context": "Programme history plus conflict and population density (24)",
+    "catboost_history": "IU history plus country and region programme history (17)",
+    "catboost_history_context": "Programme history plus conflict and population density (24)",
+    "catboost_history_country_id": "Programme history plus country identity (18)",
+}
+
+
+def models_trained_table() -> pd.DataFrame:
+    """Every pre-specified approach: what it used, how it was set, and how it did."""
+    sel = json.loads((DEV / "selected_configs.json").read_text("utf-8"))["P"]
+    lock = json.loads((LOCK / "LOCK.json").read_text("utf-8"))
+    ci = pd.read_csv(LOCK / "locked_intervals.csv")
+    ci = ci[(ci["scenario"] == "P") & (ci["subset"] == "locked_test_2023_2024")]
+    df = pd.read_csv(LOCK / "locked_differences_vs_rule.csv")
+    df = df[(df["scenario"] == "P") & (df["subset"] == "locked_test_2023_2024")
+            & (df["metric"] == "capture_at_20pct")].set_index("model")
+    rows = []
+    for m in [x for x in SHORT if x in sel]:
+        g = ci[ci["model"] == m].set_index("metric")
+        setting = ", ".join(f"{k} = {v}" for k, v in sel[m]["params"].items()) or "none to tune"
+        role = {lock["primary_candidate"]: "Primary candidate",
+                lock["primary_comparator"]: "Comparator"}.get(m, "")
+        if m in df.index:
+            d = df.loc[m]
+            diff = (f"{100 * d['difference']:+.1f} ({100 * d['ci_low']:+.1f} to "
+                    f"{100 * d['ci_high']:+.1f})")
+        else:
+            diff = "reference"
+        rows.append({
+            "Approach": SHORT[m], "Role": role, "Predictors": PREDICTORS_USED.get(m, ""),
+            "Setting chosen on development folds": setting,
+            "Development log loss": f"{sel[m]['pooled_log_loss']:.3f}",
+            "Locked-test AUROC (95% CI)": _fmt_ci(g.loc["auroc", "estimate"],
+                                                  g.loc["auroc", "ci_low"],
+                                                  g.loc["auroc", "ci_high"]),
+            "Interruptions captured in top 20% (95% CI)": _fmt_ci(
+                g.loc["capture_at_20pct", "estimate"], g.loc["capture_at_20pct", "ci_low"],
+                g.loc["capture_at_20pct", "ci_high"]),
+            "Difference from history rule, percentage points (95% CI)": diff,
+        })
+    return pd.DataFrame(rows)
+
+
+def write_models_table() -> None:
+    """Write the models table and inject it into docs/HANDOVER.md between its markers."""
+    if not (LOCK / "LOCK.json").exists():
+        return
+    table = models_trained_table()
+    _table(table, "tableM_models_trained", "Every approach trained and how it performed",
+           "All pre-specified approaches under scenario P: predictors, the setting selected on "
+           "development folds, development log loss, and locked-test performance with "
+           "country-cluster bootstrap intervals.",
+           ["reports/evaluation/development/selected_configs.json",
+            "reports/evaluation/locked_test/locked_intervals.csv",
+            "reports/evaluation/locked_test/locked_differences_vs_rule.csv"])
+    handover = paths.ROOT / "docs" / "HANDOVER.md"
+    start, end = "<!-- MODELS:START -->", "<!-- MODELS:END -->"
+    if handover.exists():
+        body = handover.read_text(encoding="utf-8")
+        if start in body and end in body:
+            head, rest = body.split(start, 1)
+            _, tail = rest.split(end, 1)
+            handover.write_text(NL.join([head + start, _md(table).rstrip(), end + tail]),
+                                encoding="utf-8")
+
+
 def render_all() -> None:
     _style()
     CAPTIONS.clear()
@@ -1008,6 +1082,7 @@ def render_all() -> None:
         fig_country_transport()
         fig_explain()
         tables()
+        write_models_table()
     write_captions()
     write_results_summary()
     print(f"rendered {sum(c['kind'] == 'figure' for c in CAPTIONS)} figures and "

@@ -696,6 +696,18 @@ Full protocol: [`config/protocol.yaml`]({REPO_URL}/blob/main/config/protocol.yam
 def page_limits() -> None:
     header("Limitations and citation", "Read this before quoting any number from this site.")
     st.markdown(f"""
+### Why the prediction work stops here
+
+Every planned stage of the study was completed. The prediction work stops for a
+scientific reason, not because it was left unfinished. The success criterion was fixed
+before any model was fitted, and no model met it. Most interruptions are country-wide
+shocks that do not repeat from year to year, so a district's own history cannot predict
+them, and what does drive them (funding, medicine supply, campaign plans) is not in
+public data. The simple history rule did at least as well as every model, though the
+test is too small to show it was better. The full account and the next steps that could
+change the answer are in the
+[handover document]({REPO_URL}/blob/main/docs/HANDOVER.md).
+
 ### Limitations
 
 1. **Unverified label.** The outcome is a reported status after WHO's final correction.
