@@ -11,7 +11,7 @@ import streamlit as st
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
-from lf_mda.evaluate import top_k_counts  # noqa: E402  (numpy/scipy only)
+from lf_mda.evaluate import top_k_counts
 
 DATA = ROOT / "dashboard" / "data"
 REPORTS = ROOT / "reports"
@@ -133,7 +133,8 @@ def style(fig, height: int = 380, legend_bottom: bool = True):
         margin=dict(l=10, r=10, t=40, b=10), title_font_size=15,
         hoverlabel=dict(font_size=12))
     if legend_bottom:
-        fig.update_layout(legend=dict(orientation="h", y=-0.18, x=0, title_text=""))
+        fig.update_layout(legend=dict(orientation="h", yanchor="top", y=-0.24, x=0,
+                                      title_text=""))
     fig.update_xaxes(showgrid=True, gridcolor="rgba(128,128,128,0.18)", zeroline=False)
     fig.update_yaxes(showgrid=True, gridcolor="rgba(128,128,128,0.18)", zeroline=False)
     return fig

@@ -13,12 +13,13 @@ import streamlit as st
 
 st.set_page_config(page_title="LF MDA interruption research", page_icon="🧭", layout="wide")
 
-import views  # noqa: E402  (must follow set_page_config)
-from lib import load_info  # noqa: E402
+import views
+from lib import load_info
 
 PAGES = [
-    st.Page(views.page_overview, title="Study overview", icon="🧭", url_path="overview",
+    st.Page(views.page_overview, title="Study overview", icon="🧭",
             default=True),
+    st.Page(views.page_scale, title="Scale, level & recovery", icon="📈", url_path="scale"),
     st.Page(views.page_quality, title="Data quality", icon="🧪", url_path="data-quality"),
     st.Page(views.page_map, title="Implementation-unit map", icon="🗺️", url_path="map"),
     st.Page(views.page_risk, title="Risk explorer", icon="🔎", url_path="risk"),

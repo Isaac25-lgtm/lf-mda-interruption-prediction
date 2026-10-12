@@ -105,11 +105,11 @@ def build_dashboard_data() -> dict:
     gate = json.loads((paths.AUDIT / "gate_decision.json").read_text("utf-8"))
     src = pd.read_csv(paths.MANIFESTS / "espen_sources.csv")
     info.update(
-        n_rows=int(len(base)), gate_decision=gate["gate"]["decision"],
+        n_rows=len(base), gate_decision=gate["gate"]["decision"],
         information_adequacy=gate["gate"]["information_adequacy"],
         expert_verification=gate["gate"]["expert_verification"],
         espen_retrieved_utc=str(src["retrieved_utc"].min()),
-        n_countries_downloaded=int(len(src)), metrics=gate["metrics"],
+        n_countries_downloaded=len(src), metrics=gate["metrics"],
         size_mb=round((DASH_DATA / "iu_year.parquet").stat().st_size / 1e6, 2))
     (DASH_DATA / "info.json").write_text(json.dumps(info, indent=2), encoding="utf-8")
     return {k: v for k, v in info.items() if k != "metrics"}

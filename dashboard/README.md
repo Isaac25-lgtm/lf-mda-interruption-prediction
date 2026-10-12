@@ -17,6 +17,7 @@ Then open http://localhost:8501.
 | Page | Shows |
 |---|---|
 | Study overview | Headline counts, gate decision, Africa map of interruption rate by country and year |
+| Scale, level & recovery | Population in units with a reported interruption, country-wide versus local failures, resumption after an interruption, country totals |
 | Data quality | Reported status by year, cohort flow, reporting gaps, contradictions, release dates |
 | Implementation-unit map | One point per IU, coloured by reported status and cohort membership |
 | Risk explorer | Stored out-of-sample scores per IU for a chosen year, country and approach |

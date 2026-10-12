@@ -1,16 +1,31 @@
 """Dashboard pages. Each function renders one page from stored artifacts only."""
 from __future__ import annotations
 
+import lib
 import numpy as np
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
-
-import lib
-from lib import (AQUA, BLUE, GREY, MAP_COLOR, METRIC_LABEL, MODEL_COLOR, MODEL_LABEL, ORANGE,
-                 SEQ_BLUE, banner, capture_summary, fmt_ci, load_info, load_iu_year, read_csv,
-                 stored_models, style)
+from lib import (
+    AQUA,
+    BLUE,
+    GREY,
+    MAP_COLOR,
+    METRIC_LABEL,
+    MODEL_COLOR,
+    MODEL_LABEL,
+    ORANGE,
+    SEQ_BLUE,
+    banner,
+    capture_summary,
+    fmt_ci,
+    load_info,
+    load_iu_year,
+    read_csv,
+    stored_models,
+    style,
+)
 
 REPO_URL = "https://github.com/Isaac25-lgtm/lf-mda-interruption-prediction"
 KEY_MODELS = ["country_prior_rate", "history_rule", "logistic_history", "catboost_history"]
@@ -108,6 +123,93 @@ def page_overview() -> None:
             f"resumed MDA and {m['hindsight_stop_share_primary']:.0%} by impact assessment or "
             f"surveillance, which may have been legitimate stops.")
     st.caption(f"Code, protocol and full audit: {REPO_URL}")
+
+
+# ------------------------------------------------------------------ scale and recovery
+def page_scale() -> None:
+    header("Scale, level and recovery",
+           "How many people were affected, whether failures were national or local, and how "
+           "quickly treatment resumed.")
+    burden = read_csv("reports/descriptive/burden_by_year.csv")
+    if burden is None:
+        return missing("The descriptive analysis")
+    st.subheader("Population living where the round was reported not delivered")
+    p = burden[burden["cohort"] == "primary"].set_index("year")
+    b = burden[burden["cohort"] == "broad"].set_index("year")
+    extra = (b["population_in_interrupted_ius_millions"]
+             - p["population_in_interrupted_ius_millions"]).clip(lower=0)
+    fig = go.Figure()
+    fig.add_bar(x=p.index, y=p["population_in_interrupted_ius_millions"], marker_color=ORANGE,
+                name="Primary cohort (fewer than 5 effective rounds)",
+                hovertemplate="%{x}: %{y:.1f} million")
+    fig.add_bar(x=p.index, y=extra, marker_color="#f6c3ad",
+                name="Additional in units with 5+ effective rounds (may include legitimate pauses)",
+                hovertemplate="%{x}: +%{y:.1f} million")
+    fig.update_traces(marker_line_color="#fcfcfb", marker_line_width=1.5)
+    fig.update_layout(barmode="stack", yaxis_title="People requiring treatment, millions",
+                      xaxis=dict(dtick=1))
+    st.plotly_chart(style(fig, 400), width="stretch")
+    peak = b["population_in_interrupted_ius_millions"].idxmax()
+    st.caption(
+        f"Peak: {b.loc[peak, 'population_in_interrupted_ius_millions']:.0f} million people in "
+        f"{peak} across all active programmes "
+        f"({b.loc[peak, 'share_population_in_interrupted_ius']:.0%} of the population requiring "
+        f"treatment). These are populations of affected units, not confirmed missed doses.")
+    left, right = st.columns(2)
+    with left:
+        st.subheader("National or local?")
+        lvl = read_csv("reports/descriptive/level_by_year.csv")
+        if lvl is not None:
+            parts = [("events_where_every_IU_missed", "Every eligible IU in the country missed",
+                      "#0d366b"),
+                     ("events_where_most_IUs_missed", "Most IUs missed", "#3987e5"),
+                     ("events_where_half_or_fewer_IUs_missed", "Half or fewer missed", "#b7d3f6")]
+            fig = go.Figure()
+            for col, name, color in parts:
+                fig.add_bar(x=lvl["year"], y=lvl[col], name=name, marker_color=color)
+            fig.update_traces(marker_line_color="#fcfcfb", marker_line_width=1.5)
+            fig.update_layout(barmode="stack", yaxis_title="Reported interruptions (IUs)",
+                              xaxis=dict(dtick=1))
+            st.plotly_chart(style(fig, 380), width="stretch")
+            tot = lvl["events"].sum()
+            st.caption(f"{lvl['events_where_every_IU_missed'].sum() / tot:.0%} of interruptions "
+                       "happened when every eligible IU in the country missed the round.")
+    with right:
+        st.subheader("How quickly did treatment resume?")
+        rec = read_csv("reports/descriptive/recovery_within_years.csv")
+        if rec is not None:
+            fig = go.Figure()
+            for era, color in zip(rec["era"].unique(), [BLUE, ORANGE, AQUA]):
+                s = rec[rec["era"] == era]
+                fig.add_scatter(x=[0, *s["years_since_onset"]], y=[0, *s["share_resumed"]],
+                                mode="lines+markers", name=f"Onset {era}",
+                                line=dict(color=color, width=2.5), marker=dict(size=9),
+                                customdata=[0, *s["onsets_with_follow_up"]],
+                                hovertemplate="%{y:.0%} resumed within %{x} years "
+                                              "(n=%{customdata})")
+            fig.update_layout(xaxis_title="Years since the first missed round",
+                              yaxis_title="Resumed MDA", yaxis_tickformat=".0%",
+                              yaxis_range=[0, 1], xaxis=dict(dtick=1))
+            st.plotly_chart(style(fig, 380), width="stretch")
+            st.caption("Units that moved to impact assessment or surveillance did not resume "
+                       "and stay in the denominator.")
+    by_c = read_csv("reports/descriptive/burden_by_country.csv")
+    if by_c is not None:
+        st.subheader("Countries, 2016-2025")
+        cohort = st.radio("Cohort", ["primary", "broad"], horizontal=True, key="sc_cohort",
+                          format_func={"primary": "Primary cohort",
+                                       "broad": "All active programmes"}.get)
+        t = by_c[by_c["cohort"] == cohort].drop(columns=["cohort", "iso2"])
+        st.dataframe(t, hide_index=True, width="stretch", column_config={
+            "country": "Country", "iu_years": "IU-years",
+            "interrupted_iu_years": "Interrupted IU-years",
+            "years_with_interruption": "Years with an interruption",
+            "person_rounds_requiring_millions": st.column_config.NumberColumn(
+                "Person-rounds requiring treatment (millions)", format="%.1f"),
+            "person_rounds_in_interrupted_ius_millions": st.column_config.NumberColumn(
+                "Person-rounds in interrupted IUs (millions)", format="%.1f"),
+            "share_of_all_missed_person_rounds": st.column_config.ProgressColumn(
+                "Share of all", format="percent", min_value=0, max_value=1)})
 
 
 # ------------------------------------------------------------------ 2. data quality
@@ -412,7 +514,7 @@ def page_capacity() -> None:
     k[0].metric("Eligible IU-years", f"{n:,}")
     k[1].metric("Reported interruptions", f"{total:,}")
     k[2].metric("Countries", f"{d['country'].nunique()}")
-    a, b = st.columns([3, 2])
+    a, b = st.container(), st.container()
     with a:
         fracs = np.linspace(0.02, 1, 50)
         fig = go.Figure()
@@ -452,8 +554,24 @@ def page_validation() -> None:
     jk = read_csv("reports/evaluation/locked_test/locked_country_jackknife.csv")
     if jk is None:
         return missing("Validation output")
-    t1, t2, t3, t4 = st.tabs(["Leave one country out of the test", "By year",
-                              "Countries excluded from training", "Sensitivity analyses"])
+    t1, t2, t3, t4, t5 = st.tabs(["Leave one country out of the test", "By year",
+                                  "Countries excluded from training", "Sensitivity analyses",
+                                  "Exploratory models (post hoc)"])
+    with t5:
+        ex = read_csv("reports/tables/tableX_exploratory_posthoc.csv")
+        if ex is None:
+            missing("Exploratory output")
+        else:
+            st.error("**Exploratory, post hoc.** These three approaches were designed after the "
+                     "locked-test results were known. Their held-out figures are not an "
+                     "independent test and support no claim of improvement.", icon="⚠️")
+            st.dataframe(ex.drop(columns="status").rename(columns=METRIC_LABEL | {
+                "evaluation": "Evaluation", "approach": "Approach"}), hide_index=True,
+                width="stretch")
+            st.caption("X1: logistic model on country-year means and within-country deviations "
+                       "of the predictors. X2: countries ranked by prior-year rate, then IUs by "
+                       "the history rule. X3: history rule plus a term for fewer cumulative "
+                       "rounds. None cleared the improvement criterion.")
     with t1:
         j = jk[(jk["scenario"] == "P") & (jk["subset"] == "locked_test_2023_2024")
                & jk["model"].isin(KEY_MODELS)].copy()
