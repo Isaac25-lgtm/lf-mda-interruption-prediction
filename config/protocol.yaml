@@ -1,7 +1,7 @@
 # Analysis protocol. FROZEN 2026-10-12, after the label audit and BEFORE any model was
 # fitted or any model performance was seen. Later changes must be appended to
 # `amendments` with a date and reason, and recorded in docs/DECISIONS.md.
-version: "1.0"
+version: "1.1"
 frozen_on: "2026-10-12"
 
 estimand: >
@@ -61,7 +61,8 @@ information_scenarios:
 
 models:
   baselines: [prevalence, country_prior_rate, history_rule]
-  statistical: [logistic_iu_only, logistic_history, logistic_history_context]
+  statistical: [logistic_parsimonious, logistic_iu_only, logistic_history,
+                logistic_history_context]
   feature_groups: >
     'history' = IU treatment history; 'country' = country and admin1 programme history
     from ESPEN; 'context' = conflict (UCDP) and population density; 'identity' = country
@@ -74,9 +75,9 @@ models:
     Fixed score, defined before modelling: 4 x (not delivered at t-1)
     + 2 x (any non-delivery in t-2 or t-3) + 1 x (round at t-1 delivered but below 65%
     epidemiological coverage); ties broken by lower epidemiological coverage at t-1.
-  logistic_grid: {C: [0.01, 0.1, 1.0]}
-  catboost_grid: {depth: [2, 4], l2_leaf_reg: [3, 10]}
-  catboost_fixed: {iterations: 300, learning_rate: 0.05, random_seed: 20261012}
+  logistic_grid: {C: [0.001, 0.01, 0.1]}
+  catboost_grid: {depth: [1, 2], l2_leaf_reg: [10, 30]}
+  catboost_fixed: {iterations: 150, learning_rate: 0.05, random_seed: 20261012}
   selection_metric: pooled rolling-origin log loss
   max_refinement_rounds: 2
   calibration: logistic (Platt) recalibration fitted on rolling-origin out-of-fold predictions
@@ -97,4 +98,14 @@ evaluation:
     for countries with at least 10 events and 10 non-events.
 
 seed: 20261012
-amendments: []
+amendments:
+  - date: "2026-10-12"
+    version: "1.1"
+    stage: after development round 0; before the locked test was opened
+    changes:
+      - A1 removed predictor h_years_in_extract (calendar-time proxy)
+      - "A2 stronger regularisation: logistic C {0.001, 0.01, 0.1} (was {0.01, 0.1, 1});
+        CatBoost depth {1, 2} (was {2, 4}), l2 {10, 30} (was {3, 10}), 150 iterations (was 300)"
+      - A3 added model logistic_parsimonious (five predictors chosen on development data)
+    evidence: reports/evaluation/development_round0/ and docs/DECISIONS.md
+    refinement_round: 1 of at most 2

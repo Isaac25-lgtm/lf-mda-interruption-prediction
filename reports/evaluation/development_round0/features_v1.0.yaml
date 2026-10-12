@@ -1,0 +1,263 @@
+# Machine-checked feature manifest. A feature may be used only if it is listed here,
+# has min_lag_years >= 1 and derived_from_outcome_year: false. `min_lag_years` is the
+# minimum gap between the target year t and the newest row the feature reads under
+# scenario P; under scenario E every ESPEN-derived lag is one year longer.
+# Values are current corrected ESPEN values, not historical vintages (see
+# docs/PREDICTOR_AVAILABILITY.md).
+groups: [history, country, context, identity]
+
+# popReq equals popTot in almost every cohort row, so population requiring treatment and
+# its share of the total were dropped as redundant before any model was fitted.
+non_predictor_columns: [rule_score, info_lag, lon, lat]
+
+features:
+  h_nd_recent:
+    group: history
+    source: ESPEN LF IU extract, endemicity status
+    description: IU had status "MDA not delivered" in the most recent known year
+    unit: indicator
+    valid_range: [0, 1]
+    min_lag_years: 1
+    missing_rule: NaN when the IU was not requiring MDA or had no row that year
+    derived_from_outcome_year: false
+  h_nd_prev:
+    group: history
+    source: ESPEN LF IU extract, endemicity status
+    description: Non-delivery one year before the most recent known year
+    unit: indicator
+    valid_range: [0, 1]
+    min_lag_years: 2
+    missing_rule: NaN when not requiring MDA or no row
+    derived_from_outcome_year: false
+  h_nd_count_3:
+    group: history
+    source: ESPEN LF IU extract, endemicity status
+    description: Number of non-delivery years in the three most recent known years
+    unit: count
+    valid_range: [0, 3]
+    min_lag_years: 1
+    missing_rule: NaN when none of the three years is a requiring-MDA year
+    derived_from_outcome_year: false
+  h_delivered_count_3:
+    group: history
+    source: ESPEN LF IU extract, endemicity status
+    description: Number of delivered rounds in the three most recent known years
+    unit: count
+    valid_range: [0, 3]
+    min_lag_years: 1
+    missing_rule: NaN when none of the three years is a requiring-MDA year
+    derived_from_outcome_year: false
+  h_any_nd_prev2:
+    group: history
+    source: ESPEN LF IU extract, endemicity status
+    description: Any non-delivery in the two years before the most recent known year
+    unit: indicator
+    valid_range: [0, 1]
+    min_lag_years: 2
+    missing_rule: NaN when neither year is a requiring-MDA year
+    derived_from_outcome_year: false
+  h_epi_cov_last_round:
+    group: history
+    source: ESPEN LF IU extract, epiCov
+    description: Epidemiological coverage (%) of the latest delivered round in the window
+    unit: percent
+    valid_range: [0, 150]
+    min_lag_years: 1
+    missing_rule: NaN if no delivered round in the three-year window; clipped to 0-150
+    derived_from_outcome_year: false
+  h_ineffective_recent:
+    group: history
+    source: ESPEN LF IU extract, epiEffMda
+    description: Most recent known year had a delivered round below 65% epidemiological coverage
+    unit: indicator
+    valid_range: [0, 1]
+    min_lag_years: 1
+    missing_rule: 0 when the round was not delivered; NaN when not requiring MDA
+    derived_from_outcome_year: false
+  h_scheme_last_round:
+    group: history
+    type: categorical
+    source: ESPEN LF IU extract, mdaScheme
+    description: Drug scheme of the latest delivered round in the window
+    unit: category (ALB+IVM, ALB+DEC, ALBx2, IDA, none)
+    min_lag_years: 1
+    missing_rule: "'none' when no delivered round in the window"
+    derived_from_outcome_year: false
+  h_eff_rounds_obs:
+    group: history
+    source: ESPEN LF IU extract, epiEffMdaN
+    description: Cumulative effective rounds observed in the extract (since 2014)
+    unit: count
+    valid_range: [0, 12]
+    min_lag_years: 1
+    missing_rule: NaN if no row
+    derived_from_outcome_year: false
+  h_cum_mda:
+    group: history
+    source: ESPEN LF IU extract, cumMda
+    description: Cumulative MDA rounds since programme inception
+    unit: count
+    valid_range: [0, 40]
+    min_lag_years: 1
+    missing_rule: NaN if no row
+    derived_from_outcome_year: false
+  h_log_pop_tot:
+    group: history
+    source: ESPEN LF IU extract, popTot
+    description: log(1 + total population)
+    unit: log persons
+    valid_range: [0, 17]
+    min_lag_years: 1
+    missing_rule: NaN if no row
+    derived_from_outcome_year: false
+  h_years_in_extract:
+    group: history
+    source: ESPEN LF IU extract, row presence
+    description: Number of years the IU has had a row up to the most recent known year
+    unit: count
+    valid_range: [1, 12]
+    min_lag_years: 1
+    missing_rule: NaN if the IU has no row in the most recent known year
+    derived_from_outcome_year: false
+  c_nd_rate_recent:
+    group: country
+    source: ESPEN LF IU extract, aggregated by country-year
+    description: Share of the country's other MDA-requiring IUs with non-delivery, most recent known year
+    unit: proportion
+    valid_range: [0, 1]
+    min_lag_years: 1
+    missing_rule: NaN when the IU is the only requiring IU in the country
+    derived_from_outcome_year: false
+  c_nd_rate_recent_full:
+    group: country
+    source: ESPEN LF IU extract, aggregated by country-year
+    description: Country non-delivery share including the IU itself (country-prior baseline only)
+    unit: proportion
+    valid_range: [0, 1]
+    min_lag_years: 1
+    missing_rule: NaN when no requiring IU
+    derived_from_outcome_year: false
+  c_nd_rate_prev:
+    group: country
+    source: ESPEN LF IU extract, aggregated by country-year
+    description: Country non-delivery share one year earlier
+    unit: proportion
+    valid_range: [0, 1]
+    min_lag_years: 2
+    missing_rule: NaN when no requiring IU
+    derived_from_outcome_year: false
+  c_log_n_requiring:
+    group: country
+    source: ESPEN LF IU extract, aggregated by country-year
+    description: log(1 + number of IUs requiring MDA in the country)
+    unit: log count
+    valid_range: [0, 8]
+    min_lag_years: 1
+    missing_rule: NaN if country has no rows
+    derived_from_outcome_year: false
+  c_share_surveillance:
+    group: country
+    source: ESPEN LF IU extract, aggregated by country-year
+    description: Share of the country's endemic IUs already under post-intervention surveillance
+    unit: proportion
+    valid_range: [0, 1]
+    min_lag_years: 1
+    missing_rule: NaN if no endemic IU
+    derived_from_outcome_year: false
+  c_not_reported_share_prev:
+    group: country
+    source: ESPEN LF IU extract, aggregated by country-year
+    description: Share of the country's IUs with status "Not reported" one year earlier
+    unit: proportion
+    valid_range: [0, 1]
+    min_lag_years: 2
+    missing_rule: NaN if country has no rows
+    derived_from_outcome_year: false
+  a_nd_rate_recent:
+    group: country
+    source: ESPEN LF IU extract, aggregated by admin1-year
+    description: Share of other MDA-requiring IUs in the same admin1 with non-delivery
+    unit: proportion
+    valid_range: [0, 1]
+    min_lag_years: 1
+    missing_rule: NaN when the IU is the only requiring IU in its admin1
+    derived_from_outcome_year: false
+  x_log_area_km2:
+    group: context
+    source: ESPEN IU geometry, 2024 provisional cartography
+    description: log IU area (km2), approximate
+    unit: log km2
+    valid_range: [-5, 15]
+    min_lag_years: 1
+    missing_rule: NaN when the IU has no geometry in the 2024 cartography
+    caveat: boundaries are the 2024 vintage and treated as static
+    derived_from_outcome_year: false
+  x_log_pop_density:
+    group: context
+    source: ESPEN popTot / ESPEN IU geometry area
+    description: log population density (persons per km2)
+    unit: log persons per km2
+    valid_range: [-10, 15]
+    min_lag_years: 1
+    missing_rule: NaN when no geometry
+    caveat: boundaries are the 2024 vintage and treated as static
+    derived_from_outcome_year: false
+  x_conflict_iu_events_recent:
+    group: context
+    source: UCDP GED 26.1, point-in-polygon on ESPEN IU geometry
+    description: log(1 + organised-violence events inside the IU) in the latest final UCDP year
+    unit: log count
+    valid_range: [0, 10]
+    min_lag_years: 2
+    missing_rule: NaN when no geometry; 0 when geometry exists and no events
+    caveat: UCDP 26.1 values, not the vintage published at each cutoff
+    derived_from_outcome_year: false
+  x_conflict_iu_events_3y:
+    group: context
+    source: UCDP GED 26.1, point-in-polygon on ESPEN IU geometry
+    description: log(1 + events inside the IU) over the three latest final UCDP years
+    unit: log count
+    valid_range: [0, 11]
+    min_lag_years: 2
+    missing_rule: NaN when no geometry
+    caveat: UCDP 26.1 values, not the vintage published at each cutoff
+    derived_from_outcome_year: false
+  x_conflict_iu_deaths_3y:
+    group: context
+    source: UCDP GED 26.1, point-in-polygon on ESPEN IU geometry
+    description: log(1 + best-estimate deaths inside the IU) over the three latest final UCDP years
+    unit: log count
+    valid_range: [0, 14]
+    min_lag_years: 2
+    missing_rule: NaN when no geometry
+    caveat: UCDP 26.1 values, not the vintage published at each cutoff
+    derived_from_outcome_year: false
+  x_conflict_ctry_events_recent:
+    group: context
+    source: UCDP GED 26.1, country-year totals
+    description: log(1 + events in the country) in the latest final UCDP year
+    unit: log count
+    valid_range: [0, 12]
+    min_lag_years: 2
+    missing_rule: 0 when UCDP records no events
+    caveat: UCDP 26.1 values, not the vintage published at each cutoff
+    derived_from_outcome_year: false
+  x_conflict_ctry_deaths_recent:
+    group: context
+    source: UCDP GED 26.1, country-year totals
+    description: log(1 + best-estimate deaths in the country) in the latest final UCDP year
+    unit: log count
+    valid_range: [0, 14]
+    min_lag_years: 2
+    missing_rule: 0 when UCDP records no events
+    caveat: UCDP 26.1 values, not the vintage published at each cutoff
+    derived_from_outcome_year: false
+  id_country:
+    group: identity
+    type: categorical
+    source: ESPEN LF IU extract, admin0Iso2
+    description: Country identity; used only in the country-identity ablation
+    unit: category
+    min_lag_years: 1
+    missing_rule: never missing
+    derived_from_outcome_year: false

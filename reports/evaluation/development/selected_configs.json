@@ -1,0 +1,120 @@
+{
+  "P": {
+    "prevalence": {
+      "params": {},
+      "pooled_log_loss": 0.6947603366634902
+    },
+    "country_prior_rate": {
+      "params": {},
+      "pooled_log_loss": 0.6855932696986505
+    },
+    "history_rule": {
+      "params": {},
+      "pooled_log_loss": 0.6882650473081164
+    },
+    "logistic_iu_only": {
+      "params": {
+        "C": 0.001
+      },
+      "pooled_log_loss": 0.6783316228763685
+    },
+    "logistic_parsimonious": {
+      "params": {
+        "C": 0.001
+      },
+      "pooled_log_loss": 0.6795077267551276
+    },
+    "logistic_history": {
+      "params": {
+        "C": 0.001
+      },
+      "pooled_log_loss": 0.6869278118321297
+    },
+    "logistic_history_context": {
+      "params": {
+        "C": 0.001
+      },
+      "pooled_log_loss": 0.7062435254588132
+    },
+    "catboost_history": {
+      "params": {
+        "depth": 1,
+        "l2_leaf_reg": 30
+      },
+      "pooled_log_loss": 0.7315302515531291
+    },
+    "catboost_history_context": {
+      "params": {
+        "depth": 1,
+        "l2_leaf_reg": 30
+      },
+      "pooled_log_loss": 0.7543257011803053
+    },
+    "catboost_history_country_id": {
+      "params": {
+        "depth": 1,
+        "l2_leaf_reg": 30
+      },
+      "pooled_log_loss": 0.7309704482322313
+    }
+  },
+  "E": {
+    "prevalence": {
+      "params": {},
+      "pooled_log_loss": 0.7262733401336823
+    },
+    "country_prior_rate": {
+      "params": {},
+      "pooled_log_loss": 0.7308538983206591
+    },
+    "history_rule": {
+      "params": {},
+      "pooled_log_loss": 0.7253557165071175
+    },
+    "logistic_iu_only": {
+      "params": {
+        "C": 0.01
+      },
+      "pooled_log_loss": 0.7123724521644761
+    },
+    "logistic_parsimonious": {
+      "params": {
+        "C": 0.001
+      },
+      "pooled_log_loss": 0.7349662736913843
+    },
+    "logistic_history": {
+      "params": {
+        "C": 0.001
+      },
+      "pooled_log_loss": 0.7261461441166852
+    },
+    "logistic_history_context": {
+      "params": {
+        "C": 0.001
+      },
+      "pooled_log_loss": 0.7594291486965616
+    },
+    "catboost_history": {
+      "params": {
+        "depth": 1,
+        "l2_leaf_reg": 30
+      },
+      "pooled_log_loss": 0.7423852005645982
+    },
+    "catboost_history_context": {
+      "params": {
+        "depth": 1,
+        "l2_leaf_reg": 30
+      },
+      "pooled_log_loss": 0.8036503498287044
+    },
+    "catboost_history_country_id": {
+      "params": {
+        "depth": 1,
+        "l2_leaf_reg": 30
+      },
+      "pooled_log_loss": 0.7495198159115082
+    }
+  }
+}

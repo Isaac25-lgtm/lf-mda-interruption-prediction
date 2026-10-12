@@ -1,0 +1,86 @@
+{
+  "P": {
+    "prevalence": {
+      "intercept": 1.4358140377429929,
+      "slope": 1.2778361017538358
+    },
+    "country_prior_rate": {
+      "intercept": 0.19155023497494775,
+      "slope": 0.5873634713236869
+    },
+    "history_rule": {
+      "intercept": -0.09492584419715121,
+      "slope": 0.41827727252398383
+    },
+    "logistic_iu_only": {
+      "intercept": 0.4803496123922799,
+      "slope": 0.7334617018493588
+    },
+    "logistic_parsimonious": {
+      "intercept": 0.4572729002114239,
+      "slope": 0.7341016547945542
+    },
+    "logistic_history": {
+      "intercept": 0.1893626150024871,
+      "slope": 0.5621298308608547
+    },
+    "logistic_history_context": {
+      "intercept": 0.22953124089787946,
+      "slope": 0.5390820883074149
+    },
+    "catboost_history": {
+      "intercept": -0.04411990444962525,
+      "slope": 0.38650393423706914
+    },
+    "catboost_history_context": {
+      "intercept": -0.1264948335995912,
+      "slope": 0.329617641955166
+    },
+    "catboost_history_country_id": {
+      "intercept": 0.1519317917576042,
+      "slope": 0.46615778110783385
+    }
+  },
+  "E": {
+    "prevalence": {
+      "intercept": 1.7911079340449525,
+      "slope": 1.3521580651661176
+    },
+    "country_prior_rate": {
+      "intercept": 1.8958776641527646,
+      "slope": 1.3823830662150856
+    },
+    "history_rule": {
+      "intercept": 0.683918435995054,
+      "slope": 0.7793634681139513
+    },
+    "logistic_iu_only": {
+      "intercept": 0.25401222490262876,
+      "slope": 0.5428231921013386
+    },
+    "logistic_parsimonious": {
+      "intercept": 2.1484891664314487,
+      "slope": 1.4389978426783807
+    },
+    "logistic_history": {
+      "intercept": 1.3972527263841161,
+      "slope": 1.0770190370818054
+    },
+    "logistic_history_context": {
+      "intercept": 0.8568722166695415,
+      "slope": 0.7481243820948423
+    },
+    "catboost_history": {
+      "intercept": 0.5319980102391412,
+      "slope": 0.625019965228786
+    },
+    "catboost_history_context": {
+      "intercept": 0.3708285097918109,
+      "slope": 0.48984211222898744
+    },
+    "catboost_history_country_id": {
+      "intercept": 0.49361026873462077,
+      "slope": 0.5813886778315414
+    }
+  }
+}

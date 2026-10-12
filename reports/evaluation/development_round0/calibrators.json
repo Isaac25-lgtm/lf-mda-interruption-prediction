@@ -1,0 +1,78 @@
+{
+  "P": {
+    "prevalence": {
+      "intercept": 1.4358140377429929,
+      "slope": 1.2778361017538358
+    },
+    "country_prior_rate": {
+      "intercept": 0.19155023497494775,
+      "slope": 0.5873634713236869
+    },
+    "history_rule": {
+      "intercept": -0.09492584419715121,
+      "slope": 0.41827727252398383
+    },
+    "logistic_iu_only": {
+      "intercept": -0.4064802139477869,
+      "slope": 0.3674461503734998
+    },
+    "logistic_history": {
+      "intercept": -0.44092271765307617,
+      "slope": 0.3044820483584218
+    },
+    "logistic_history_context": {
+      "intercept": -0.42547591814354213,
+      "slope": 0.28202048486784054
+    },
+    "catboost_history": {
+      "intercept": -0.47869870468066,
+      "slope": 0.17798267861610081
+    },
+    "catboost_history_context": {
+      "intercept": -0.4286049933413757,
+      "slope": 0.19392779391919748
+    },
+    "catboost_history_country_id": {
+      "intercept": -0.3598257092716552,
+      "slope": 0.22630724651904777
+    }
+  },
+  "E": {
+    "prevalence": {
+      "intercept": 1.7911079340449525,
+      "slope": 1.3521580651661176
+    },
+    "country_prior_rate": {
+      "intercept": 1.8958776641527646,
+      "slope": 1.3823830662150856
+    },
+    "history_rule": {
+      "intercept": 0.683918435995054,
+      "slope": 0.7793634681139513
+    },
+    "logistic_iu_only": {
+      "intercept": -0.11487577858282438,
+      "slope": 0.36963694868822905
+    },
+    "logistic_history": {
+      "intercept": -0.24810751372303982,
+      "slope": 0.3524842871367711
+    },
+    "logistic_history_context": {
+      "intercept": -0.2633456164994743,
+      "slope": 0.3009281822851383
+    },
+    "catboost_history": {
+      "intercept": -0.1732164122636952,
+      "slope": 0.22857434097785984
+    },
+    "catboost_history_context": {
+      "intercept": -0.17870921795147146,
+      "slope": 0.2298814468801784
+    },
+    "catboost_history_country_id": {
+      "intercept": -0.1688223958784971,
+      "slope": 0.24137284966167236
+    }
+  }
+}

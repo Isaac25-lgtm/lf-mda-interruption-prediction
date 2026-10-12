@@ -1,0 +1,49 @@
+scenario,model,params,pooled_log_loss
+P,prevalence,{},0.6947603366634902
+P,country_prior_rate,{},0.6855932696986505
+P,history_rule,{},0.6882650473081164
+P,logistic_iu_only,"{""C"": 0.01}",0.650796570586876
+P,logistic_iu_only,"{""C"": 0.1}",0.6765457376633717
+P,logistic_iu_only,"{""C"": 1.0}",0.7000301473293128
+P,logistic_history,"{""C"": 0.01}",0.6781244733588492
+P,logistic_history,"{""C"": 0.1}",0.7228704410356502
+P,logistic_history,"{""C"": 1.0}",0.7572318483419033
+P,logistic_history_context,"{""C"": 0.01}",0.7033524382137721
+P,logistic_history_context,"{""C"": 0.1}",0.7614323976397516
+P,logistic_history_context,"{""C"": 1.0}",0.7975056549531789
+P,catboost_history,"{""depth"": 2, ""l2_leaf_reg"": 3}",0.8200952661985837
+P,catboost_history,"{""depth"": 2, ""l2_leaf_reg"": 10}",0.8169208375718443
+P,catboost_history,"{""depth"": 4, ""l2_leaf_reg"": 3}",0.838212599930617
+P,catboost_history,"{""depth"": 4, ""l2_leaf_reg"": 10}",0.8316648885690097
+P,catboost_history_context,"{""depth"": 2, ""l2_leaf_reg"": 3}",0.8202171139514564
+P,catboost_history_context,"{""depth"": 2, ""l2_leaf_reg"": 10}",0.8120497805101388
+P,catboost_history_context,"{""depth"": 4, ""l2_leaf_reg"": 3}",0.9186692290093806
+P,catboost_history_context,"{""depth"": 4, ""l2_leaf_reg"": 10}",0.9016735764470623
+P,catboost_history_country_id,"{""depth"": 2, ""l2_leaf_reg"": 3}",0.8267370249265031
+P,catboost_history_country_id,"{""depth"": 2, ""l2_leaf_reg"": 10}",0.8032491866515497
+P,catboost_history_country_id,"{""depth"": 4, ""l2_leaf_reg"": 3}",0.8710542526718865
+P,catboost_history_country_id,"{""depth"": 4, ""l2_leaf_reg"": 10}",0.8597567935913728
+E,prevalence,{},0.7262733401336823
+E,country_prior_rate,{},0.7308538983206591
+E,history_rule,{},0.7253557165071175
+E,logistic_iu_only,"{""C"": 0.01}",0.7129206934915401
+E,logistic_iu_only,"{""C"": 0.1}",0.9531878161556768
+E,logistic_iu_only,"{""C"": 1.0}",1.2494949140323979
+E,logistic_history,"{""C"": 0.01}",0.6850232999164834
+E,logistic_history,"{""C"": 0.1}",0.7236798708668016
+E,logistic_history,"{""C"": 1.0}",0.9903264966616453
+E,logistic_history_context,"{""C"": 0.01}",0.7305288531473302
+E,logistic_history_context,"{""C"": 0.1}",0.7530203714558169
+E,logistic_history_context,"{""C"": 1.0}",0.991014712562451
+E,catboost_history,"{""depth"": 2, ""l2_leaf_reg"": 3}",0.9288507097792751
+E,catboost_history,"{""depth"": 2, ""l2_leaf_reg"": 10}",0.9216451605447021
+E,catboost_history,"{""depth"": 4, ""l2_leaf_reg"": 3}",1.0157269715459913
+E,catboost_history,"{""depth"": 4, ""l2_leaf_reg"": 10}",0.9588619364594275
+E,catboost_history_context,"{""depth"": 2, ""l2_leaf_reg"": 3}",0.9223850647136668
+E,catboost_history_context,"{""depth"": 2, ""l2_leaf_reg"": 10}",0.920580583473959
+E,catboost_history_context,"{""depth"": 4, ""l2_leaf_reg"": 3}",1.040535161856906
+E,catboost_history_context,"{""depth"": 4, ""l2_leaf_reg"": 10}",0.9983410701093071
+E,catboost_history_country_id,"{""depth"": 2, ""l2_leaf_reg"": 3}",0.8996006751110359
+E,catboost_history_country_id,"{""depth"": 2, ""l2_leaf_reg"": 10}",0.8927975272593184
+E,catboost_history_country_id,"{""depth"": 4, ""l2_leaf_reg"": 3}",1.0015894901457965
+E,catboost_history_country_id,"{""depth"": 4, ""l2_leaf_reg"": 10}",0.9355532788251748

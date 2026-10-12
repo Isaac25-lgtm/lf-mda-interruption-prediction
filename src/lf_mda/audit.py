@@ -34,7 +34,9 @@ COHORTS = ["primary", "broad", "strict", "incident"]
 
 
 def load_release_calendar() -> pd.DataFrame:
-    cal = pd.read_csv(paths.CONFIG / "source_release_calendar.csv")
+    # keep_default_na=False: the ISO code for Namibia is "NA" and must stay a string
+    cal = pd.read_csv(paths.CONFIG / "source_release_calendar.csv", keep_default_na=False,
+                      na_values=[""])
     cal = cal.rename(columns={"data_year": "year"})
     cal = cal.sort_values("release_date").drop_duplicates(["iso2", "year"])
     return cal[["iso2", "year", "release_date", "release_type"]]

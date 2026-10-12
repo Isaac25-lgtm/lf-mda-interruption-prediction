@@ -46,3 +46,74 @@ They are not external standards, and passing them does not validate the label.
 ## Decisions made after seeing development results
 
 See the dated entries appended below. None may use locked-test results.
+
+### 2026-10-12, refinement round 1 (after development round 0; locked test unopened)
+
+**What round 0 showed** (rolling-origin folds 2019-2022, scenario P; full output
+archived in `reports/evaluation/development_round0/`):
+
+- Pooled AUROC was about 0.60 for every approach, including the no-skill prevalence
+  baseline (0.598). That baseline scores above 0.5 only because its constant
+  prediction differs by fold year, which shows that pooled AUROC here mostly measures
+  differences between years.
+- Within country-year, the fixed history rule ranked IUs best (AUROC 0.655). CatBoost
+  reached 0.62 and the logistic models 0.53 to 0.59.
+- Probabilities were poor: log loss was 0.65 to 0.70 for the baselines and logistic
+  models against 0.695 for no skill, and 0.80 to 0.82 for CatBoost, which was strongly
+  overconfident (calibration slope about 0.2).
+- In 2020 and 2021 pooled AUROC was at or near chance for every approach. In 2019 and
+  2022 the rule's within-country-year AUROC was 0.75.
+
+**Diagnosis** (development years only):
+
+1. The selected logistic penalty was at the edge of the grid (C = 0.01), and CatBoost
+   log loss fell with shallower trees and a stronger penalty. Both point to overfitting.
+2. `h_years_in_extract` has no within-country signal (stratified AUROC 0.50) but a
+   pooled AUROC of 0.65. It is a proxy for calendar year, so models used it to
+   extrapolate year-level prevalence trends.
+3. Country-level predictors take one value per country-year, so a flexible model can
+   use them to memorise the outcome of training country-years.
+4. Single predictors carry real within-country signal: fewer cumulative rounds
+   (stratified AUROC 0.71 when reversed), non-delivery in the same region last year
+   (0.65), non-delivery count over three years (0.65), lower coverage of the last round
+   (0.60 reversed). The fitted models were not exploiting these.
+
+**Changes made (protocol v1.1), all on development evidence only:**
+
+| # | Change | Reason |
+|---|---|---|
+| A1 | Remove `h_years_in_extract` | Calendar-time proxy with no within-country signal (diagnosis 2) |
+| A2 | Stronger regularisation grids: logistic C in {0.001, 0.01, 0.1}; CatBoost depth in {1, 2}, L2 in {10, 30}, 150 iterations | Diagnosis 1 and 3 |
+| A3 | Add one model, `logistic_parsimonious`, with five predictors: `h_nd_count_3`, `h_cum_mda`, `h_epi_cov_last_round`, `a_nd_rate_recent`, `c_nd_rate_recent` | The playbook permits a simple monotone logistic model after a poor development result. The five predictors were chosen from diagnosis 4 |
+
+**Caveats that follow from this.** The predictors in A3 were chosen using all
+development years, including the validation folds, so development estimates for
+`logistic_parsimonious` are optimistic. Only the locked test is an honest check of it.
+This was the first of at most two permitted refinement rounds. No locked-test result
+had been computed when these changes were made.
+
+### 2026-10-12, after refinement round 1 (locked test still unopened)
+
+**What round 1 showed** (`reports/evaluation/development/`, scenario P, folds 2019-2022):
+
+- Every tuned model again selected the most regularised setting on offer (logistic
+  C = 0.001; CatBoost depth 1, L2 30). CatBoost log loss improved from about 0.82 to
+  0.73 but stayed worse than the no-skill value of 0.695.
+- Pooled over 2019-2022, no approach differed from the history rule in interruptions
+  captured at 20% capacity with an interval excluding zero. The rule still had the
+  best or equal-best ranking within country-year (0.655; five-predictor logistic 0.657).
+- In the non-COVID folds (2019 and 2022) the logistic models captured 37% to 45% of
+  interruptions at 20% capacity against 34% for the rule, with intervals spanning zero.
+- In 2020-2021 all approaches were close to chance.
+
+**Decisions:**
+
+| # | Decision | Reason |
+|---|---|---|
+| D15 | Stop refining. The second permitted round is not used. | Both rounds pushed every model to the most regularised corner of its grid. Further tuning would move towards the intercept-only model, not towards a better one. The limit is the signal in the data, not the hyperparameters |
+| D16 | Primary candidate for the locked test: `logistic_iu_only` (C = 0.001). | It has the lowest pooled rolling-origin log loss among fitted models (0.678), which is the selection rule fixed in the protocol |
+| D17 | All ten approaches are scored on the locked test, but only the primary candidate against the history rule is the pre-specified comparison. The others are exploratory and unadjusted for multiple comparisons. | Avoids choosing a winner after seeing the test |
+| D18 | Leave-one-country-out transport also includes `logistic_iu_only`. | It is the primary candidate |
+
+Expectation recorded before opening the locked test: on development evidence the most
+likely result is that no model shows a clear gain over the history rule.

@@ -1,0 +1,108 @@
+{
+  "P": {
+    "prevalence": {
+      "params": {},
+      "pooled_log_loss": 0.6947603366634902
+    },
+    "country_prior_rate": {
+      "params": {},
+      "pooled_log_loss": 0.6855932696986505
+    },
+    "history_rule": {
+      "params": {},
+      "pooled_log_loss": 0.6882650473081164
+    },
+    "logistic_iu_only": {
+      "params": {
+        "C": 0.01
+      },
+      "pooled_log_loss": 0.650796570586876
+    },
+    "logistic_history": {
+      "params": {
+        "C": 0.01
+      },
+      "pooled_log_loss": 0.6781244733588492
+    },
+    "logistic_history_context": {
+      "params": {
+        "C": 0.01
+      },
+      "pooled_log_loss": 0.7033524382137721
+    },
+    "catboost_history": {
+      "params": {
+        "depth": 2,
+        "l2_leaf_reg": 10
+      },
+      "pooled_log_loss": 0.8169208375718443
+    },
+    "catboost_history_context": {
+      "params": {
+        "depth": 2,
+        "l2_leaf_reg": 10
+      },
+      "pooled_log_loss": 0.8120497805101388
+    },
+    "catboost_history_country_id": {
+      "params": {
+        "depth": 2,
+        "l2_leaf_reg": 10
+      },
+      "pooled_log_loss": 0.8032491866515497
+    }
+  },
+  "E": {
+    "prevalence": {
+      "params": {},
+      "pooled_log_loss": 0.7262733401336823
+    },
+    "country_prior_rate": {
+      "params": {},
+      "pooled_log_loss": 0.7308538983206591
+    },
+    "history_rule": {
+      "params": {},
+      "pooled_log_loss": 0.7253557165071175
+    },
+    "logistic_iu_only": {
+      "params": {
+        "C": 0.01
+      },
+      "pooled_log_loss": 0.7129206934915401
+    },
+    "logistic_history": {
+      "params": {
+        "C": 0.01
+      },
+      "pooled_log_loss": 0.6850232999164834
+    },
+    "logistic_history_context": {
+      "params": {
+        "C": 0.01
+      },
+      "pooled_log_loss": 0.7305288531473302
+    },
+    "catboost_history": {
+      "params": {
+        "depth": 2,
+        "l2_leaf_reg": 10
+      },
+      "pooled_log_loss": 0.9216451605447021
+    },
+    "catboost_history_context": {
+      "params": {
+        "depth": 2,
+        "l2_leaf_reg": 10
+      },
+      "pooled_log_loss": 0.920580583473959
+    },
+    "catboost_history_country_id": {
+      "params": {
+        "depth": 2,
+        "l2_leaf_reg": 10
+      },
+      "pooled_log_loss": 0.8927975272593184
+    }
+  }
+}

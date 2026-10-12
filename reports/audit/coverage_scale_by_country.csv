@@ -1,0 +1,33 @@
+iso2,country,delivered_rows,median_cov,median_epi_cov,max_cov,looks_like_fraction_scale
+AO,Angola,86,55.65,43.525,109.51,False
+BF,Burkina Faso,173,100.58,80.22,107.64,False
+BJ,Benin,123,82.22,72.93,163.05,False
+CD,Democratic Republic of the Congo,1883,98.26,80.85,239.96,False
+CF,Central African Republic,118,85.77000000000001,76.94,161.67,False
+CG,Congo,119,83.6,46.85,149.57,False
+CI,Cote d'Ivoire,451,87.71,72.83,115.3,False
+CM,Cameroon,514,96.07,76.925,220.32,False
+ER,Eritrea,13,87.43,85.51,101.35,False
+ET,Ethiopia,489,91.91,78.29,176.07,False
+GH,Ghana,203,86.52,70.45,167.07,False
+GN,Guinea,156,93.71,74.97,117.87,False
+GQ,Equatorial Guinea,30,87.99000000000001,34.57,141.51,False
+GW,Guinea-Bissau,571,79.93,66.83,165.35,False
+KE,Kenya,144,92.755,86.72,176.01,False
+KM,Comoros,48,78.77,49.615,178.45,False
+LR,Liberia,103,85.09,71.59,141.27,False
+MG,Madagascar,449,78.65,76.3,129.37,False
+ML,Mali,153,91.26,73.1,249.35,False
+MZ,Mozambique,672,92.925,78.69,329.26,False
+NE,Niger,113,92.34,73.87,126.39,False
+NG,Nigeria,4129,89.54,71.61,350.73,False
+SL,Sierra Leone,53,94.67,78.2,126.7,False
+SN,Senegal,295,84.83,69.16,286.12,False
+SS,South Sudan,213,88.49,75.16,184.42,False
+ST,Sao Tome and Principe,21,82.31,76.27,104.09,False
+TD,Chad,215,97.49,81.63,272.36,False
+TZ,Tanzania (Mainland),296,96.21000000000001,76.92,485.93,False
+UG,Uganda,105,87.22,70.74,118.25,False
+ZM,Zambia,353,97.23,95.7,887.43,False
+ZW,Zimbabwe,92,69.295,69.155,116.9,False
+ZZ,Tanzania (Zanzibar),66,79.8,68.21000000000001,168.45,False

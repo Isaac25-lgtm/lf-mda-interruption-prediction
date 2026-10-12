@@ -1,6 +1,6 @@
 # Label audit and feasibility gate
 
-Generated 2026-10-12T14:20:08Z from the raw ESPEN LF IU-level extracts (protocol v1.0). All numbers are computed by `python -m lf_mda.cli audit`; none are typed by hand.
+Generated 2026-10-12T15:01:08Z from the raw ESPEN LF IU-level extracts (protocol v1.1). All numbers are computed by `python -m lf_mda.cli audit`; none are typed by hand.
 
 ## Gate decision: `GO_ON_PROXY_LABEL`
 
@@ -50,11 +50,11 @@ Thresholds were set by the code author after profiling the data. They are judgem
 
 ### Coverage fields (delivered rows)
 
-| delivered_rows | cov_over_100 | epi_cov_over_100 | max_cov | max_epi_cov | pop_treat_gt_pop_tot | pop_req_gt_pop_tot | cov_looks_like_fraction |
-|---|---|---|---|---|---|---|---|
-| 12449 | 2175 | 494 | 887.43 | 887.43 | 494 | 11 | 1 |
+| delivered_rows | cov_over_100 | epi_cov_over_100 | max_cov | max_epi_cov | pop_treat_gt_pop_tot | pop_req_gt_pop_tot | cov_looks_like_fraction | countries_on_fraction_scale | lowest_country_median_cov |
+|---|---|---|---|---|---|---|---|---|---|
+| 12449 | 2175 | 494 | 887.43 | 887.43 | 494 | 11 | 1 | 0 | 55.65 |
 
-Coverage is expressed as a percentage in every country file (no values in (0, 1]). Values above 100% exist and are kept as reported.
+Coverage scale was checked per country file (`coverage_scale_by_country.csv`): 0 countries have a median at or below 1.5, so every file reports percentages, not fractions (lowest country median 55.6%). Values above 100% exist and are kept as reported.
 
 ## 2. Cohort flow
 

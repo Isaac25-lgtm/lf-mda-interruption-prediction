@@ -1,2 +1,2 @@
-delivered_rows,cov_over_100,epi_cov_over_100,max_cov,max_epi_cov,pop_treat_gt_pop_tot,pop_req_gt_pop_tot,cov_looks_like_fraction
-12449,2175,494,887.43,887.43,494,11,1
+delivered_rows,cov_over_100,epi_cov_over_100,max_cov,max_epi_cov,pop_treat_gt_pop_tot,pop_req_gt_pop_tot,cov_looks_like_fraction,countries_on_fraction_scale,lowest_country_median_cov
+12449,2175,494,887.43,887.43,494,11,1,0,55.65
