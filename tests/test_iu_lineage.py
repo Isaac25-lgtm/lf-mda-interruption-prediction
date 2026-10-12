@@ -1,6 +1,5 @@
 """Lags are joins on (country, IU, year); identifiers never bleed across countries."""
 import numpy as np
-
 from conftest import panel_from_patterns
 
 

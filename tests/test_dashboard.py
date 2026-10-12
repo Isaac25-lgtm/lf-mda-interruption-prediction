@@ -9,7 +9,7 @@ AppTest = streamlit_testing.AppTest
 
 ROOT = Path(__file__).resolve().parents[1]
 DASH = ROOT / "dashboard"
-PAGES = ["page_overview", "page_quality", "page_map", "page_risk", "page_models",
+PAGES = ["page_overview", "page_scale", "page_quality", "page_map", "page_risk", "page_models",
          "page_capacity", "page_validation", "page_methods", "page_limits"]
 
 

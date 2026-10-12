@@ -27,6 +27,12 @@ that shows the problem.
 | I13 | The five predictors of `logistic_parsimonious` were chosen using all development years. | `docs/DECISIONS.md` round 1 | Its development estimates are optimistic; the locked test is the check |
 | I14 | Coverage values above 100% and populations repeated from the previous year exist in the raw data. | `reports/audit/coverage_qc.csv`, `country_year_flags.csv` | Coverage is clipped and used only as a predictor |
 | I15 | Gate thresholds were set by the code author after profiling the data. | `docs/DECISIONS.md` | They document a judgement; they do not validate the label |
+| I16 | Predicted probabilities were poorly calibrated on the test years: after the pre-specified recalibration, models predicted about twice as many interruptions as occurred. The recalibration was fitted on folds dominated by 2020-2021. | `reports/evaluation/locked_test/locked_metrics.csv` | Only rankings, not probabilities, can be discussed. The pre-specified recalibration made the Brier score worse than no recalibration |
+| I17 | The history rule's ranking within countries was unstable on the test: 0.39 in 2023 and 0.80 in 2024. | `reports/evaluation/locked_test/locked_metrics.csv` | The rule's advantage in share captured comes from ranking across countries, not within them |
+| I18 | Three models were designed after the locked test was opened. | `docs/DECISIONS.md` D19 | Labelled exploratory; they cannot support a claim of improvement |
+| I19 | The paper was reframed after the test results. | `docs/DECISIONS.md` D20 | The pre-specified prediction analysis is reported unchanged; a reader should still be told the order of events, and the manuscript says so |
+| I20 | "Population in interrupted IUs" is the population requiring treatment in those IUs, not a count of people who missed a dose. In the broad cohort it includes IUs that may have paused legitimately. | `src/lf_mda/describe.py` | Report both cohorts; describe the broad figure as an upper bound |
+| I21 | Recovery estimates for interruptions that began in 2022-2024 rest on short follow-up and shrinking denominators. | `reports/descriptive/recovery_within_years.csv` | Do not read the lower recent recovery as a confirmed trend |
 
 ## Not done
 

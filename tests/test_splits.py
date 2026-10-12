@@ -4,8 +4,14 @@ import pandas as pd
 import pytest
 
 from lf_mda.labels import load_protocol
-from lf_mda.splits import (SplitError, assert_time_forward, final_training_index,
-                           held_out_index, leave_one_country_out, rolling_origin_folds)
+from lf_mda.splits import (
+    SplitError,
+    assert_time_forward,
+    final_training_index,
+    held_out_index,
+    leave_one_country_out,
+    rolling_origin_folds,
+)
 
 
 @pytest.fixture

@@ -8,9 +8,9 @@ import json
 import numpy as np
 import pandas as pd
 import pytest
-
-import lf_mda.pipeline as pipeline
 from conftest import panel_from_patterns
+
+from lf_mda import pipeline
 from lf_mda.features import build_features, load_manifest
 from lf_mda.labels import load_protocol
 from lf_mda.model import SPEC_BY_NAME, SPECS, build_model, grid_for, rank_score

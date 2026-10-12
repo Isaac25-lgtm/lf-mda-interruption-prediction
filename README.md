@@ -1,32 +1,39 @@
-# Predicting interruptions of lymphatic filariasis mass drug administration in Africa
+# Missed rounds of lymphatic filariasis mass drug administration in Africa
+
+**Scale, country-level clustering, recovery, and the limits of district-level prediction
+from public WHO ESPEN data, 2014-2025.**
 
 [![CI](https://github.com/Isaac25-lgtm/lf-mda-interruption-prediction/actions/workflows/ci.yml/badge.svg)](https://github.com/Isaac25-lgtm/lf-mda-interruption-prediction/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.12-3776ab)
 ![Licence](https://img.shields.io/badge/code%20licence-MIT-2a78d6)
 ![Data](https://img.shields.io/badge/data-public%20WHO%20ESPEN%2C%20not%20redistributed-1baf7a)
 ![Label](https://img.shields.io/badge/outcome%20label-unverified%20proxy-eb6834)
-![Status](https://img.shields.io/badge/status-research%20in%20progress%2C%20not%20peer%20reviewed-eda100)
+![Status](https://img.shields.io/badge/status-draft%2C%20not%20peer%20reviewed-eda100)
 ![Dashboard](https://img.shields.io/badge/dashboard-runs%20locally%2C%20not%20yet%20deployed-8a8983)
 
-A multi-country feasibility audit and prediction study using public WHO ESPEN
-implementation-unit data, 2014-2025.
-
 > **Read this first.** The outcome is a WHO-reported administrative status used as a
-> proxy for a missed treatment round. No programme officer has reviewed the labels. The
-> results describe what public data can and cannot predict. They are not validated for
-> any programme decision and have not been peer reviewed.
+> proxy for a missed treatment round. No programme officer has reviewed the labels.
+> The results describe what public data show and what they cannot predict. They are
+> not validated for any programme decision and have not been peer reviewed.
 
 ## The question
 
 Lymphatic filariasis (LF) is being eliminated through repeated rounds of mass drug
 administration (MDA). When an implementation unit (IU, usually a district) misses a
-round, elimination is delayed. Before the treatment year, a programme with limited
-supervision capacity has to decide which IUs need extra attention.
+round, elimination is delayed. This study asks, across all African countries with
+public ESPEN data:
 
-**Among IUs with an active LF treatment programme, can information available at 31
-December of year t-1 identify the units that will have a reported interruption in year
-t, and does a statistical or machine-learning model do better than a simple rule based
-on treatment history?**
+1. **How often are rounds missed, and how many people live where they are missed?**
+2. **Are missed rounds local failures or country-wide ones?**
+3. **What happens afterwards?**
+4. **Can information available at 31 December of year t-1 identify the IUs that will
+   miss the round in year t, and does a statistical or machine-learning model do
+   better than a simple rule based on treatment history?**
+
+The study began as question 4 alone. The audit of the data and the test results showed
+that the first three questions carry the stronger findings, so the paper is now built
+around them, with the prediction test reported exactly as pre-specified
+([decision D20](docs/DECISIONS.md)).
 
 ## What is already known
 
@@ -36,21 +43,21 @@ on treatment history?**
 | Ng et al. 2025, [Trans R Soc Trop Med Hyg](https://doi.org/10.1093/trstmh/traf005) | Documented denominator, reporting and coverage problems in ESPEN using soil-transmitted helminthiasis data | Whether LF records share them |
 | ESPEN Implementation Unit Planner | Shows IU-level funding status for planned MDA | No predictive model; not used here |
 
-A dated search of PubMed, Europe PMC and GitHub found no study that predicts
-non-delivery of an expected LF round at IU level and tests the prediction on later
-years ([search log](docs/LITERATURE_SEARCH_LOG.md)). Several indexes were not searched,
-so this is a defensible gap, not a proven first.
+A dated search of PubMed, Europe PMC and GitHub found no study that describes or
+predicts non-delivery of expected LF rounds at IU level across countries
+([search log](docs/LITERATURE_SEARCH_LOG.md)). Several indexes were not searched, so
+this is a defensible gap, not a proven first.
 
 ## What this study adds
 
 1. **A label audit.** It separates reported non-delivery from non-reporting,
    never-started programmes, pauses for impact assessment and stops for surveillance,
    and measures how much of each is in the data.
-2. **A clustering finding.** It shows how far interruptions are country-wide events
-   rather than district-level failures, and what that does to the real sample size.
-3. **A like-for-like comparison.** A fixed history rule, logistic regression and CatBoost are
-   compared on later years and on countries left out of training, with uncertainty
-   that respects country clustering.
+2. **The anatomy of interruptions.** Population affected by year and country, the share
+   of failures that are country-wide, and how quickly treatment resumes.
+3. **A tested negative result.** A fixed history rule, logistic regression and CatBoost
+   are compared on later years and on countries left out of training, with uncertainty
+   that respects country clustering. No model improves on the rule.
 
 ## Results
 
@@ -61,13 +68,75 @@ so this is a defensible gap, not a proven first.
 - **Primary cohort:** 8,795 IU-years with 1,839 reported interruptions in 32 countries (30 with at least one event).
 - **Clustering:** 40% of interruptions occurred in country-years where every eligible IU missed the round; 61% of outcome variance lies between country-years.
 - **Locked test (2023-2024):** 705 IU-years, 130 interruptions from 11 countries and 14 country-years.
+- **Scale:** in 2021, IUs with a reported interruption held 77 million people requiring treatment (51% of the cohort's population requiring treatment), and 175 million across all active programmes. The figures for 2024 and 2025 were 5 million and 13 million.
+- **Recovery:** after an interruption that began in 2016-2019, 55% of IUs resumed MDA within one year and 75% within three. 23% of IUs had two or more interruptions and accounted for 69% of all interruptions.
+- **Country persistence:** a country where most IUs missed the round did so again the next year in 32% of cases, against 19% otherwise.
 
-No model has been evaluated.
+**Locked test 2023-2024, scenario P (95% country-cluster bootstrap intervals):**
+
+| Approach | AUROC | AUROC within country-year | Captured in top 20% |
+|---|---|---|---|
+| Country prior rate | 0.59 (0.39 to 0.81) | 0.50 (0.50 to 0.50) | 0.36 (0.12 to 0.63) |
+| History rule | 0.65 (0.43 to 0.82) | 0.50 (0.25 to 0.81) | 0.48 (0.20 to 0.68) |
+| Logistic, five predictors | 0.66 (0.44 to 0.81) | 0.68 (0.11 to 0.85) | 0.42 (0.14 to 0.63) |
+| Logistic, IU history only | 0.64 (0.43 to 0.79) | 0.67 (0.17 to 0.84) | 0.38 (0.13 to 0.59) |
+| Logistic, programme history | 0.67 (0.48 to 0.81) | 0.68 (0.19 to 0.83) | 0.41 (0.17 to 0.59) |
+| Logistic, history + context | 0.56 (0.32 to 0.76) | 0.65 (0.18 to 0.80) | 0.18 (0.02 to 0.47) |
+| CatBoost, programme history | 0.62 (0.35 to 0.81) | 0.70 (0.22 to 0.86) | 0.27 (0.01 to 0.50) |
+| CatBoost, history + context | 0.59 (0.33 to 0.78) | 0.69 (0.23 to 0.84) | 0.25 (0.00 to 0.49) |
+| CatBoost, history + country ID | 0.56 (0.31 to 0.77) | 0.73 (0.20 to 0.88) | 0.16 (0.00 to 0.44) |
+
+**Pre-specified test of improvement over the history rule: not met.** The primary candidate, chosen on development folds by pooled log loss, was Logistic, IU history only. Its share of interruptions captured at 20% capacity differed from the history rule by -0.100 (-0.291 to 0.097). The criterion was a gain of at least 0.05 with a 95% interval above zero.
+None of the other 6 approaches cleared that criterion either (exploratory, no adjustment for multiple comparisons).
+
+**Scenario E (public data only, two-year lag), same IU-years:**
+
+| Approach | AUROC | AUROC within country-year | Captured in top 20% |
+|---|---|---|---|
+| Country prior rate | 0.50 (0.32 to 0.72) | 0.50 (0.50 to 0.50) | 0.19 (0.04 to 0.43) |
+| History rule | 0.45 (0.24 to 0.65) | 0.63 (0.39 to 0.70) | 0.20 (0.05 to 0.39) |
+| Logistic, five predictors | 0.53 (0.31 to 0.71) | 0.65 (0.15 to 0.82) | 0.26 (0.05 to 0.43) |
+| Logistic, IU history only | 0.51 (0.31 to 0.69) | 0.55 (0.20 to 0.70) | 0.20 (0.03 to 0.42) |
+| Logistic, programme history | 0.55 (0.34 to 0.73) | 0.58 (0.16 to 0.76) | 0.31 (0.07 to 0.50) |
+| Logistic, history + context | 0.46 (0.24 to 0.69) | 0.55 (0.14 to 0.73) | 0.03 (0.00 to 0.47) |
+| CatBoost, programme history | 0.60 (0.40 to 0.72) | 0.61 (0.36 to 0.74) | 0.24 (0.04 to 0.44) |
+| CatBoost, history + context | 0.54 (0.30 to 0.69) | 0.62 (0.33 to 0.75) | 0.24 (0.02 to 0.44) |
+| CatBoost, history + country ID | 0.52 (0.27 to 0.73) | 0.67 (0.40 to 0.81) | 0.15 (0.00 to 0.44) |
+
+**2025 stress year, scenario P (robustness only, not part of the primary test):**
+
+| Approach | AUROC | AUROC within country-year | Captured in top 20% |
+|---|---|---|---|
+| Country prior rate | 0.73 (0.35 to 0.93) | 0.50 (0.50 to 0.50) | 0.35 (0.00 to 0.65) |
+| History rule | 0.85 (0.62 to 0.95) | 0.77 (0.32 to 0.91) | 0.52 (0.08 to 0.65) |
+| Logistic, five predictors | 0.78 (0.42 to 0.91) | 0.51 (0.12 to 0.90) | 0.47 (0.02 to 0.63) |
+| Logistic, IU history only | 0.77 (0.48 to 0.90) | 0.62 (0.12 to 0.80) | 0.43 (0.06 to 0.60) |
+| Logistic, programme history | 0.77 (0.46 to 0.91) | 0.62 (0.11 to 0.84) | 0.45 (0.05 to 0.61) |
+| Logistic, history + context | 0.70 (0.38 to 0.88) | 0.63 (0.12 to 0.83) | 0.30 (0.00 to 0.56) |
+| CatBoost, programme history | 0.65 (0.36 to 0.84) | 0.65 (0.06 to 0.94) | 0.31 (0.00 to 0.49) |
+| CatBoost, history + context | 0.63 (0.32 to 0.83) | 0.66 (0.00 to 0.96) | 0.25 (0.00 to 0.45) |
+| CatBoost, history + country ID | 0.74 (0.41 to 0.93) | 0.61 (0.12 to 0.84) | 0.32 (0.00 to 0.62) |
+
+**Exploratory, post hoc.** After the locked test was opened, three further approaches built around the country-level structure of the data were tried (a within/between-country logistic model, a country-then-district ranking, and the history rule with a term for fewer cumulative rounds). They were designed with knowledge of the test results, so they prove nothing; 0 of 3 cleared the improvement criterion. See `reports/tables/tableX_exploratory_posthoc.md`.
+
+**Countries excluded from training (leave-one-country-out, development years 2016-2022; 20 of 32 countries have enough events and non-events for a country-specific estimate):**
+
+| Approach | AUROC | AUROC within country-year | Captured in top 20% |
+|---|---|---|---|
+| Country prior rate | 0.59 (0.48 to 0.71) | 0.50 (0.50 to 0.50) | 0.29 (0.14 to 0.41) |
+| History rule | 0.59 (0.47 to 0.67) | 0.69 (0.62 to 0.75) | 0.33 (0.25 to 0.41) |
+| Logistic, IU history only | 0.68 (0.59 to 0.75) | 0.64 (0.35 to 0.66) | 0.38 (0.28 to 0.45) |
+| Logistic, programme history | 0.57 (0.47 to 0.66) | 0.70 (0.36 to 0.73) | 0.29 (0.17 to 0.37) |
+| CatBoost, programme history | 0.59 (0.45 to 0.69) | 0.66 (0.36 to 0.72) | 0.34 (0.23 to 0.45) |
+
 <!-- RESULTS:END -->
 
 Full tables: [`reports/tables/`](reports/tables). Figures:
 [`reports/figures/`](reports/figures). Label audit:
-[`reports/audit/label_audit.md`](reports/audit/label_audit.md).
+[`reports/audit/label_audit.md`](reports/audit/label_audit.md). Manuscript draft:
+[`manuscript/manuscript_draft.md`](manuscript/manuscript_draft.md).
+
+![Population living where the LF round was reported not delivered](reports/figures/fig13_burden.png)
 
 ![Interruption rate by country and year](reports/figures/fig4_country_year_heatmap.png)
 
@@ -79,13 +148,15 @@ flowchart LR
     B --> C[Status mapping and<br>IU-year panel]
     C --> D{Label gate}
     D -- not GO --> X[Stop: audit report only]
+    D -- GO on proxy --> S[Descriptive analysis:<br>scale, level, recovery]
     D -- GO on proxy --> E[As-of predictors<br>scenario P and E]
     U[UCDP conflict events<br>IU geometry] --> E
     E --> F[Rolling-origin development<br>2016-2022]
     F --> G[Locked test 2023-2024<br>scored once]
     F --> H[Leave-one-country-out<br>transport]
-    G --> I[Tables, figures,<br>dashboard]
+    G --> I[Tables, figures, manuscript,<br>dashboard]
     H --> I
+    S --> I
 ```
 
 | Element | Choice |
@@ -96,11 +167,12 @@ flowchart LR
 | Excluded and counted | Pending impact assessment, surveillance, not reported, no record, contradictory |
 | Predictors | IU treatment history; country and region programme history; conflict; population density |
 | Scenario P / E | Records up to t-1 (programme) / up to t-2 (public ESPEN lag) |
-| Approaches | Prevalence, country prior rate, fixed history rule, penalised logistic regression, CatBoost |
+| Approaches | Prevalence, country prior rate, fixed history rule, four penalised logistic models, three CatBoost models |
 | Development | Rolling origin on 2016-2022; 2020-2021 reported as COVID-19 stress years |
 | Primary test | 2023-2024, locked and scored once |
 | Stress test | 2025 (funding shock, incomplete release) |
 | Uncertainty | Bootstrap resampling whole countries; leave-one-country-out jackknife |
+| After the test | Three further models, labelled exploratory and post hoc |
 
 The protocol was frozen before any model was fitted
 ([`config/protocol.yaml`](config/protocol.yaml)); every later change is dated in
@@ -119,7 +191,7 @@ python -m pytest -q
 
 lf-mda download          # ESPEN extracts for all countries (about 6 minutes)
 lf-mda context           # IU geometry and UCDP conflict events
-lf-mda all               # audit, gate, models, evaluation, figures, dashboard data
+lf-mda all               # audit, gate, description, models, evaluation, figures, manuscript
 streamlit run dashboard/app.py
 ```
 
@@ -128,11 +200,11 @@ commands and run times are in [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.m
 
 ## Dashboard
 
-`streamlit run dashboard/app.py` opens a nine-page research dashboard: study overview
-with an Africa map, data quality, IU map, risk explorer, model comparison, capacity
-prioritisation, validation and uncertainty, methods, and limitations. It reads stored
-results only and never trains a model. A public deployment does not exist yet; the
-steps are in [`dashboard/README.md`](dashboard/README.md).
+`streamlit run dashboard/app.py` opens a ten-page research dashboard: study overview
+with an Africa map; scale, level and recovery; data quality; IU map; risk explorer;
+model comparison; capacity prioritisation; validation and uncertainty; methods; and
+limitations. It reads stored results only and never trains a model. A public deployment
+does not exist yet; the steps are in [`dashboard/README.md`](dashboard/README.md).
 
 ## Data
 
@@ -153,29 +225,34 @@ reasoning and what to do if ESPEN objects.
 
 1. The label is an unverified administrative proxy. Expert review is pending.
 2. Before 2021 ESPEN had no status for "pending impact assessment", so some legitimate
-   pauses may be counted as interruptions.
-3. Most interruptions are country-wide, so the independent evidence is far smaller than
-   the row count and intervals are wide.
+   pauses may be counted as interruptions. Population figures for all active programmes
+   are upper bounds for that reason.
+3. Most interruptions are country-wide, so the independent evidence for comparing
+   models is far smaller than the row count and intervals are wide. "No improvement
+   found" is not proof that none exists.
 4. Records are today's corrected values, not what was known at each decision date.
 5. Programmes hold funding and planning information that is not used here.
 6. Rainfall and travel-time predictors from the original concept were not used.
-7. Nothing has been tested prospectively or with users.
+7. Predicted probabilities were poorly calibrated on the test years.
+8. Nothing has been tested prospectively or with users.
 
-More detail: [`docs/ISSUES.md`](docs/ISSUES.md).
+More detail: [`docs/ISSUES.md`](docs/ISSUES.md). Assessment against the project's ten
+publication standards: [`docs/PUBLICATION_STANDARDS.md`](docs/PUBLICATION_STANDARDS.md).
 
 ## Repository map
 
 | Path | Contents |
 |---|---|
 | `config/` | Frozen protocol, feature manifest, status map, data sources, release calendar |
-| `src/lf_mda/` | Download, audit, labels, features, splits, models, evaluation, reporting |
+| `src/lf_mda/` | Download, audit, labels, description, features, splits, models, evaluation, reporting |
 | `tests/` | Unit, adversarial (leakage, label, split) and dashboard tests on synthetic data |
 | `reports/audit/` | Label audit and gate decision |
-| `reports/evaluation/` | Development, locked test, country transport, sensitivity, explanation |
+| `reports/descriptive/` | Burden, level and recovery tables |
+| `reports/evaluation/` | Development (both rounds), locked test, country transport, sensitivity, explanation, exploratory |
 | `reports/figures/`, `reports/tables/` | Publication figures and tables, generated by code |
+| `manuscript/` | Template, generated draft, captions, traceability, TRIPOD+AI tracker |
 | `dashboard/` | Streamlit app and its derived data |
 | `docs/` | Status, decisions, label rules, predictor availability, literature, ethics, issues |
-| `manuscript/` | Outline, captions, traceability, TRIPOD+AI tracker |
 
 Current state and next steps: [`docs/STATUS.md`](docs/STATUS.md).
 

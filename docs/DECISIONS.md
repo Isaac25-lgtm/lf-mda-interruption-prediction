@@ -117,3 +117,23 @@ had been computed when these changes were made.
 
 Expectation recorded before opening the locked test: on development evidence the most
 likely result is that no model shows a clear gain over the history rule.
+
+### 2026-10-12, after the locked test was opened
+
+The locked test was opened once (`reports/evaluation/locked_test/LOCK.json`). The
+pre-specified criterion for improvement over the history rule was not met by the
+primary candidate or by any other fitted model. Everything below was decided **with
+knowledge of the locked-test results** and is labelled accordingly.
+
+| # | Decision | Reason | Status of resulting evidence |
+|---|---|---|---|
+| D19 | Three further approaches were tried at the researcher's request ("propose other models based on the data"): a within/between-country logistic model, a country-then-district ranking, and the history rule with a term for fewer cumulative rounds. They live in `src/lf_mda/exploratory.py` and write to `reports/evaluation/exploratory_posthoc/`. The protocol, the lock fingerprint and Table 3 are untouched. | The audit showed about 60% of variance between country-years, so approaches built around that structure were the natural ones to try | **Exploratory, post hoc.** Tuned on development folds, but designed after the test was seen. Their held-out figures are not an independent test. None cleared the criterion |
+| D20 | The paper is reframed. The main results are now the scale of reported interruptions, their country-level clustering and recovery after them; the prediction comparison is one section with a negative result. A descriptive module (`src/lf_mda/describe.py`) was added. | The researcher asked for something publishable. A prediction-tool paper is not supported by the evidence. The descriptive findings do not depend on a held-out test and are the stronger contribution | Descriptive. Not affected by test reuse. Still subject to the proxy-label caveat |
+| D21 | A full manuscript draft is generated from a template whose every number is filled from result files (`lf-mda manuscript`). | Prevents hand-typed figures from drifting from the data | The draft is unreviewed and lists its open items |
+| D22 | No further model will be evaluated on 2023-2025 as if it were a test. Any future model claim needs data for a year that no one has yet analysed (2026 onwards). | The held-out years have now been seen by every approach in this repository | Standing rule |
+
+**Why the reframing is not outcome switching.** The prediction question, its outcome,
+cohort, test window and success criterion are reported exactly as pre-specified, with
+their negative result. The descriptive analyses answer objective 1 of the concept
+(build and audit the panel) and add burden and recovery measures that use the same
+cohort and outcome definitions. Nothing was redefined to obtain a positive result.

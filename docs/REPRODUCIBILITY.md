@@ -24,15 +24,18 @@ python -m pytest -q
 | 1 | `lf-mda download` | about 6 min | `data/raw/espen_lf/`, `data/manifests/espen_sources.csv` |
 | 2 | `lf-mda context` | about 10 min | geometry, UCDP archive, `data/processed/*.parquet` |
 | 3 | `lf-mda audit` | under 1 min | `reports/audit/`, `data/processed/panel.parquet` |
-| 4 | `lf-mda develop` | about 40 min | `reports/evaluation/development/` |
-| 5 | `lf-mda lock` | about 15 min | `reports/evaluation/locked_test/`, `models/` |
-| 6 | `lf-mda loco` | about 15 min | `reports/evaluation/country_transport/` |
+| 4 | `lf-mda develop` | about 10 min | `reports/evaluation/development/` |
+| 5 | `lf-mda lock` | about 6 min | `reports/evaluation/locked_test/`, `models/` |
+| 6 | `lf-mda loco` | about 5 min | `reports/evaluation/country_transport/` |
 | 7 | `lf-mda sensitivity` and `lf-mda explain` | a few min | `reports/evaluation/sensitivity/`, `explain/` |
-| 8 | `lf-mda report` | under 1 min | `reports/figures/`, `reports/tables/`, `manuscript/figures_and_tables.md` |
-| 9 | `lf-mda dashboard-data` | under 1 min | `dashboard/data/` |
-| 10 | `streamlit run dashboard/app.py` | | local dashboard at http://localhost:8501 |
+| 8 | `lf-mda describe` | under 1 min | `reports/descriptive/` (burden, level, recovery) |
+| 9 | `lf-mda exploratory` | about 2 min | `reports/evaluation/exploratory_posthoc/` (post hoc, not confirmatory) |
+| 10 | `lf-mda report` | under 1 min | `reports/figures/`, `reports/tables/`, `reports/RESULTS_SUMMARY.md`, README results block, `manuscript/figures_and_tables.md`, `manuscript/results_traceability.md` |
+| 11 | `lf-mda manuscript` | seconds | `reports/facts.json`, `manuscript/manuscript_draft.md` |
+| 12 | `lf-mda dashboard-data` | under 1 min | `dashboard/data/` |
+| 13 | `streamlit run dashboard/app.py` | | local dashboard at http://localhost:8501 |
 
-`lf-mda all` runs steps 3 to 9 and stops before any model is fitted if the gate is not GO.
+`lf-mda all` runs steps 3 to 12 and stops before any model is fitted if the gate is not GO.
 Steps 4 to 6 refuse to run without a GO gate decision on disk.
 
 ## Determinism

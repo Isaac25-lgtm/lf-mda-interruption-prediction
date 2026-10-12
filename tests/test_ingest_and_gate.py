@@ -3,12 +3,17 @@ import hashlib
 
 import pandas as pd
 import pytest
-
 from conftest import raw_from_patterns
+
 from lf_mda import paths
 from lf_mda.audit import GATE_RULES, evaluate_gate, variance_partition
-from lf_mda.ingest import (OPTIONAL_COLUMNS, REQUIRED_COLUMNS, SchemaError, load_sources,
-                           read_raw_file)
+from lf_mda.ingest import (
+    OPTIONAL_COLUMNS,
+    REQUIRED_COLUMNS,
+    SchemaError,
+    load_sources,
+    read_raw_file,
+)
 
 
 def _write(tmp_path, df, name="espen_lf_iu_XA_2014_2025.csv"):

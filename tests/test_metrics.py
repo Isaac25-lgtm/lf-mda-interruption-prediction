@@ -5,9 +5,20 @@ import pytest
 from sklearn.metrics import average_precision_score, roc_auc_score
 
 from lf_mda.calibrate import PlattCalibrator
-from lf_mda.evaluate import (all_metrics, auroc, brier, calibration_intercept,
-                             calibration_slope, capture_at, log_loss, observed_expected,
-                             pr_auc, precision_at, stratified_auroc, top_k_counts)
+from lf_mda.evaluate import (
+    all_metrics,
+    auroc,
+    brier,
+    calibration_intercept,
+    calibration_slope,
+    capture_at,
+    log_loss,
+    observed_expected,
+    pr_auc,
+    precision_at,
+    stratified_auroc,
+    top_k_counts,
+)
 from lf_mda.uncertainty import cluster_bootstrap, country_jackknife, point_estimates
 
 

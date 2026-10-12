@@ -4,11 +4,16 @@ import copy
 import numpy as np
 import pandas as pd
 import pytest
+from conftest import panel_from_patterns
 
 import lf_mda.features as F
-from conftest import panel_from_patterns
-from lf_mda.features import (assert_no_future_dependence, build_features,
-                             check_frame_against_manifest, load_manifest, validate_manifest)
+from lf_mda.features import (
+    assert_no_future_dependence,
+    build_features,
+    check_frame_against_manifest,
+    load_manifest,
+    validate_manifest,
+)
 
 
 def test_real_manifest_is_valid_and_has_no_outcome_year_features():

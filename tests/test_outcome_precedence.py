@@ -2,8 +2,8 @@
 import numpy as np
 import pandas as pd
 import pytest
-
 from conftest import panel_from_patterns, raw_from_patterns
+
 from lf_mda.ingest import coerce_numeric
 from lf_mda.labels import classify_rows, load_status_map
 

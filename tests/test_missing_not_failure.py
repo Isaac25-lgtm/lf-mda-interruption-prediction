@@ -1,7 +1,7 @@
 """A missing report or a missing row is a missing label, never an interruption."""
 import numpy as np
-
 from conftest import panel_from_patterns, raw_from_patterns
+
 from lf_mda.ingest import coerce_numeric
 from lf_mda.labels import analysis_set
 
