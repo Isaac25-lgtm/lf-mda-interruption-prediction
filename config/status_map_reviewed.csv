@@ -1,0 +1,9 @@
+raw_endemicity,endemicity_id,status_code,row_class,analytic_role,reviewed_by,review_date,note
+Endemic (under MDA),2,MDA,delivered,candidate negative,code author (not a programme expert),2026-10-12,"In the 2014-2025 extract every row with this status has popTreat>0 and mda=1."
+Endemic (MDA not delivered),1,ND,non_delivery,candidate positive when the IU is in the active-programme cohort,code author (not a programme expert),2026-10-12,"Rows have popReq>0 and popTreat=0. Includes never-started IUs and, before 2021, possibly pauses for impact assessment."
+Endemic (pending IA),33,IA,legitimate_pause_IA,excluded from binary outcome and counted,code author (not a programme expert),2026-10-12,"Category first appears in 2021; before 2021 such pauses cannot be told apart from non-delivery by status alone."
+Endemic (under post-intervention surveillance),3,PIS,surveillance_or_stopped,excluded from binary outcome and counted,code author (not a programme expert),2026-10-12,"MDA legitimately stopped."
+Non-endemic,0,NE,not_endemic,excluded from binary outcome and counted,code author (not a programme expert),2026-10-12,""
+Not reported,999,NR,missing_JRF,missing label - never treated as interruption,code author (not a programme expert),2026-10-12,"Occurs mostly as whole-country years. The extract has no JRF_submitted column although the dictionary lists one."
+Endemicity unknown,99,UNK,unknown,excluded and counted,code author (not a programme expert),2026-10-12,""
+Endemic (under targeted treatment),,TT,unknown,excluded and counted,code author (not a programme expert),2026-10-12,"New in 2025 (8 rows; Nigeria and Tanzania Mainland); endemicityId blank; treatment given but mda flag is 0. Meaning not documented in the dictionary."

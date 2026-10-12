@@ -1,0 +1,68 @@
+# Data sources actually used. Verified 2026-10-12.
+#
+# The ESPEN "Download data" form (public, no login, no key, no terms click-through)
+# calls the path below from the browser. The path template is published by the site
+# itself in /sites/default/files/remora_core.routes.json.js under the route name
+# `espen_doctrine.download_data`. robots.txt does not disallow /api/.
+espen_lf:
+  form_url: https://espen.afro.who.int/maps-data/data-query-tools/download-data
+  base_url: https://espen.afro.who.int
+  path_template: /api/download-data/{country}/{disease}/{level}/{from_year}/{to_year}
+  disease: lf
+  level: iu
+  from_year: 2014
+  to_year: 2025
+  dictionary_url: https://espen.afro.who.int/sites/default/files/content/document/Lymphatic_Filariasis_EN_FR_PT.pdf
+  updates_url: https://espen.afro.who.int/maps-data/data-updates
+  request_delay_seconds: 3
+  # Country codes exactly as offered by the form's country selector (48 entries).
+  # ZZ is ESPEN's own code for Tanzania (Zanzibar).
+  countries:
+    - {iso2: DZ, name: "Algeria"}
+    - {iso2: AO, name: "Angola"}
+    - {iso2: BJ, name: "Benin"}
+    - {iso2: BW, name: "Botswana"}
+    - {iso2: BF, name: "Burkina Faso"}
+    - {iso2: BI, name: "Burundi"}
+    - {iso2: CM, name: "Cameroon"}
+    - {iso2: CV, name: "Cape Verde"}
+    - {iso2: CF, name: "Central African Republic"}
+    - {iso2: TD, name: "Chad"}
+    - {iso2: KM, name: "Comoros"}
+    - {iso2: CI, name: "Cote d'Ivoire"}
+    - {iso2: CD, name: "Democratic Republic of the Congo"}
+    - {iso2: GQ, name: "Equatorial Guinea"}
+    - {iso2: ER, name: "Eritrea"}
+    - {iso2: SZ, name: "eSwatini"}
+    - {iso2: ET, name: "Ethiopia"}
+    - {iso2: GA, name: "Gabon"}
+    - {iso2: GH, name: "Ghana"}
+    - {iso2: GN, name: "Guinea"}
+    - {iso2: GW, name: "Guinea-Bissau"}
+    - {iso2: KE, name: "Kenya"}
+    - {iso2: LS, name: "Lesotho"}
+    - {iso2: LR, name: "Liberia"}
+    - {iso2: MG, name: "Madagascar"}
+    - {iso2: MW, name: "Malawi"}
+    - {iso2: ML, name: "Mali"}
+    - {iso2: MR, name: "Mauritania"}
+    - {iso2: MU, name: "Mauritius"}
+    - {iso2: MZ, name: "Mozambique"}
+    - {iso2: NA, name: "Namibia"}
+    - {iso2: NE, name: "Niger"}
+    - {iso2: NG, name: "Nigeria"}
+    - {iso2: CG, name: "Republic of the Congo"}
+    - {iso2: RW, name: "Rwanda"}
+    - {iso2: ST, name: "Sao Tome and Principe"}
+    - {iso2: SN, name: "Senegal"}
+    - {iso2: SC, name: "Seychelles"}
+    - {iso2: SL, name: "Sierra Leone"}
+    - {iso2: ZA, name: "South Africa"}
+    - {iso2: SS, name: "South Sudan"}
+    - {iso2: TZ, name: "Tanzania (Mainland)"}
+    - {iso2: ZZ, name: "Tanzania (Zanzibar)"}
+    - {iso2: GM, name: "The Gambia"}
+    - {iso2: TG, name: "Togo"}
+    - {iso2: UG, name: "Uganda"}
+    - {iso2: ZM, name: "Zambia"}
+    - {iso2: ZW, name: "Zimbabwe"}

@@ -1,0 +1,78 @@
+data_year,iso2,country_as_listed,release_date,release_type,source_url,transcribed_on
+2024,AO,Angola,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,BJ,Benin,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,BW,Botswana,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,BI,Burundi,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,CM,Cameroon,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,CF,Central African Republic,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,TD,Chad,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,CG,Congo,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,SZ,Eswatini,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,GH,Ghana,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,GN,Guinea,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,GW,Guinea-Bissau,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,KE,Kenya,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,LR,Liberia,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,ML,Mali,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,MR,Mauritania,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,MZ,Mozambique,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,NE,Niger,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,NG,Nigeria,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,RW,Rwanda,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,SN,Senegal,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,SL,Sierra Leone,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,ZA,South Africa,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,SS,South Sudan,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,TZ,Tanzania (Mainland),2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,ZZ,Tanzania (Zanzibar),2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,TG,Togo,2025-08-25,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,GA,Gabon,2025-08-25,no_mda_reported,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,ER,Eritrea,2025-08-25,no_mda_reported,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,NA,Namibia,2025-08-25,no_mda_reported,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,ZM,Zambia,2025-08-25,no_mda_reported,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,ST,Sao Tome and Principe,2025-08-25,no_mda_reported,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,GQ,Equatorial Guinea,2025-08-25,no_mda_reported,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,LS,Lesotho,2025-08-25,no_mda_reported,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,KM,Comoros,2025-08-25,no_mda_reported,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,BF,Burkina Faso,2025-12-17,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,CI,Cote d'Ivoire,2025-12-17,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,GM,The Gambia,2025-12-17,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,MG,Madagascar,2025-12-17,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,MW,Malawi,2025-12-17,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,UG,Uganda,2025-12-17,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,ZW,Zimbabwe,2025-12-17,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,CD,Democratic Republic of the Congo,2026-04-04,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2024,ET,Ethiopia,2026-06-08,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,AO,Angola,2026-06-09,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,BJ,Benin,2026-06-09,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,BF,Burkina Faso,2026-06-09,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,BI,Burundi,2026-06-09,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,CG,Congo,2026-06-09,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,CI,Cote d'Ivoire,2026-06-09,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,GA,Gabon,2026-06-09,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,GN,Guinea,2026-06-09,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,GW,Guinea-Bissau,2026-06-09,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,MW,Malawi,2026-06-09,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,MZ,Mozambique,2026-06-09,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,ST,Sao Tome and Principe,2026-06-09,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,SL,Sierra Leone,2026-06-09,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,SS,South Sudan,2026-06-09,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,ZZ,Tanzania (Zanzibar),2026-06-09,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,ZW,Zimbabwe,2026-06-09,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,CF,Central African Republic,2026-08-31,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,LR,Liberia,2026-08-31,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,NG,Nigeria,2026-08-31,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,RW,Rwanda,2026-08-31,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,TZ,Tanzania (Mainland),2026-08-31,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,TG,Togo,2026-08-31,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,UG,Uganda,2026-08-31,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,ZM,Zambia,2026-08-31,data,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,GQ,Equatorial Guinea,2026-08-31,no_mda_reported,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,BW,Botswana,2026-08-31,no_mda_reported,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,KM,Comoros,2026-08-31,no_mda_reported,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,ER,Eritrea,2026-08-31,no_mda_reported,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,SZ,Eswatini,2026-08-31,no_mda_reported,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,GM,The Gambia,2026-08-31,no_mda_reported,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,LS,Lesotho,2026-08-31,no_mda_reported,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,NA,Namibia,2026-08-31,no_mda_reported,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
+2025,ZA,South Africa,2026-08-31,no_mda_reported,https://espen.afro.who.int/maps-data/data-updates,2026-10-12
