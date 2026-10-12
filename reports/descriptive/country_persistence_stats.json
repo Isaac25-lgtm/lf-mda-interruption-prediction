@@ -1,0 +1,8 @@
+{
+  "country_year_pairs": 142,
+  "spearman_rho": 0.29814756460679076,
+  "spearman_p": 0.0003136560485865495,
+  "auroc_prev_rate_for_majority_failure": 0.6163905841325196,
+  "majority_failure_country_years": 31,
+  "min_ius_per_country_year": 5
+}

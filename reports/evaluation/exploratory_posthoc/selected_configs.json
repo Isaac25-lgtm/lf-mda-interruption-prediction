@@ -1,0 +1,16 @@
+{
+  "within_between_logistic": {
+    "params": {
+      "C": 0.01
+    },
+    "pooled_log_loss": 0.6727106804775975
+  },
+  "two_level_rank": {
+    "params": {},
+    "pooled_log_loss": 0.6855771681231905
+  },
+  "rule_plus_rounds": {
+    "params": {},
+    "pooled_log_loss": 0.6880032207649188
+  }
+}

@@ -1,0 +1,209 @@
+evaluation,model,comparator,metric,difference,ci_low,ci_high,boot_valid,interval_excludes_zero
+development folds 2019-2022,logistic_iu_only,history_rule,prevalence,0.0,0.0,0.0,1000,False
+development folds 2019-2022,logistic_iu_only,history_rule,auroc,0.08805092517088553,0.01549969334592382,0.12654934699019565,1000,True
+development folds 2019-2022,logistic_iu_only,history_rule,pr_auc,0.08426020267238765,0.00030196264015005137,0.1465148685866771,1000,True
+development folds 2019-2022,logistic_iu_only,history_rule,brier,-0.002180276393311059,-0.012532680449917047,0.004318893826200223,1000,False
+development folds 2019-2022,logistic_iu_only,history_rule,log_loss,-0.00993342443174794,-0.048660807081687824,0.013482872912733335,1000,False
+development folds 2019-2022,logistic_iu_only,history_rule,calibration_intercept,0.09291638830715765,-0.02607402055137313,0.17408770437955037,1000,False
+development folds 2019-2022,logistic_iu_only,history_rule,calibration_slope,0.3152421165271636,0.053649313887727645,0.5734012849901662,1000,True
+development folds 2019-2022,logistic_iu_only,history_rule,observed_expected_ratio,0.1687945862124245,-0.0059914458865408474,0.2812024909611681,1000,False
+development folds 2019-2022,logistic_iu_only,history_rule,capture_at_10pct,0.038806233564532916,-0.02424052796019428,0.07060578869858128,1000,False
+development folds 2019-2022,logistic_iu_only,history_rule,capture_at_20pct,0.0530364801186001,-0.025801904676711205,0.11781249278568674,1000,False
+development folds 2019-2022,logistic_iu_only,history_rule,precision_at_10pct,0.12047757072331472,-0.08745747593589873,0.21759372235134689,1000,False
+development folds 2019-2022,logistic_iu_only,history_rule,precision_at_20pct,0.08232834904962544,-0.033502034762067145,0.21590043952391835,1000,False
+development folds 2019-2022,logistic_iu_only,history_rule,within_country_year_auroc,-0.06566211235620412,-0.22163585648698275,-0.023583007313831877,1000,True
+development folds 2019-2022,within_between_logistic,history_rule,prevalence,0.0,0.0,0.0,1000,False
+development folds 2019-2022,within_between_logistic,history_rule,auroc,0.07477922220982369,-0.07090022495832149,0.156703508515463,1000,False
+development folds 2019-2022,within_between_logistic,history_rule,pr_auc,0.052002838549257024,-0.051835794163749296,0.10633307596989215,1000,False
+development folds 2019-2022,within_between_logistic,history_rule,brier,-0.006199493284236718,-0.034642007762859396,0.015806641209860035,1000,False
+development folds 2019-2022,within_between_logistic,history_rule,log_loss,-0.015554366830518918,-0.08961239792589462,0.0753267837447022,1000,False
+development folds 2019-2022,within_between_logistic,history_rule,calibration_intercept,-0.29142343054921693,-0.5838220098389982,-0.023086885441993027,1000,True
+development folds 2019-2022,within_between_logistic,history_rule,calibration_slope,-0.06035759819139963,-0.6751085364230083,0.6157081242137722,1000,False
+development folds 2019-2022,within_between_logistic,history_rule,observed_expected_ratio,-0.409657218856575,-0.8071795077745967,-0.11449562246342566,1000,True
+development folds 2019-2022,within_between_logistic,history_rule,capture_at_10pct,0.013850796844390306,-0.06673150585139012,0.06467088745522591,1000,False
+development folds 2019-2022,within_between_logistic,history_rule,capture_at_20pct,0.021663931098992284,-0.06298997727135577,0.10538340779213483,1000,False
+development folds 2019-2022,within_between_logistic,history_rule,precision_at_10pct,0.04300109036913646,-0.21141956309386808,0.20065287190423672,1000,False
+development folds 2019-2022,within_between_logistic,history_rule,precision_at_20pct,0.03362884711271352,-0.111133843299641,0.17374180673258993,1000,False
+development folds 2019-2022,within_between_logistic,history_rule,within_country_year_auroc,-0.010917315066453215,-0.19916978502424687,0.09938426568673218,1000,False
+development folds 2019-2022,two_level_rank,history_rule,prevalence,0.0,0.0,0.0,1000,False
+development folds 2019-2022,two_level_rank,history_rule,auroc,0.044014643651127505,-0.016314242766216135,0.10884557033900137,1000,False
+development folds 2019-2022,two_level_rank,history_rule,pr_auc,0.0007368145185118191,-0.05436753287584641,0.05700804596498093,1000,False
+development folds 2019-2022,two_level_rank,history_rule,brier,0.003127511051587789,-0.0078040926011602165,0.017418729405288064,1000,False
+development folds 2019-2022,two_level_rank,history_rule,log_loss,-0.0026878791849259676,-0.04080368758126839,0.03816874949837448,1000,False
+development folds 2019-2022,two_level_rank,history_rule,calibration_intercept,0.037068138389953376,-0.016057821116842886,0.11288971521328567,1000,False
+development folds 2019-2022,two_level_rank,history_rule,calibration_slope,0.16897760509520965,-0.14360281295147548,0.6341817845653192,1000,False
+development folds 2019-2022,two_level_rank,history_rule,observed_expected_ratio,0.12092008600117499,0.0393786723665415,0.29729029241454463,1000,True
+development folds 2019-2022,two_level_rank,history_rule,capture_at_10pct,-0.06957166304865779,-0.11844906898004424,-0.012691359463012742,1000,True
+development folds 2019-2022,two_level_rank,history_rule,capture_at_20pct,-0.03965514198478673,-0.10272531588667919,0.043164909756227644,1000,False
+development folds 2019-2022,two_level_rank,history_rule,precision_at_10pct,-0.21599171538625908,-0.4537668912763766,-0.04102595274304763,1000,True
+development folds 2019-2022,two_level_rank,history_rule,precision_at_20pct,-0.06155654303670549,-0.19760044945528038,0.06724336151281132,1000,False
+development folds 2019-2022,two_level_rank,history_rule,within_country_year_auroc,0.0,0.0,0.0,1000,False
+development folds 2019-2022,rule_plus_rounds,history_rule,prevalence,0.0,0.0,0.0,1000,False
+development folds 2019-2022,rule_plus_rounds,history_rule,auroc,0.03178835374803646,-0.008840753025046694,0.061332656923632274,1000,False
+development folds 2019-2022,rule_plus_rounds,history_rule,pr_auc,0.028330013413251587,0.0038149811126010746,0.05552645160115493,1000,True
+development folds 2019-2022,rule_plus_rounds,history_rule,brier,-0.0007726599356511488,-0.0035954443051805923,0.0007114484107039115,1000,False
+development folds 2019-2022,rule_plus_rounds,history_rule,log_loss,-0.00026182654319761856,-0.00802922373965928,0.004040229663794024,1000,False
+development folds 2019-2022,rule_plus_rounds,history_rule,calibration_intercept,0.01117481385222363,-0.020982565859741835,0.03435943108730433,1000,False
+development folds 2019-2022,rule_plus_rounds,history_rule,calibration_slope,0.017375407177442348,-0.02898505029216287,0.08135087143552541,1000,False
+development folds 2019-2022,rule_plus_rounds,history_rule,observed_expected_ratio,0.0024327903123064765,-0.04273995358216021,0.032929134758281915,1000,False
+development folds 2019-2022,rule_plus_rounds,history_rule,capture_at_10pct,0.02882662366956118,-0.007109953840138724,0.049874858813240226,1000,False
+development folds 2019-2022,rule_plus_rounds,history_rule,capture_at_20pct,0.03786268332715623,-0.0038791893532734434,0.06481396335557585,1000,False
+development folds 2019-2022,rule_plus_rounds,history_rule,precision_at_10pct,0.08949494122093976,-0.02195389744502465,0.18053003428256129,1000,False
+development folds 2019-2022,rule_plus_rounds,history_rule,precision_at_20pct,0.05877411551337752,-0.006131838787669164,0.10455934621041807,1000,False
+development folds 2019-2022,rule_plus_rounds,history_rule,within_country_year_auroc,-0.005323703510666022,-0.154156636459163,0.09413760193474771,1000,False
+"development folds, non-COVID (2019, 2022)",logistic_iu_only,history_rule,prevalence,0.0,0.0,0.0,1000,False
+"development folds, non-COVID (2019, 2022)",logistic_iu_only,history_rule,auroc,0.06459921173629779,-0.04308245800699811,0.13743207799298143,1000,False
+"development folds, non-COVID (2019, 2022)",logistic_iu_only,history_rule,pr_auc,0.10565369025881138,-0.05521224066170755,0.19612918620588696,1000,False
+"development folds, non-COVID (2019, 2022)",logistic_iu_only,history_rule,brier,-0.0012132405228251764,-0.006206277950528841,0.0072564387743341025,1000,False
+"development folds, non-COVID (2019, 2022)",logistic_iu_only,history_rule,log_loss,-0.007156628997114334,-0.020972273920853154,0.013278912621952863,1000,False
+"development folds, non-COVID (2019, 2022)",logistic_iu_only,history_rule,calibration_intercept,0.14129763525292371,0.023036885466963083,0.23166077544032257,1000,True
+"development folds, non-COVID (2019, 2022)",logistic_iu_only,history_rule,calibration_slope,0.33739230322151526,-0.03762783917621487,0.5693181785199569,1000,False
+"development folds, non-COVID (2019, 2022)",logistic_iu_only,history_rule,observed_expected_ratio,0.162555036191659,0.054865803925143876,0.25586749638015016,1000,True
+"development folds, non-COVID (2019, 2022)",logistic_iu_only,history_rule,capture_at_10pct,0.06377205447624182,-0.05165648379683531,0.1262356890960674,1000,False
+"development folds, non-COVID (2019, 2022)",logistic_iu_only,history_rule,capture_at_20pct,0.06675725295356238,-0.1478539207093882,0.16342341413844355,1000,False
+"development folds, non-COVID (2019, 2022)",logistic_iu_only,history_rule,precision_at_10pct,0.1437260970797528,-0.11049958330361341,0.26720047020007165,1000,False
+"development folds, non-COVID (2019, 2022)",logistic_iu_only,history_rule,precision_at_20pct,0.075226990078827,-0.1425319011324494,0.22917499417411294,1000,False
+"development folds, non-COVID (2019, 2022)",logistic_iu_only,history_rule,within_country_year_auroc,-0.08667668419734542,-0.22364872881584802,0.014102530213226492,1000,False
+"development folds, non-COVID (2019, 2022)",within_between_logistic,history_rule,prevalence,0.0,0.0,0.0,1000,False
+"development folds, non-COVID (2019, 2022)",within_between_logistic,history_rule,auroc,0.02357732518914557,-0.17932273843972754,0.12751880784209113,1000,False
+"development folds, non-COVID (2019, 2022)",within_between_logistic,history_rule,pr_auc,-0.030010045875385194,-0.23377867762416987,0.11563930773146362,1000,False
+"development folds, non-COVID (2019, 2022)",within_between_logistic,history_rule,brier,0.009741591606687,-0.023064190438980905,0.045150989850794306,1000,False
+"development folds, non-COVID (2019, 2022)",within_between_logistic,history_rule,log_loss,0.025212720418601453,-0.06620642549918292,0.1398263460073865,1000,False
+"development folds, non-COVID (2019, 2022)",within_between_logistic,history_rule,calibration_intercept,-0.11745041753523208,-0.432177388986356,0.1795733437787062,1000,False
+"development folds, non-COVID (2019, 2022)",within_between_logistic,history_rule,calibration_slope,-0.3099275446919571,-1.1808104551978085,0.30550062076507306,1000,False
+"development folds, non-COVID (2019, 2022)",within_between_logistic,history_rule,observed_expected_ratio,-0.13323901059382082,-0.49365057649992666,0.12961602489777607,1000,False
+"development folds, non-COVID (2019, 2022)",within_between_logistic,history_rule,capture_at_10pct,-0.06639421630760617,-0.24715655813337195,0.053709420826402225,1000,False
+"development folds, non-COVID (2019, 2022)",within_between_logistic,history_rule,capture_at_20pct,-0.03158003920795771,-0.37841582198289514,0.14061476385097366,1000,False
+"development folds, non-COVID (2019, 2022)",within_between_logistic,history_rule,precision_at_10pct,-0.1496357872885556,-0.4404506972147513,0.15394011745637354,1000,False
+"development folds, non-COVID (2019, 2022)",within_between_logistic,history_rule,precision_at_20pct,-0.03558671441796096,-0.4238679164526622,0.2010298766448635,1000,False
+"development folds, non-COVID (2019, 2022)",within_between_logistic,history_rule,within_country_year_auroc,-0.07480591034310047,-0.24407784110902836,0.038313387898954714,1000,False
+"development folds, non-COVID (2019, 2022)",two_level_rank,history_rule,prevalence,0.0,0.0,0.0,1000,False
+"development folds, non-COVID (2019, 2022)",two_level_rank,history_rule,auroc,0.006750800657269518,-0.10837463999583308,0.14754855197200906,1000,False
+"development folds, non-COVID (2019, 2022)",two_level_rank,history_rule,pr_auc,-0.007180872019945828,-0.0789678156016223,0.10248584801854177,1000,False
+"development folds, non-COVID (2019, 2022)",two_level_rank,history_rule,brier,0.007767669382462927,-0.004987907368447659,0.02764310248582129,1000,False
+"development folds, non-COVID (2019, 2022)",two_level_rank,history_rule,log_loss,0.017040661917888777,-0.02842324538556692,0.07144279791401759,1000,False
+"development folds, non-COVID (2019, 2022)",two_level_rank,history_rule,calibration_intercept,0.10595670545862534,-0.009384105716316489,0.20907784413634528,1000,False
+"development folds, non-COVID (2019, 2022)",two_level_rank,history_rule,calibration_slope,0.09277417490899476,-0.3198804900927409,0.8824686415530171,1000,False
+"development folds, non-COVID (2019, 2022)",two_level_rank,history_rule,observed_expected_ratio,0.13539930523106847,0.034716743577924085,0.3989036382942898,1000,True
+"development folds, non-COVID (2019, 2022)",two_level_rank,history_rule,capture_at_10pct,-0.06688076906218435,-0.16080870008064033,0.036344347300173406,1000,False
+"development folds, non-COVID (2019, 2022)",two_level_rank,history_rule,capture_at_20pct,-0.11709072804406223,-0.18382863562091503,0.11684219805256445,1000,False
+"development folds, non-COVID (2019, 2022)",two_level_rank,history_rule,precision_at_10pct,-0.1507323542568501,-0.4440216092835408,0.0703526413619302,1000,False
+"development folds, non-COVID (2019, 2022)",two_level_rank,history_rule,precision_at_20pct,-0.1319464574586462,-0.2462412574916095,0.11527127244340354,1000,False
+"development folds, non-COVID (2019, 2022)",two_level_rank,history_rule,within_country_year_auroc,0.0,0.0,0.0,1000,False
+"development folds, non-COVID (2019, 2022)",rule_plus_rounds,history_rule,prevalence,0.0,0.0,0.0,1000,False
+"development folds, non-COVID (2019, 2022)",rule_plus_rounds,history_rule,auroc,0.03531920411958889,-0.012995564680459272,0.06067891993786049,1000,False
+"development folds, non-COVID (2019, 2022)",rule_plus_rounds,history_rule,pr_auc,0.04365495533707836,-0.0018667362733076078,0.1115554047325638,1000,False
+"development folds, non-COVID (2019, 2022)",rule_plus_rounds,history_rule,brier,-0.0013818810240301127,-0.004477999394577199,0.0008659376511604107,1000,False
+"development folds, non-COVID (2019, 2022)",rule_plus_rounds,history_rule,log_loss,-0.002781127488093005,-0.010295642475533528,0.005598352840275052,1000,False
+"development folds, non-COVID (2019, 2022)",rule_plus_rounds,history_rule,calibration_intercept,0.006104955630863218,-0.021989304515372905,0.02847909070626578,1000,False
+"development folds, non-COVID (2019, 2022)",rule_plus_rounds,history_rule,calibration_slope,0.0003173949026485934,-0.06109559544531643,0.05432074256379564,1000,False
+"development folds, non-COVID (2019, 2022)",rule_plus_rounds,history_rule,observed_expected_ratio,0.0025947932684817765,-0.0418164477345727,0.023917175274192636,1000,False
+"development folds, non-COVID (2019, 2022)",rule_plus_rounds,history_rule,capture_at_10pct,0.020985039432694697,-0.017238270559982675,0.0851134548891902,1000,False
+"development folds, non-COVID (2019, 2022)",rule_plus_rounds,history_rule,capture_at_20pct,0.0463508132597118,-0.010220718722271527,0.1019166234491221,1000,False
+"development folds, non-COVID (2019, 2022)",rule_plus_rounds,history_rule,precision_at_10pct,0.047294976451629944,-0.0692387608298716,0.1519576265152757,1000,False
+"development folds, non-COVID (2019, 2022)",rule_plus_rounds,history_rule,precision_at_20pct,0.05223151065936471,-0.01100199150873199,0.13114766759309968,1000,False
+"development folds, non-COVID (2019, 2022)",rule_plus_rounds,history_rule,within_country_year_auroc,-0.06491359879789638,-0.19402093690444128,-0.0037168871899011017,1000,True
+locked test 2023-2024 (already opened; NOT an independent test),logistic_iu_only,history_rule,prevalence,0.0,0.0,0.0,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),logistic_iu_only,history_rule,auroc,-0.01754515050167227,-0.1880204670796493,0.1431364923227123,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),logistic_iu_only,history_rule,pr_auc,-0.02926543537185511,-0.20383460973755455,0.13729392808513477,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),logistic_iu_only,history_rule,brier,0.0029629609359816123,-0.009138508741384593,0.015176989807515476,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),logistic_iu_only,history_rule,log_loss,0.007160736432474113,-0.02393727972532539,0.03897617142631491,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),logistic_iu_only,history_rule,calibration_intercept,-0.007090791248724304,-0.14225770663092202,0.13624815849559205,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),logistic_iu_only,history_rule,calibration_slope,-0.24216389058507226,-1.9749560530108652,0.9565634319409229,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),logistic_iu_only,history_rule,observed_expected_ratio,-0.004171346755428629,-0.07366007642542652,0.0723263925684273,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),logistic_iu_only,history_rule,capture_at_10pct,0.013086913086913093,-0.20953262786596122,0.10735034697677488,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),logistic_iu_only,history_rule,capture_at_20pct,-0.10000000000000003,-0.27950000000000014,0.08836115142718909,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),logistic_iu_only,history_rule,precision_at_10pct,0.024131896472322,-0.2881933400627159,0.19492179074370708,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),logistic_iu_only,history_rule,precision_at_20pct,-0.09219858156028371,-0.27104935663781443,0.09380377496109267,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),logistic_iu_only,history_rule,within_country_year_auroc,0.1721491228070176,-0.18426529457605348,0.4671164903300024,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),within_between_logistic,history_rule,prevalence,0.0,0.0,0.0,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),within_between_logistic,history_rule,auroc,0.009652173913043516,-0.20727204018433426,0.24160813201778258,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),within_between_logistic,history_rule,pr_auc,-0.09564460535836977,-0.33269461218900176,0.10679352558943946,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),within_between_logistic,history_rule,brier,0.03228715155957315,-0.013200629823260247,0.0816033172968797,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),within_between_logistic,history_rule,log_loss,0.06625491948238826,-0.037099393781672686,0.17263426203806773,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),within_between_logistic,history_rule,calibration_intercept,-0.5503288582376682,-0.9040381185792545,-0.17279679944859008,1000,True
+locked test 2023-2024 (already opened; NOT an independent test),within_between_logistic,history_rule,calibration_slope,-0.7690467000440304,-2.6214678090881827,1.0877983827957354,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),within_between_logistic,history_rule,observed_expected_ratio,-0.20843218445917444,-0.3855274791541801,-0.054140073969383404,1000,True
+locked test 2023-2024 (already opened; NOT an independent test),within_between_logistic,history_rule,capture_at_10pct,-0.17152847152847153,-0.3825198091505496,0.0697842416043067,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),within_between_logistic,history_rule,capture_at_20pct,-0.23076923076923078,-0.4614483493911087,0.1333414634146341,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),within_between_logistic,history_rule,precision_at_10pct,-0.3162936354425716,-0.6729960857049705,0.11708078636258541,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),within_between_logistic,history_rule,precision_at_20pct,-0.21276595744680854,-0.48553172737955347,0.09956188332120565,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),within_between_logistic,history_rule,within_country_year_auroc,0.18896198830409355,-0.22472048267125735,0.5444302553086526,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),two_level_rank,history_rule,prevalence,0.0,0.0,0.0,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),two_level_rank,history_rule,auroc,-0.059237458193979964,-0.1775891680482459,0.09098258545048894,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),two_level_rank,history_rule,pr_auc,-0.06371811602107258,-0.23138741336323795,0.08354417752430822,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),two_level_rank,history_rule,brier,0.001084455086855396,-0.012174996017086229,0.01899252207866662,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),two_level_rank,history_rule,log_loss,0.001606585088893886,-0.03228888449513903,0.04868508524480583,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),two_level_rank,history_rule,calibration_intercept,0.2281143474915833,0.1509384683461192,0.2841938434018343,1000,True
+locked test 2023-2024 (already opened; NOT an independent test),two_level_rank,history_rule,calibration_slope,-0.0863689018103444,-2.3621284216330967,2.4046306642586686,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),two_level_rank,history_rule,observed_expected_ratio,0.13412112920499863,0.06366857824458365,0.22084531040068983,1000,True
+locked test 2023-2024 (already opened; NOT an independent test),two_level_rank,history_rule,capture_at_10pct,0.009240759240759233,-0.22355998835177635,0.11790688879407304,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),two_level_rank,history_rule,capture_at_20pct,-0.11538461538461542,-0.35979365079365083,0.125,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),two_level_rank,history_rule,precision_at_10pct,0.017039697890761707,-0.4593560246679317,0.18350639053954063,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),two_level_rank,history_rule,precision_at_20pct,-0.1063829787234043,-0.34197004473797227,0.09525566684238272,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),two_level_rank,history_rule,within_country_year_auroc,0.0,0.0,0.0,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),rule_plus_rounds,history_rule,prevalence,0.0,0.0,0.0,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),rule_plus_rounds,history_rule,auroc,0.02062876254180601,-0.051548291382018344,0.11183761560911704,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),rule_plus_rounds,history_rule,pr_auc,0.010277987650256115,-0.020737883163118587,0.06480155627196926,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),rule_plus_rounds,history_rule,brier,0.00011253935015204108,-0.001998569967193766,0.002369129475371436,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),rule_plus_rounds,history_rule,log_loss,0.00037637607712542875,-0.004368239726311896,0.006113464197778819,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),rule_plus_rounds,history_rule,calibration_intercept,-0.02605008069164033,-0.05091246187031485,-0.0026902991566297874,1000,True
+locked test 2023-2024 (already opened; NOT an independent test),rule_plus_rounds,history_rule,calibration_slope,-0.10367085759344441,-0.41497333648171325,0.14122361468221345,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),rule_plus_rounds,history_rule,observed_expected_ratio,-0.012538976321734951,-0.03460139579142745,-0.0002105516026644453,1000,True
+locked test 2023-2024 (already opened; NOT an independent test),rule_plus_rounds,history_rule,capture_at_10pct,0.020779220779220786,-0.08952693316765695,0.06696408864436762,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),rule_plus_rounds,history_rule,capture_at_20pct,0.030769230769230715,-0.028989024905023232,0.06847381474519633,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),rule_plus_rounds,history_rule,precision_at_10pct,0.03831629363544253,-0.21136833514723943,0.1075491778784559,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),rule_plus_rounds,history_rule,precision_at_20pct,0.02836879432624112,-0.02896427966887257,0.0734446935705096,1000,False
+locked test 2023-2024 (already opened; NOT an independent test),rule_plus_rounds,history_rule,within_country_year_auroc,0.11257309941520471,-0.16047236318124927,0.32183650615901455,1000,False
+2025 stress year (already seen),logistic_iu_only,history_rule,prevalence,0.0,0.0,0.0,1000,False
+2025 stress year (already seen),logistic_iu_only,history_rule,auroc,-0.08355068683707179,-0.1819035103081305,-0.02091396172887895,1000,True
+2025 stress year (already seen),logistic_iu_only,history_rule,pr_auc,-0.15480825287236255,-0.25179344409344023,0.0006026652221395628,1000,False
+2025 stress year (already seen),logistic_iu_only,history_rule,brier,0.011916081076145751,0.0026523809370921124,0.02182225629458205,1000,True
+2025 stress year (already seen),logistic_iu_only,history_rule,log_loss,0.03157749280720212,0.008777865278950034,0.055953988011451294,1000,True
+2025 stress year (already seen),logistic_iu_only,history_rule,calibration_intercept,-0.07488017360672006,-0.21468152348400188,0.03162205191154794,1000,False
+2025 stress year (already seen),logistic_iu_only,history_rule,calibration_slope,-1.5583987390792933,-4.004685750745953,0.03144309264268267,1000,False
+2025 stress year (already seen),logistic_iu_only,history_rule,observed_expected_ratio,-0.07102243702688482,-0.16654723875144983,0.0453505301967368,1000,False
+2025 stress year (already seen),logistic_iu_only,history_rule,capture_at_10pct,-0.03802816901408451,-0.16674242424242422,0.0370486111111111,1000,False
+2025 stress year (already seen),logistic_iu_only,history_rule,capture_at_20pct,-0.08450704225352107,-0.19370967741935483,0.05937352245862852,1000,False
+2025 stress year (already seen),logistic_iu_only,history_rule,precision_at_10pct,-0.11587982832618027,-0.3793211438484482,0.08778875922838769,1000,False
+2025 stress year (already seen),logistic_iu_only,history_rule,precision_at_20pct,-0.1287553648068669,-0.2328123478430228,0.06303185831294543,1000,False
+2025 stress year (already seen),logistic_iu_only,history_rule,within_country_year_auroc,-0.1540084388185654,-0.32000000000000006,-0.041341653666146616,994,True
+2025 stress year (already seen),within_between_logistic,history_rule,prevalence,0.0,0.0,0.0,1000,False
+2025 stress year (already seen),within_between_logistic,history_rule,auroc,-0.3100330377325682,-0.5395133026889312,-0.010518578454387162,1000,True
+2025 stress year (already seen),within_between_logistic,history_rule,pr_auc,-0.42412994305133433,-0.5705863090940012,-0.00972473099180705,1000,True
+2025 stress year (already seen),within_between_logistic,history_rule,brier,0.060738756843956715,-0.01187292720179693,0.13889782933696718,1000,False
+2025 stress year (already seen),within_between_logistic,history_rule,log_loss,0.13743221066364308,-0.032112953866470395,0.3080401537106847,1000,False
+2025 stress year (already seen),within_between_logistic,history_rule,calibration_intercept,-0.828217669528638,-1.3968077224396058,-0.2555883367145422,1000,True
+2025 stress year (already seen),within_between_logistic,history_rule,calibration_slope,-3.939795745686087,-8.003398129507529,-0.9993442481236043,1000,True
+2025 stress year (already seen),within_between_logistic,history_rule,observed_expected_ratio,-0.5629554377970472,-0.9009673362384764,-0.20120933721841208,1000,True
+2025 stress year (already seen),within_between_logistic,history_rule,capture_at_10pct,-0.1971830985915493,-0.42112102242212673,0.04764808362369335,1000,False
+2025 stress year (already seen),within_between_logistic,history_rule,capture_at_20pct,-0.3464788732394366,-0.5,0.1628875968992247,1000,False
+2025 stress year (already seen),within_between_logistic,history_rule,precision_at_10pct,-0.6008583690987125,-0.9152542372881356,0.06428571428571411,1000,False
+2025 stress year (already seen),within_between_logistic,history_rule,precision_at_20pct,-0.5278969957081545,-0.7672110297110297,0.1131170824082537,1000,False
+2025 stress year (already seen),within_between_logistic,history_rule,within_country_year_auroc,-0.2046413502109704,-0.4173166926677067,0.07999999999999996,994,False
+2025 stress year (already seen),two_level_rank,history_rule,prevalence,0.0,0.0,0.0,1000,False
+2025 stress year (already seen),two_level_rank,history_rule,auroc,-0.10563380281690138,-0.3103132818476934,0.06659541741035792,1000,False
+2025 stress year (already seen),two_level_rank,history_rule,pr_auc,-0.12828192862513454,-0.2529882883499916,0.07645418407132827,1000,False
+2025 stress year (already seen),two_level_rank,history_rule,brier,0.02399498406892908,0.0029522536314209877,0.05200848957895814,1000,True
+2025 stress year (already seen),two_level_rank,history_rule,log_loss,0.06222452809147516,0.011216275377638137,0.12737151552857767,1000,True
+2025 stress year (already seen),two_level_rank,history_rule,calibration_intercept,0.09206311641744896,-0.020295742162453053,0.194018601602996,1000,False
+2025 stress year (already seen),two_level_rank,history_rule,calibration_slope,1.4476962690701152,-5.697929928441591,14.067922117584605,1000,False
+2025 stress year (already seen),two_level_rank,history_rule,observed_expected_ratio,0.11462086669532012,-0.0135560170409565,0.38649396248767454,1000,False
+2025 stress year (already seen),two_level_rank,history_rule,capture_at_10pct,-0.07042253521126762,-0.22637218045112786,0.05111538461538466,1000,False
+2025 stress year (already seen),two_level_rank,history_rule,capture_at_20pct,-0.1690140845070422,-0.41385811192764266,0.06957027300303341,1000,False
+2025 stress year (already seen),two_level_rank,history_rule,precision_at_10pct,-0.2145922746781116,-0.6410642570281125,0.1282051282051282,1000,False
+2025 stress year (already seen),two_level_rank,history_rule,precision_at_20pct,-0.2575107296137339,-0.5346952952825066,0.0936506253974984,1000,False
+2025 stress year (already seen),two_level_rank,history_rule,within_country_year_auroc,0.0,0.0,0.0,994,False
+2025 stress year (already seen),rule_plus_rounds,history_rule,prevalence,0.0,0.0,0.0,1000,False
+2025 stress year (already seen),rule_plus_rounds,history_rule,auroc,-0.006259780907668211,-0.050770717982216745,0.008995058566768185,1000,False
+2025 stress year (already seen),rule_plus_rounds,history_rule,pr_auc,-0.0022045795432270587,-0.028333008088978998,0.009459819314795418,1000,False
+2025 stress year (already seen),rule_plus_rounds,history_rule,brier,-0.0034804186797683934,-0.010588314042708106,0.0018782982651070635,1000,False
+2025 stress year (already seen),rule_plus_rounds,history_rule,log_loss,-0.0076550751928676775,-0.02381894981062889,0.004715937798531528,1000,False
+2025 stress year (already seen),rule_plus_rounds,history_rule,calibration_intercept,-0.02243788028936694,-0.044048593681557814,0.0038081938196913687,1000,False
+2025 stress year (already seen),rule_plus_rounds,history_rule,calibration_slope,-0.46607148286649247,-1.5421484124019595,-0.17054361822929479,1000,True
+2025 stress year (already seen),rule_plus_rounds,history_rule,observed_expected_ratio,-0.025682274135859995,-0.07208824298914668,0.002320011588245778,1000,False
+2025 stress year (already seen),rule_plus_rounds,history_rule,capture_at_10pct,0.0,-0.035492788461538444,0.011595045500505568,1000,False
+2025 stress year (already seen),rule_plus_rounds,history_rule,capture_at_20pct,-0.014084507042253502,-0.06666666666666665,0.015886026541764235,1000,False
+2025 stress year (already seen),rule_plus_rounds,history_rule,precision_at_10pct,0.0,-0.059895833333333426,0.03817159486414559,1000,False
+2025 stress year (already seen),rule_plus_rounds,history_rule,precision_at_20pct,-0.02145922746781115,-0.05358349420849418,0.023255813953488302,1000,False
+2025 stress year (already seen),rule_plus_rounds,history_rule,within_country_year_auroc,-0.10759493670886078,-0.2588235294117647,0.0,994,False

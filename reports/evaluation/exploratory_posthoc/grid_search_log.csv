@@ -1,0 +1,6 @@
+model,params,pooled_log_loss
+within_between_logistic,"{""C"": 0.001}",0.6757374499743539
+within_between_logistic,"{""C"": 0.01}",0.6727106804775975
+within_between_logistic,"{""C"": 0.1}",0.6938959281341716
+two_level_rank,{},0.6855771681231905
+rule_plus_rounds,{},0.6880032207649188
