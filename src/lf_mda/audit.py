@@ -15,7 +15,7 @@ import numpy as np
 import pandas as pd
 
 from . import paths
-from .ingest import OPTIONAL_COLUMNS, coerce_numeric, load_raw
+from .ingest import coerce_numeric, load_raw
 from .labels import analysis_set, build_panel, classify_rows, country_year_flags, load_protocol
 
 GATE_RULES = {
@@ -349,14 +349,14 @@ def run_audit(out_dir: Path | None = None, raw_dir: Path | None = None) -> dict:
     w = windows[windows["cohort"] == "primary"].set_index("window")
     hp = hind.set_index("cohort")
     metrics = {
-        "n_raw_rows": int(len(raw)), "n_countries": int(obs["iso2"].nunique()),
+        "n_raw_rows": len(raw), "n_countries": int(obs["iso2"].nunique()),
         "n_ius": int(obs["iu_key"].nunique()),
         "contradiction_share": float((dn["contradiction"] != "").mean()),
         "n_contradictory_rows": int((obs["row_class"] == "contradictory").sum()),
         "n_not_reported_rows": int((obs["row_class"] == "missing_JRF").sum()),
         "missing_jrf_in_positive": int(((prim["y"] == 1) & (prim["row_class"] != "non_delivery")).sum()),
         "n_unmapped_status_rows": int((~obs["status_mapped"]).sum()),
-        "primary_n": int(len(prim)), "primary_events": int(prim["y"].sum()),
+        "primary_n": len(prim), "primary_events": int(prim["y"].sum()),
         "primary_countries": int(prim["iso2"].nunique()),
         "primary_event_countries": int(prim.loc[prim["y"] == 1, "iso2"].nunique()),
         "dev_events": int(w.loc["development", "events"]),
@@ -376,7 +376,7 @@ def run_audit(out_dir: Path | None = None, raw_dir: Path | None = None) -> dict:
         "events_in_mixed_country_years": int(cy.loc[cy["mixed"], "events"].sum()),
         "mixed_country_years": int(cy["mixed"].sum()),
         "country_years_with_events": int((cy["events"] > 0).sum()),
-        "country_years_total": int(len(cy)),
+        "country_years_total": len(cy),
         "events_in_whole_country_failures": int(cy.loc[cy["rate"] == 1, "events"].sum()),
         "events_in_majority_failure_country_years": int(cy.loc[cy["rate"] > 0.5, "events"].sum()),
         "within_country_year_variance_share":
@@ -454,8 +454,8 @@ def write_markdown(out_dir, result, flow, windows, hind, bands, vp, by_country, 
         "- The dictionary lists `JRF_submitted`, `PopNoTx` and `Alt_ADMIN2`; the extract has no "
         "`JRF_submitted` or `PopNoTx` column. Non-reporting is identified from the status "
         "value `Not reported` instead.",
-        f"- No numeric field had blank or unparseable values except `endemicityId` "
-        f"(blank for the 2025 status `Endemic (under targeted treatment)`).",
+        "- No numeric field had blank or unparseable values except `endemicityId` "
+        "(blank for the 2025 status `Endemic (under targeted treatment)`).",
         "",
         "### Status values actually present",
         "",

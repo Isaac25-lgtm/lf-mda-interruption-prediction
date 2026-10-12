@@ -24,12 +24,15 @@ from sklearn.model_selection import GroupKFold
 from . import paths
 from .calibrate import PlattCalibrator
 from .evaluate import log_loss
-from .features import (build_features, check_frame_against_manifest, load_context,
-                       load_manifest)
+from .features import build_features, check_frame_against_manifest, load_context, load_manifest
 from .labels import load_protocol
 from .model import SPEC_BY_NAME, SPECS, build_model, grid_for, rank_score
-from .splits import (final_training_index, held_out_index, leave_one_country_out,
-                     rolling_origin_folds, usable)
+from .splits import (
+    final_training_index,
+    held_out_index,
+    leave_one_country_out,
+    rolling_origin_folds,
+)
 from .uncertainty import cluster_bootstrap, country_jackknife, point_estimates
 
 DEV_DIR = paths.EVALUATION / "development"
@@ -42,8 +45,16 @@ LOCO_MODELS = ["country_prior_rate", "history_rule", "logistic_iu_only", "logist
 
 
 # ------------------------------------------------------------------ helpers
+TEXT_SUFFIXES = {".yaml", ".yml", ".csv", ".json", ".md"}
+
+
 def sha256_file(path: Path) -> str:
-    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+    """SHA-256 of a file. Text files are hashed with LF line endings so that the same
+    content gives the same fingerprint on Windows and on a fresh Git checkout."""
+    data = Path(path).read_bytes()
+    if Path(path).suffix.lower() in TEXT_SUFFIXES:
+        data = data.replace(b"\r\n", b"\n")
+    return hashlib.sha256(data).hexdigest()
 
 
 def frame_digest(df: pd.DataFrame) -> str:

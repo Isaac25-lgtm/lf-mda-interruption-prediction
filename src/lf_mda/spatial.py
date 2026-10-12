@@ -109,8 +109,7 @@ def download_ucdp(force: bool = False, max_attempts: int = 30) -> Path:
                 resp.raise_for_status()
                 last_modified = resp.headers.get("Last-Modified", last_modified)
                 with open(part, "ab" if resp.status_code == 206 else "wb") as fh:
-                    for chunk in resp.iter_content(1 << 16):
-                        fh.write(chunk)
+                    fh.writelines(resp.iter_content(1 << 16))
         except requests.RequestException:
             time.sleep(3)
     if part.stat().st_size != total:
@@ -291,8 +290,8 @@ def build_conflict_tables() -> tuple[pd.DataFrame, pd.DataFrame, dict]:
                                  "iu_conflict_deaths": float(r.iu_conflict_deaths)})
     iu = pd.DataFrame(rows, columns=["iso2", "iu_id", "year", "iu_conflict_events",
                                      "iu_conflict_deaths"])
-    info = {"ucdp_version": UCDP_VERSION, "n_events_africa": int(len(ged)),
-            "n_events_precise": int(len(precise)), "unmapped_countries": unmapped,
+    info = {"ucdp_version": UCDP_VERSION, "n_events_africa": len(ged),
+            "n_events_precise": len(precise), "unmapped_countries": unmapped,
             "max_year": int(ged["year"].max())}
     return iu, ctry, info
 
@@ -310,7 +309,7 @@ def build_context(out_dir: Path | None = None) -> dict:
     iu, ctry, info = build_conflict_tables()
     iu.to_parquet(out_dir / "conflict_iu_year.parquet", index=False)
     ctry.to_parquet(out_dir / "conflict_country_year.parquet", index=False)
-    info["n_iu_with_geometry"] = int(len(geo))
+    info["n_iu_with_geometry"] = len(geo)
     (out_dir / "context_info.json").write_text(json.dumps(info, indent=2), encoding="utf-8")
     return info
 

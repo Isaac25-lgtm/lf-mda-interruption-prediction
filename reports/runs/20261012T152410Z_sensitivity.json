@@ -1,0 +1,32 @@
+{
+  "step": "sensitivity",
+  "utc": "2026-10-12T15:24:10Z",
+  "git_commit": "b61bf3e2593319ffcd305cd1055188d2670aa2b5",
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "pandas": "2.3.3",
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "catboost": "1.2.10"
+  },
+  "protocol_sha256": "72ab4ec58121e0bdd0a02050a4c97b91538ce32d8141bb226bc69604b661c154",
+  "features_sha256": "e1b260ef2d545f349d720bf4641927796011711a7cf43227a596baaa5dce2cff",
+  "status_map_sha256": "ddcdf8c4767ac3e2674cff78ace1f103ec174ca3da063987270905f8b5061d13",
+  "raw_manifest_sha256": "ec45a81c753e039d4bb0a3ef681ff5252d96f73d56031a834316001aa4c344d9",
+  "analyses": [
+    "primary: locked test 2023-2024",
+    "incident cohort (delivered at t-1)",
+    "strict cohort (<5 rounds incl. pre-2014)",
+    "broad cohort (no round restriction; model extrapolates)",
+    "mixed country-years only (both outcomes present)",
+    "excluding carried-forward country-years",
+    "missing labels counted as interruptions",
+    "missing labels counted as delivered",
+    "stress 2025 (all)",
+    "stress 2025, countries in ESPEN release log only",
+    "development folds: all events",
+    "development folds: excluding events later moved to IA/surveillance",
+    "development folds: non-COVID years"
+  ]
+}

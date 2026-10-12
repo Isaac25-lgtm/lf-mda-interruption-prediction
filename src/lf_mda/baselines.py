@@ -9,7 +9,7 @@ from sklearn.linear_model import LogisticRegression
 class PrevalenceModel:
     """No-skill baseline: every unit gets the training prevalence."""
 
-    def fit(self, X: pd.DataFrame, y) -> "PrevalenceModel":
+    def fit(self, X: pd.DataFrame, y) -> PrevalenceModel:
         self.p_ = float(np.mean(y))
         return self
 
@@ -31,7 +31,7 @@ class SingleScoreModel:
     def _x(self, X: pd.DataFrame) -> np.ndarray:
         return X[self.column].fillna(self.fill_).to_numpy(dtype=float).reshape(-1, 1)
 
-    def fit(self, X: pd.DataFrame, y) -> "SingleScoreModel":
+    def fit(self, X: pd.DataFrame, y) -> SingleScoreModel:
         self.fill_ = float(X[self.column].median())
         self.model_ = LogisticRegression(C=1e6, max_iter=1000).fit(self._x(X), np.asarray(y))
         return self

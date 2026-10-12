@@ -25,6 +25,10 @@ def main(argv: list[str] | None = None) -> None:
     lo.add_argument("--n-boot", type=int, default=1000)
     sub.add_parser("sensitivity", help="sensitivity analyses from saved predictions")
     sub.add_parser("explain", help="coefficients and SHAP importance")
+    sub.add_parser("describe", help="descriptive burden, level and recovery analyses")
+    ex = sub.add_parser("exploratory", help="EXPLORATORY post hoc models (not confirmatory)")
+    ex.add_argument("--n-boot", type=int, default=1000)
+    sub.add_parser("manuscript", help="fill the manuscript template from result files")
     sub.add_parser("report", help="render paper tables and figures from saved results")
     sub.add_parser("dashboard-data", help="build the compact dataset the dashboard reads")
     sub.add_parser("all", help="audit -> develop -> lock -> loco -> sensitivity -> explain -> "
@@ -63,6 +67,15 @@ def main(argv: list[str] | None = None) -> None:
     elif args.step == "explain":
         from .pipeline import run_explain
         run_explain()
+    elif args.step == "describe":
+        from .describe import run_descriptive
+        print(json.dumps(run_descriptive(), indent=2))
+    elif args.step == "exploratory":
+        from .exploratory import run_exploratory
+        print(run_exploratory(args.n_boot).to_string(index=False))
+    elif args.step == "manuscript":
+        from .manuscript import render_manuscript
+        print(render_manuscript())
     elif args.step == "report":
         from .render_paper import render_all
         render_all()
@@ -77,15 +90,26 @@ def main(argv: list[str] | None = None) -> None:
             print("Gate is not GO: stopping before any model is fitted.", file=sys.stderr)
             sys.exit(2)
         from .dashboard_data import build_dashboard_data
-        from .pipeline import (run_development, run_explain, run_locked_test, run_loco,
-                               run_sensitivity)
+        from .describe import run_descriptive
+        from .exploratory import run_exploratory
+        from .manuscript import render_manuscript
+        from .pipeline import (
+            run_development,
+            run_explain,
+            run_locked_test,
+            run_loco,
+            run_sensitivity,
+        )
         from .render_paper import render_all
+        run_descriptive()
         run_development()
         run_locked_test()
         run_loco()
         run_sensitivity()
         run_explain()
+        run_exploratory()
         render_all()
+        render_manuscript()
         build_dashboard_data()
 
 

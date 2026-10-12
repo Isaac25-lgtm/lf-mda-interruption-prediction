@@ -369,8 +369,8 @@ NA,Namibia,2020,34,0,0,0,34,0,0.0,False,False,,
 NA,Namibia,2021,34,0,0,0,34,0,0.0,False,False,,
 NA,Namibia,2022,34,0,0,0,34,0,0.0,False,False,,
 NA,Namibia,2023,34,0,0,0,34,0,0.0,False,False,,
-NA,Namibia,2024,34,0,0,0,34,34,1.0,True,False,,
-NA,Namibia,2025,34,0,0,0,34,34,1.0,True,False,,
+NA,Namibia,2024,34,0,0,0,34,34,1.0,True,False,2025-08-25,no_mda_reported
+NA,Namibia,2025,34,0,0,0,34,34,1.0,True,False,2026-08-31,no_mda_reported
 NE,Niger,2014,42,28,0,0,0,0,,False,False,,
 NE,Niger,2015,42,23,0,0,42,0,0.0,False,False,,
 NE,Niger,2016,42,0,12,0,42,31,0.7380952380952381,False,False,,

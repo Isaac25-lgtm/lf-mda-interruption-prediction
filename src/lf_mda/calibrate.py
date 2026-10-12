@@ -10,7 +10,7 @@ from .evaluate import _logit
 class PlattCalibrator:
     """Logistic recalibration p' = sigmoid(a + b * logit(p)). Monotone when b > 0."""
 
-    def fit(self, p, y) -> "PlattCalibrator":
+    def fit(self, p, y) -> PlattCalibrator:
         self.model_ = LogisticRegression(C=1e6, max_iter=1000).fit(
             _logit(p).reshape(-1, 1), np.asarray(y))
         self.intercept_ = float(self.model_.intercept_[0])
@@ -24,7 +24,7 @@ class PlattCalibrator:
         return {"intercept": self.intercept_, "slope": self.slope_}
 
     @classmethod
-    def from_dict(cls, d: dict) -> "PlattCalibrator":
+    def from_dict(cls, d: dict) -> PlattCalibrator:
         obj = cls()
         obj.intercept_, obj.slope_ = d["intercept"], d["slope"]
         obj.model_ = None

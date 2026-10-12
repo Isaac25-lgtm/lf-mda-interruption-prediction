@@ -71,7 +71,7 @@ class LogisticModel:
         self.features, self.cat, self.C = features, cat, C
         self.num = [f for f in features if f not in cat]
 
-    def fit(self, X: pd.DataFrame, y) -> "LogisticModel":
+    def fit(self, X: pd.DataFrame, y) -> LogisticModel:
         pre = ColumnTransformer([
             ("num", Pipeline([("imp", SimpleImputer(strategy="median", add_indicator=True)),
                               ("sc", StandardScaler())]), self.num),
@@ -105,7 +105,7 @@ class CatBoostModel:
             Z[c] = Z[c].fillna("none").astype(str)
         return Z
 
-    def fit(self, X: pd.DataFrame, y) -> "CatBoostModel":
+    def fit(self, X: pd.DataFrame, y) -> CatBoostModel:
         from catboost import CatBoostClassifier
         self.model_ = CatBoostClassifier(
             loss_function="Logloss", verbose=0, allow_writing_files=False, thread_count=4,

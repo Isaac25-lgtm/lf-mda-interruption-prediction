@@ -166,7 +166,7 @@ def all_metrics(y, p, rank_score=None, strata=None) -> dict:
     s = p if rank_score is None else rank_score
     yv, _ = _valid(y, p)
     out = {
-        "n": int(len(yv)), "events": int(yv.sum()),
+        "n": len(yv), "events": int(yv.sum()),
         "prevalence": float(yv.mean()) if len(yv) else float("nan"),
         "auroc": auroc(y, s), "pr_auc": pr_auc(y, s), "brier": brier(y, p),
         "log_loss": log_loss(y, p), "calibration_intercept": calibration_intercept(y, p),

@@ -1,6 +1,6 @@
 # Label audit and feasibility gate
 
-Generated 2026-10-12T15:01:08Z from the raw ESPEN LF IU-level extracts (protocol v1.1). All numbers are computed by `python -m lf_mda.cli audit`; none are typed by hand.
+Generated 2026-10-12T15:13:56Z from the raw ESPEN LF IU-level extracts (protocol v1.1). All numbers are computed by `python -m lf_mda.cli audit`; none are typed by hand.
 
 ## Gate decision: `GO_ON_PROXY_LABEL`
 

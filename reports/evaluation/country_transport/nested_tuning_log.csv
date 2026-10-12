@@ -1,0 +1,161 @@
+held_out_country,model,params
+AO,country_prior_rate,{}
+AO,history_rule,{}
+AO,logistic_iu_only,"{""C"": 0.01}"
+AO,logistic_history,"{""C"": 0.001}"
+AO,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+BF,country_prior_rate,{}
+BF,history_rule,{}
+BF,logistic_iu_only,"{""C"": 0.01}"
+BF,logistic_history,"{""C"": 0.001}"
+BF,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+BJ,country_prior_rate,{}
+BJ,history_rule,{}
+BJ,logistic_iu_only,"{""C"": 0.01}"
+BJ,logistic_history,"{""C"": 0.001}"
+BJ,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+CD,country_prior_rate,{}
+CD,history_rule,{}
+CD,logistic_iu_only,"{""C"": 0.1}"
+CD,logistic_history,"{""C"": 0.01}"
+CD,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+CF,country_prior_rate,{}
+CF,history_rule,{}
+CF,logistic_iu_only,"{""C"": 0.1}"
+CF,logistic_history,"{""C"": 0.001}"
+CF,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+CG,country_prior_rate,{}
+CG,history_rule,{}
+CG,logistic_iu_only,"{""C"": 0.01}"
+CG,logistic_history,"{""C"": 0.001}"
+CG,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+CI,country_prior_rate,{}
+CI,history_rule,{}
+CI,logistic_iu_only,"{""C"": 0.1}"
+CI,logistic_history,"{""C"": 0.01}"
+CI,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+CM,country_prior_rate,{}
+CM,history_rule,{}
+CM,logistic_iu_only,"{""C"": 0.1}"
+CM,logistic_history,"{""C"": 0.001}"
+CM,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+ER,country_prior_rate,{}
+ER,history_rule,{}
+ER,logistic_iu_only,"{""C"": 0.1}"
+ER,logistic_history,"{""C"": 0.001}"
+ER,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+ET,country_prior_rate,{}
+ET,history_rule,{}
+ET,logistic_iu_only,"{""C"": 0.01}"
+ET,logistic_history,"{""C"": 0.01}"
+ET,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+GH,country_prior_rate,{}
+GH,history_rule,{}
+GH,logistic_iu_only,"{""C"": 0.01}"
+GH,logistic_history,"{""C"": 0.001}"
+GH,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+GN,country_prior_rate,{}
+GN,history_rule,{}
+GN,logistic_iu_only,"{""C"": 0.01}"
+GN,logistic_history,"{""C"": 0.001}"
+GN,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+GQ,country_prior_rate,{}
+GQ,history_rule,{}
+GQ,logistic_iu_only,"{""C"": 0.1}"
+GQ,logistic_history,"{""C"": 0.001}"
+GQ,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+GW,country_prior_rate,{}
+GW,history_rule,{}
+GW,logistic_iu_only,"{""C"": 0.1}"
+GW,logistic_history,"{""C"": 0.001}"
+GW,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+KE,country_prior_rate,{}
+KE,history_rule,{}
+KE,logistic_iu_only,"{""C"": 0.1}"
+KE,logistic_history,"{""C"": 0.001}"
+KE,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+KM,country_prior_rate,{}
+KM,history_rule,{}
+KM,logistic_iu_only,"{""C"": 0.01}"
+KM,logistic_history,"{""C"": 0.001}"
+KM,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+LR,country_prior_rate,{}
+LR,history_rule,{}
+LR,logistic_iu_only,"{""C"": 0.01}"
+LR,logistic_history,"{""C"": 0.001}"
+LR,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+MG,country_prior_rate,{}
+MG,history_rule,{}
+MG,logistic_iu_only,"{""C"": 0.01}"
+MG,logistic_history,"{""C"": 0.001}"
+MG,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+ML,country_prior_rate,{}
+ML,history_rule,{}
+ML,logistic_iu_only,"{""C"": 0.01}"
+ML,logistic_history,"{""C"": 0.001}"
+ML,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+MZ,country_prior_rate,{}
+MZ,history_rule,{}
+MZ,logistic_iu_only,"{""C"": 0.1}"
+MZ,logistic_history,"{""C"": 0.001}"
+MZ,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+NE,country_prior_rate,{}
+NE,history_rule,{}
+NE,logistic_iu_only,"{""C"": 0.1}"
+NE,logistic_history,"{""C"": 0.001}"
+NE,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+NG,country_prior_rate,{}
+NG,history_rule,{}
+NG,logistic_iu_only,"{""C"": 0.1}"
+NG,logistic_history,"{""C"": 0.001}"
+NG,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+SL,country_prior_rate,{}
+SL,history_rule,{}
+SL,logistic_iu_only,"{""C"": 0.01}"
+SL,logistic_history,"{""C"": 0.001}"
+SL,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+SN,country_prior_rate,{}
+SN,history_rule,{}
+SN,logistic_iu_only,"{""C"": 0.1}"
+SN,logistic_history,"{""C"": 0.001}"
+SN,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+SS,country_prior_rate,{}
+SS,history_rule,{}
+SS,logistic_iu_only,"{""C"": 0.01}"
+SS,logistic_history,"{""C"": 0.001}"
+SS,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+ST,country_prior_rate,{}
+ST,history_rule,{}
+ST,logistic_iu_only,"{""C"": 0.1}"
+ST,logistic_history,"{""C"": 0.001}"
+ST,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+TD,country_prior_rate,{}
+TD,history_rule,{}
+TD,logistic_iu_only,"{""C"": 0.1}"
+TD,logistic_history,"{""C"": 0.001}"
+TD,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+TZ,country_prior_rate,{}
+TZ,history_rule,{}
+TZ,logistic_iu_only,"{""C"": 0.01}"
+TZ,logistic_history,"{""C"": 0.001}"
+TZ,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+UG,country_prior_rate,{}
+UG,history_rule,{}
+UG,logistic_iu_only,"{""C"": 0.01}"
+UG,logistic_history,"{""C"": 0.001}"
+UG,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+ZM,country_prior_rate,{}
+ZM,history_rule,{}
+ZM,logistic_iu_only,"{""C"": 0.01}"
+ZM,logistic_history,"{""C"": 0.001}"
+ZM,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+ZW,country_prior_rate,{}
+ZW,history_rule,{}
+ZW,logistic_iu_only,"{""C"": 0.01}"
+ZW,logistic_history,"{""C"": 0.001}"
+ZW,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
+ZZ,country_prior_rate,{}
+ZZ,history_rule,{}
+ZZ,logistic_iu_only,"{""C"": 0.01}"
+ZZ,logistic_history,"{""C"": 0.001}"
+ZZ,catboost_history,"{""depth"": 1, ""l2_leaf_reg"": 30}"
