@@ -1,0 +1,18 @@
+step,n
+"IU-year cells in grid, 2014-2025",74832
+... of which a row exists in the extract,65454
+Target years 2016-2025 (cells),62360
+Requiring MDA at t-1 (under MDA or MDA not delivered),15819
+  excluded: no delivery in t-1 or t-2 (never started / long lapsed),2858
+Broad cohort: delivered MDA in t-1 or t-2,12961
+  excluded: >=5 observed effective rounds at t-1 (due for impact assessment),3503
+Primary cohort (expected-round cohort),9458
+  outcome year class: delivered (outcome),6956
+  outcome year class: reported_interruption (outcome),1839
+"  outcome year class: surveillance_or_stopped (excluded, counted)",465
+"  outcome year class: legitimate_pause_IA (excluded, counted)",76
+"  outcome year class: missing_JRF (excluded, counted)",71
+"  outcome year class: missing_iu_year (excluded, counted)",32
+"  outcome year class: contradictory (excluded, counted)",19
+Primary analysis set (binary outcome available),8795
+  reported interruptions (events),1839

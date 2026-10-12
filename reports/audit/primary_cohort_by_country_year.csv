@@ -1,0 +1,221 @@
+iso2,country,year,window,n,events
+AO,Angola,2017,development,1,0.0
+AO,Angola,2018,development,1,0.0
+AO,Angola,2019,development,1,0.0
+AO,Angola,2020,development,1,0.0
+AO,Angola,2021,development,33,33.0
+AO,Angola,2022,development,33,33.0
+AO,Angola,2024,locked_test,24,4.0
+AO,Angola,2025,shock_stress_2025,28,28.0
+BF,Burkina Faso,2016,development,30,0.0
+BF,Burkina Faso,2017,development,24,0.0
+BF,Burkina Faso,2018,development,10,0.0
+BF,Burkina Faso,2019,development,3,0.0
+BF,Burkina Faso,2020,development,1,0.0
+BF,Burkina Faso,2021,development,1,1.0
+BF,Burkina Faso,2022,development,1,0.0
+BJ,Benin,2016,development,25,0.0
+BJ,Benin,2017,development,25,0.0
+BJ,Benin,2018,development,16,1.0
+BJ,Benin,2019,development,3,0.0
+BJ,Benin,2020,development,1,0.0
+CD,Democratic Republic of the Congo,2016,development,76,0.0
+CD,Democratic Republic of the Congo,2017,development,115,0.0
+CD,Democratic Republic of the Congo,2018,development,216,0.0
+CD,Democratic Republic of the Congo,2019,development,185,0.0
+CD,Democratic Republic of the Congo,2020,development,174,148.0
+CD,Democratic Republic of the Congo,2021,development,157,1.0
+CD,Democratic Republic of the Congo,2022,development,128,0.0
+CD,Democratic Republic of the Congo,2023,locked_test,36,0.0
+CD,Democratic Republic of the Congo,2024,locked_test,17,0.0
+CD,Democratic Republic of the Congo,2025,shock_stress_2025,3,0.0
+CF,Central African Republic,2017,development,4,4.0
+CF,Central African Republic,2018,development,4,3.0
+CF,Central African Republic,2020,development,17,17.0
+CF,Central African Republic,2021,development,17,5.0
+CF,Central African Republic,2022,development,22,22.0
+CF,Central African Republic,2023,locked_test,22,6.0
+CF,Central African Republic,2024,locked_test,16,0.0
+CF,Central African Republic,2025,shock_stress_2025,22,5.0
+CG,Congo,2016,development,6,0.0
+CG,Congo,2017,development,6,0.0
+CG,Congo,2018,development,6,0.0
+CG,Congo,2019,development,5,0.0
+CG,Congo,2020,development,13,1.0
+CG,Congo,2021,development,13,0.0
+CG,Congo,2022,development,13,0.0
+CG,Congo,2023,locked_test,13,0.0
+CG,Congo,2024,locked_test,13,0.0
+CG,Congo,2025,shock_stress_2025,12,0.0
+CI,Cote d'Ivoire,2016,development,33,0.0
+CI,Cote d'Ivoire,2017,development,61,0.0
+CI,Cote d'Ivoire,2018,development,74,0.0
+CI,Cote d'Ivoire,2019,development,49,0.0
+CI,Cote d'Ivoire,2020,development,34,1.0
+CI,Cote d'Ivoire,2021,development,21,1.0
+CM,Cameroon,2016,development,134,0.0
+CM,Cameroon,2017,development,90,0.0
+CM,Cameroon,2018,development,18,0.0
+CM,Cameroon,2019,development,1,0.0
+CM,Cameroon,2020,development,1,1.0
+CM,Cameroon,2021,development,1,0.0
+CM,Cameroon,2022,development,1,1.0
+ER,Eritrea,2017,development,1,0.0
+ER,Eritrea,2018,development,2,0.0
+ER,Eritrea,2019,development,2,0.0
+ER,Eritrea,2020,development,2,1.0
+ER,Eritrea,2021,development,2,0.0
+ER,Eritrea,2022,development,1,0.0
+ER,Eritrea,2023,locked_test,1,0.0
+ET,Ethiopia,2016,development,56,18.0
+ET,Ethiopia,2017,development,61,1.0
+ET,Ethiopia,2018,development,69,16.0
+ET,Ethiopia,2019,development,54,21.0
+ET,Ethiopia,2020,development,27,17.0
+ET,Ethiopia,2021,development,13,9.0
+ET,Ethiopia,2022,development,15,4.0
+ET,Ethiopia,2023,locked_test,22,3.0
+ET,Ethiopia,2024,locked_test,19,8.0
+ET,Ethiopia,2025,shock_stress_2025,22,0.0
+GH,Ghana,2016,development,22,0.0
+GH,Ghana,2017,development,15,0.0
+GH,Ghana,2018,development,15,15.0
+GH,Ghana,2019,development,15,0.0
+GH,Ghana,2022,development,4,0.0
+GH,Ghana,2023,locked_test,3,0.0
+GH,Ghana,2024,locked_test,3,0.0
+GH,Ghana,2025,shock_stress_2025,3,3.0
+GN,Guinea,2016,development,9,0.0
+GN,Guinea,2017,development,24,0.0
+GN,Guinea,2018,development,24,0.0
+GN,Guinea,2019,development,24,24.0
+GN,Guinea,2020,development,24,1.0
+GN,Guinea,2021,development,22,0.0
+GN,Guinea,2022,development,11,1.0
+GN,Guinea,2023,locked_test,3,1.0
+GN,Guinea,2024,locked_test,2,0.0
+GQ,Equatorial Guinea,2022,development,15,15.0
+GQ,Equatorial Guinea,2023,locked_test,15,0.0
+GQ,Equatorial Guinea,2024,locked_test,15,15.0
+GQ,Equatorial Guinea,2025,shock_stress_2025,15,15.0
+GW,Guinea-Bissau,2016,development,48,0.0
+GW,Guinea-Bissau,2017,development,84,27.0
+GW,Guinea-Bissau,2018,development,108,30.0
+GW,Guinea-Bissau,2019,development,82,49.0
+GW,Guinea-Bissau,2020,development,74,35.0
+GW,Guinea-Bissau,2021,development,35,24.0
+GW,Guinea-Bissau,2022,development,40,14.0
+GW,Guinea-Bissau,2023,locked_test,43,12.0
+GW,Guinea-Bissau,2024,locked_test,30,0.0
+GW,Guinea-Bissau,2025,shock_stress_2025,26,7.0
+KE,Kenya,2017,development,23,0.0
+KE,Kenya,2018,development,23,0.0
+KE,Kenya,2019,development,23,0.0
+KE,Kenya,2020,development,23,3.0
+KE,Kenya,2021,development,14,14.0
+KE,Kenya,2022,development,11,0.0
+KM,Comoros,2018,development,17,17.0
+KM,Comoros,2019,development,17,0.0
+KM,Comoros,2020,development,7,0.0
+KM,Comoros,2021,development,7,0.0
+LR,Liberia,2016,development,10,0.0
+LR,Liberia,2017,development,13,0.0
+LR,Liberia,2018,development,13,0.0
+LR,Liberia,2019,development,13,0.0
+LR,Liberia,2020,development,11,11.0
+LR,Liberia,2021,development,11,0.0
+LR,Liberia,2022,development,8,0.0
+LR,Liberia,2023,locked_test,3,0.0
+LR,Liberia,2024,locked_test,2,0.0
+LR,Liberia,2025,shock_stress_2025,2,0.0
+MG,Madagascar,2016,development,61,0.0
+MG,Madagascar,2017,development,58,58.0
+MG,Madagascar,2018,development,58,58.0
+MG,Madagascar,2020,development,18,18.0
+MG,Madagascar,2021,development,42,42.0
+MG,Madagascar,2022,development,24,7.0
+MG,Madagascar,2023,locked_test,43,0.0
+MG,Madagascar,2024,locked_test,64,0.0
+MG,Madagascar,2025,shock_stress_2025,22,0.0
+ML,Mali,2016,development,53,0.0
+ML,Mali,2017,development,16,0.0
+ML,Mali,2018,development,9,0.0
+MZ,Mozambique,2017,development,113,0.0
+MZ,Mozambique,2018,development,113,0.0
+MZ,Mozambique,2019,development,99,39.0
+MZ,Mozambique,2020,development,49,0.0
+MZ,Mozambique,2021,development,20,19.0
+MZ,Mozambique,2022,development,13,13.0
+MZ,Mozambique,2024,locked_test,1,0.0
+NE,Niger,2016,development,12,12.0
+NE,Niger,2017,development,11,0.0
+NE,Niger,2018,development,17,0.0
+NE,Niger,2019,development,11,0.0
+NG,Nigeria,2016,development,451,50.0
+NG,Nigeria,2017,development,482,32.0
+NG,Nigeria,2018,development,508,10.0
+NG,Nigeria,2019,development,432,24.0
+NG,Nigeria,2020,development,354,44.0
+NG,Nigeria,2021,development,257,188.0
+NG,Nigeria,2022,development,190,17.0
+NG,Nigeria,2023,locked_test,88,13.0
+NG,Nigeria,2024,locked_test,62,1.0
+NG,Nigeria,2025,shock_stress_2025,40,7.0
+SL,Sierra Leone,2016,development,14,0.0
+SL,Sierra Leone,2017,development,6,0.0
+SL,Sierra Leone,2018,development,6,2.0
+SL,Sierra Leone,2019,development,6,1.0
+SN,Senegal,2016,development,50,0.0
+SN,Senegal,2017,development,50,0.0
+SN,Senegal,2018,development,50,3.0
+SN,Senegal,2019,development,50,6.0
+SN,Senegal,2020,development,33,0.0
+SN,Senegal,2021,development,12,2.0
+SN,Senegal,2022,development,3,0.0
+SN,Senegal,2023,locked_test,1,0.0
+SS,South Sudan,2018,development,3,0.0
+SS,South Sudan,2019,development,6,2.0
+SS,South Sudan,2020,development,16,16.0
+SS,South Sudan,2021,development,14,0.0
+SS,South Sudan,2022,development,34,0.0
+SS,South Sudan,2023,locked_test,50,15.0
+SS,South Sudan,2024,locked_test,47,15.0
+SS,South Sudan,2025,shock_stress_2025,26,1.0
+ST,Sao Tome and Principe,2019,development,7,0.0
+ST,Sao Tome and Principe,2020,development,7,0.0
+TD,Chad,2017,development,13,0.0
+TD,Chad,2018,development,25,1.0
+TD,Chad,2019,development,31,0.0
+TD,Chad,2020,development,32,0.0
+TD,Chad,2021,development,28,0.0
+TD,Chad,2022,development,17,13.0
+TD,Chad,2023,locked_test,13,13.0
+TD,Chad,2024,locked_test,1,0.0
+TD,Chad,2025,shock_stress_2025,5,5.0
+TZ,Tanzania (Mainland),2016,development,39,0.0
+TZ,Tanzania (Mainland),2017,development,24,0.0
+TZ,Tanzania (Mainland),2018,development,23,0.0
+TZ,Tanzania (Mainland),2019,development,5,5.0
+TZ,Tanzania (Mainland),2020,development,2,2.0
+TZ,Tanzania (Mainland),2023,locked_test,1,0.0
+UG,Uganda,2016,development,10,10.0
+UG,Uganda,2017,development,1,0.0
+UG,Uganda,2018,development,6,0.0
+UG,Uganda,2019,development,6,0.0
+ZM,Zambia,2016,development,83,83.0
+ZM,Zambia,2017,development,83,0.0
+ZM,Zambia,2018,development,85,16.0
+ZM,Zambia,2019,development,85,52.0
+ZM,Zambia,2020,development,69,22.0
+ZM,Zambia,2021,development,25,24.0
+ZM,Zambia,2022,development,58,58.0
+ZM,Zambia,2023,locked_test,16,16.0
+ZW,Zimbabwe,2017,development,39,0.0
+ZW,Zimbabwe,2018,development,39,39.0
+ZW,Zimbabwe,2025,shock_stress_2025,7,0.0
+ZZ,Tanzania (Zanzibar),2017,development,10,0.0
+ZZ,Tanzania (Zanzibar),2018,development,10,10.0
+ZZ,Tanzania (Zanzibar),2021,development,11,0.0
+ZZ,Tanzania (Zanzibar),2022,development,11,0.0
+ZZ,Tanzania (Zanzibar),2023,locked_test,8,8.0
+ZZ,Tanzania (Zanzibar),2024,locked_test,8,0.0

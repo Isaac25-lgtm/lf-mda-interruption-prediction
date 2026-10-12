@@ -1,0 +1,82 @@
+{
+  "generated_utc": "2026-10-12T14:20:08Z",
+  "protocol_version": "1.0",
+  "metrics": {
+    "n_raw_rows": 65454,
+    "n_countries": 48,
+    "n_ius": 6236,
+    "contradiction_share": 0.0002179005284087814,
+    "n_contradictory_rows": 187,
+    "n_not_reported_rows": 1512,
+    "missing_jrf_in_positive": 0,
+    "n_unmapped_status_rows": -130908,
+    "primary_n": 8795,
+    "primary_events": 1839,
+    "primary_countries": 32,
+    "primary_event_countries": 30,
+    "dev_events": 1638,
+    "test_events": 130,
+    "test_event_countries": 11,
+    "test_n": 705,
+    "test_event_country_years": 14,
+    "test_events_effective": 13.132688875500772,
+    "dev_events_effective": 57.01437660723092,
+    "stress2025_events": 71,
+    "hindsight_stop_share_primary": 0.15873015873015872,
+    "hindsight_resumed_share_primary": 0.7838827838827839,
+    "hindsight_stop_share_excluded": 0.4296774193548387,
+    "events_in_mixed_country_years": 1104,
+    "mixed_country_years": 61,
+    "country_years_with_events": 97,
+    "country_years_total": 220,
+    "events_in_whole_country_failures": 735,
+    "events_in_majority_failure_country_years": 1281,
+    "within_country_year_variance_share": 0.38586641892982265,
+    "between_country_variance_share": 0.16475177161174545,
+    "n_effective_all": 355.5127236307105
+  },
+  "gate": {
+    "decision": "GO_ON_PROXY_LABEL",
+    "information_adequacy": "LIMITED",
+    "information_adequacy_evidence": "locked test has 130 events in 705 IU-years, but they come from 14 country-years; after the country-year design effect this is about 13 effective events (target 100)",
+    "expert_verification": "PENDING - cannot be satisfied by code",
+    "checks": [
+      {
+        "check": "G1 status agrees with treatment fields",
+        "passed": true,
+        "evidence": "0.0218% of delivered/non-delivery rows are contradictory (limit 1%)"
+      },
+      {
+        "check": "G2 non-reporting is separable from non-delivery",
+        "passed": true,
+        "evidence": "1512 'Not reported' rows held as missing labels; none counted as events"
+      },
+      {
+        "check": "G3 legitimate stops are limited in the primary cohort",
+        "passed": true,
+        "evidence": "15.9% of primary-cohort events (to 2022) were followed by impact assessment or surveillance rather than resumed MDA (limit 20%); broad-cohort exclusions: 43.0%"
+      },
+      {
+        "check": "G4 enough events in development and locked test",
+        "passed": true,
+        "evidence": "development 1638 events; locked test 130 events from 11 countries"
+      },
+      {
+        "check": "G5 within-country variation supports IU-level ranking",
+        "passed": true,
+        "evidence": "1104 events lie in country-years with both outcomes; 38.6% of outcome variance is within country-year"
+      }
+    ],
+    "rules": {
+      "max_contradiction_share": 0.01,
+      "max_hindsight_stop_share_primary": 0.2,
+      "min_development_events": 200,
+      "min_locked_test_events": 100,
+      "min_locked_test_event_countries": 5,
+      "min_events_in_mixed_country_years": 100,
+      "min_within_country_year_variance_share": 0.1,
+      "target_effective_locked_test_events": 100
+    },
+    "rules_note": "Thresholds were set by the code author after profiling the data. They are judgement calls recorded for transparency, not external standards."
+  }
+}

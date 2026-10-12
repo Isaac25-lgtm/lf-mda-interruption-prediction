@@ -1,0 +1,22 @@
+contradiction,status_code,country,rows
+no_mda_status_but_treatment_recorded,IA,Central African Republic,1
+no_mda_status_but_treatment_recorded,IA,Chad,2
+no_mda_status_but_treatment_recorded,NE,Angola,19
+no_mda_status_but_treatment_recorded,NE,Chad,1
+no_mda_status_but_treatment_recorded,NE,Democratic Republic of the Congo,6
+no_mda_status_but_treatment_recorded,NE,Equatorial Guinea,2
+no_mda_status_but_treatment_recorded,NE,Ethiopia,15
+no_mda_status_but_treatment_recorded,NE,Guinea,2
+no_mda_status_but_treatment_recorded,NE,Liberia,2
+no_mda_status_but_treatment_recorded,NE,Mozambique,2
+no_mda_status_but_treatment_recorded,NE,Nigeria,5
+no_mda_status_but_treatment_recorded,NE,South Sudan,2
+no_mda_status_but_treatment_recorded,PIS,Cameroon,6
+no_mda_status_but_treatment_recorded,PIS,Democratic Republic of the Congo,1
+no_mda_status_but_treatment_recorded,PIS,Ethiopia,5
+no_mda_status_but_treatment_recorded,PIS,Kenya,7
+no_mda_status_but_treatment_recorded,PIS,Liberia,6
+no_mda_status_but_treatment_recorded,PIS,Mozambique,2
+no_mda_status_but_treatment_recorded,PIS,Nigeria,26
+no_mda_status_but_treatment_recorded,PIS,Tanzania (Mainland),71
+non_delivery_but_treatment_recorded,ND,Tanzania (Mainland),4

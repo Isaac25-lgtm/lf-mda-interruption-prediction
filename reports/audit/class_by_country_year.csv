@@ -1,0 +1,1616 @@
+iso2,country,year,lifecycle_class,iu_years
+AO,Angola,2014,missing_iu_year,6
+AO,Angola,2014,never_started,20
+AO,Angola,2014,non_delivery_outside_cohort,1
+AO,Angola,2014,not_endemic,125
+AO,Angola,2014,unknown,12
+AO,Angola,2015,missing_iu_year,6
+AO,Angola,2015,never_started,20
+AO,Angola,2015,non_delivery_outside_cohort,1
+AO,Angola,2015,not_endemic,125
+AO,Angola,2015,unknown,12
+AO,Angola,2016,contradictory,2
+AO,Angola,2016,delivered,1
+AO,Angola,2016,never_started,20
+AO,Angola,2016,not_endemic,129
+AO,Angola,2016,unknown,12
+AO,Angola,2017,contradictory,2
+AO,Angola,2017,delivered,1
+AO,Angola,2017,never_started,20
+AO,Angola,2017,not_endemic,129
+AO,Angola,2017,unknown,12
+AO,Angola,2018,delivered,1
+AO,Angola,2018,never_started,20
+AO,Angola,2018,not_endemic,131
+AO,Angola,2018,unknown,12
+AO,Angola,2019,delivered,2
+AO,Angola,2019,never_started,19
+AO,Angola,2019,not_endemic,131
+AO,Angola,2019,unknown,12
+AO,Angola,2020,contradictory,15
+AO,Angola,2020,delivered,33
+AO,Angola,2020,never_started,5
+AO,Angola,2020,not_endemic,109
+AO,Angola,2020,unknown,2
+AO,Angola,2021,never_started,5
+AO,Angola,2021,not_endemic,124
+AO,Angola,2021,reported_interruption,33
+AO,Angola,2021,unknown,2
+AO,Angola,2022,never_started,5
+AO,Angola,2022,not_endemic,124
+AO,Angola,2022,reported_interruption,33
+AO,Angola,2022,unknown,2
+AO,Angola,2023,delivered,24
+AO,Angola,2023,never_started,4
+AO,Angola,2023,non_delivery_outside_cohort,10
+AO,Angola,2023,not_endemic,124
+AO,Angola,2023,unknown,2
+AO,Angola,2024,delivered,24
+AO,Angola,2024,never_started,1
+AO,Angola,2024,non_delivery_outside_cohort,9
+AO,Angola,2024,not_endemic,124
+AO,Angola,2024,reported_interruption,4
+AO,Angola,2024,unknown,2
+AO,Angola,2025,never_started,1
+AO,Angola,2025,non_delivery_outside_cohort,9
+AO,Angola,2025,not_endemic,124
+AO,Angola,2025,reported_interruption,28
+AO,Angola,2025,unknown,2
+BF,Burkina Faso,2014,delivered,41
+BF,Burkina Faso,2014,missing_iu_year,7
+BF,Burkina Faso,2014,surveillance_or_stopped,22
+BF,Burkina Faso,2015,delivered,30
+BF,Burkina Faso,2015,missing_iu_year,7
+BF,Burkina Faso,2015,surveillance_or_stopped,33
+BF,Burkina Faso,2016,delivered,31
+BF,Burkina Faso,2016,surveillance_or_stopped,39
+BF,Burkina Faso,2017,delivered,24
+BF,Burkina Faso,2017,surveillance_or_stopped,46
+BF,Burkina Faso,2018,delivered,10
+BF,Burkina Faso,2018,surveillance_or_stopped,60
+BF,Burkina Faso,2019,delivered,9
+BF,Burkina Faso,2019,surveillance_or_stopped,61
+BF,Burkina Faso,2020,delivered,9
+BF,Burkina Faso,2020,surveillance_or_stopped,61
+BF,Burkina Faso,2021,reported_interruption,8
+BF,Burkina Faso,2021,surveillance_or_stopped,62
+BF,Burkina Faso,2022,delivered,8
+BF,Burkina Faso,2022,surveillance_or_stopped,62
+BF,Burkina Faso,2023,delivered,7
+BF,Burkina Faso,2023,surveillance_or_stopped,63
+BF,Burkina Faso,2024,delivered,1
+BF,Burkina Faso,2024,reported_interruption,2
+BF,Burkina Faso,2024,surveillance_or_stopped,67
+BF,Burkina Faso,2025,delivered,3
+BF,Burkina Faso,2025,surveillance_or_stopped,67
+BI,Burundi,2014,missing_iu_year,5
+BI,Burundi,2014,not_endemic,46
+BI,Burundi,2015,missing_iu_year,5
+BI,Burundi,2015,not_endemic,46
+BI,Burundi,2016,missing_iu_year,5
+BI,Burundi,2016,not_endemic,46
+BI,Burundi,2017,missing_iu_year,5
+BI,Burundi,2017,not_endemic,46
+BI,Burundi,2018,missing_iu_year,5
+BI,Burundi,2018,not_endemic,46
+BI,Burundi,2019,missing_iu_year,4
+BI,Burundi,2019,not_endemic,47
+BI,Burundi,2020,missing_iu_year,4
+BI,Burundi,2020,not_endemic,47
+BI,Burundi,2021,missing_iu_year,2
+BI,Burundi,2021,not_endemic,49
+BI,Burundi,2022,missing_iu_year,2
+BI,Burundi,2022,not_endemic,49
+BI,Burundi,2023,missing_iu_year,2
+BI,Burundi,2023,not_endemic,49
+BI,Burundi,2024,missing_iu_year,2
+BI,Burundi,2024,not_endemic,49
+BI,Burundi,2025,missing_iu_year,2
+BI,Burundi,2025,not_endemic,49
+BJ,Benin,2014,delivered,25
+BJ,Benin,2014,not_endemic,29
+BJ,Benin,2014,surveillance_or_stopped,23
+BJ,Benin,2015,delivered,25
+BJ,Benin,2015,not_endemic,29
+BJ,Benin,2015,surveillance_or_stopped,23
+BJ,Benin,2016,delivered,25
+BJ,Benin,2016,not_endemic,29
+BJ,Benin,2016,surveillance_or_stopped,23
+BJ,Benin,2017,delivered,25
+BJ,Benin,2017,not_endemic,29
+BJ,Benin,2017,surveillance_or_stopped,23
+BJ,Benin,2018,delivered,15
+BJ,Benin,2018,not_endemic,29
+BJ,Benin,2018,reported_interruption,1
+BJ,Benin,2018,surveillance_or_stopped,32
+BJ,Benin,2019,delivered,4
+BJ,Benin,2019,not_endemic,29
+BJ,Benin,2019,surveillance_or_stopped,44
+BJ,Benin,2020,delivered,4
+BJ,Benin,2020,not_endemic,29
+BJ,Benin,2020,surveillance_or_stopped,44
+BJ,Benin,2021,not_endemic,29
+BJ,Benin,2021,surveillance_or_stopped,48
+BJ,Benin,2022,not_endemic,29
+BJ,Benin,2022,surveillance_or_stopped,48
+BJ,Benin,2023,not_endemic,29
+BJ,Benin,2023,surveillance_or_stopped,48
+BJ,Benin,2024,not_endemic,29
+BJ,Benin,2024,surveillance_or_stopped,48
+BJ,Benin,2025,not_endemic,29
+BJ,Benin,2025,surveillance_or_stopped,48
+BW,Botswana,2014,missing_iu_year,6
+BW,Botswana,2014,not_endemic,24
+BW,Botswana,2015,missing_iu_year,6
+BW,Botswana,2015,not_endemic,24
+BW,Botswana,2016,missing_iu_year,6
+BW,Botswana,2016,not_endemic,24
+BW,Botswana,2017,missing_iu_year,6
+BW,Botswana,2017,not_endemic,24
+BW,Botswana,2018,missing_iu_year,6
+BW,Botswana,2018,not_endemic,24
+BW,Botswana,2019,missing_iu_year,6
+BW,Botswana,2019,not_endemic,24
+BW,Botswana,2020,missing_iu_year,3
+BW,Botswana,2020,not_endemic,27
+BW,Botswana,2021,missing_iu_year,3
+BW,Botswana,2021,not_endemic,27
+BW,Botswana,2022,missing_iu_year,3
+BW,Botswana,2022,not_endemic,27
+BW,Botswana,2023,missing_iu_year,3
+BW,Botswana,2023,not_endemic,27
+BW,Botswana,2024,missing_iu_year,3
+BW,Botswana,2024,not_endemic,27
+BW,Botswana,2025,missing_iu_year,3
+BW,Botswana,2025,not_endemic,27
+CD,Democratic Republic of the Congo,2014,delivered,58
+CD,Democratic Republic of the Congo,2014,never_started,11
+CD,Democratic Republic of the Congo,2014,non_delivery_outside_cohort,176
+CD,Democratic Republic of the Congo,2014,not_endemic,274
+CD,Democratic Republic of the Congo,2015,delivered,72
+CD,Democratic Republic of the Congo,2015,never_started,11
+CD,Democratic Republic of the Congo,2015,non_delivery_outside_cohort,162
+CD,Democratic Republic of the Congo,2015,not_endemic,274
+CD,Democratic Republic of the Congo,2016,delivered,115
+CD,Democratic Republic of the Congo,2016,never_started,11
+CD,Democratic Republic of the Congo,2016,non_delivery_outside_cohort,119
+CD,Democratic Republic of the Congo,2016,not_endemic,274
+CD,Democratic Republic of the Congo,2017,contradictory,2
+CD,Democratic Republic of the Congo,2017,delivered,216
+CD,Democratic Republic of the Congo,2017,never_started,11
+CD,Democratic Republic of the Congo,2017,non_delivery_outside_cohort,18
+CD,Democratic Republic of the Congo,2017,not_endemic,272
+CD,Democratic Republic of the Congo,2018,contradictory,2
+CD,Democratic Republic of the Congo,2018,delivered,232
+CD,Democratic Republic of the Congo,2018,never_started,11
+CD,Democratic Republic of the Congo,2018,non_delivery_outside_cohort,2
+CD,Democratic Republic of the Congo,2018,not_endemic,272
+CD,Democratic Republic of the Congo,2019,contradictory,2
+CD,Democratic Republic of the Congo,2019,delivered,243
+CD,Democratic Republic of the Congo,2019,non_delivery_outside_cohort,2
+CD,Democratic Republic of the Congo,2019,not_endemic,272
+CD,Democratic Republic of the Congo,2020,delivered,27
+CD,Democratic Republic of the Congo,2020,never_started,2
+CD,Democratic Republic of the Congo,2020,not_endemic,274
+CD,Democratic Republic of the Congo,2020,reported_interruption,216
+CD,Democratic Republic of the Congo,2021,delivered,244
+CD,Democratic Republic of the Congo,2021,not_endemic,274
+CD,Democratic Republic of the Congo,2021,reported_interruption,1
+CD,Democratic Republic of the Congo,2022,delivered,218
+CD,Democratic Republic of the Congo,2022,not_endemic,274
+CD,Democratic Republic of the Congo,2022,surveillance_or_stopped,27
+CD,Democratic Republic of the Congo,2023,contradictory,1
+CD,Democratic Republic of the Congo,2023,delivered,178
+CD,Democratic Republic of the Congo,2023,not_endemic,274
+CD,Democratic Republic of the Congo,2023,surveillance_or_stopped,66
+CD,Democratic Republic of the Congo,2024,delivered,149
+CD,Democratic Republic of the Congo,2024,legitimate_pause_IA,11
+CD,Democratic Republic of the Congo,2024,not_endemic,274
+CD,Democratic Republic of the Congo,2024,reported_interruption,5
+CD,Democratic Republic of the Congo,2024,surveillance_or_stopped,80
+CD,Democratic Republic of the Congo,2025,delivered,131
+CD,Democratic Republic of the Congo,2025,not_endemic,274
+CD,Democratic Republic of the Congo,2025,reported_interruption,17
+CD,Democratic Republic of the Congo,2025,surveillance_or_stopped,97
+CF,Central African Republic,2014,delivered,4
+CF,Central African Republic,2014,missing_JRF,1
+CF,Central African Republic,2014,missing_iu_year,35
+CF,Central African Republic,2014,non_delivery_outside_cohort,4
+CF,Central African Republic,2014,unknown,8
+CF,Central African Republic,2015,missing_JRF,17
+CF,Central African Republic,2015,missing_iu_year,35
+CF,Central African Republic,2016,delivered,4
+CF,Central African Republic,2016,missing_iu_year,35
+CF,Central African Republic,2016,non_delivery_outside_cohort,4
+CF,Central African Republic,2016,unknown,9
+CF,Central African Republic,2017,missing_iu_year,35
+CF,Central African Republic,2017,non_delivery_outside_cohort,4
+CF,Central African Republic,2017,reported_interruption,4
+CF,Central African Republic,2017,unknown,9
+CF,Central African Republic,2018,delivered,5
+CF,Central African Republic,2018,missing_iu_year,35
+CF,Central African Republic,2018,reported_interruption,3
+CF,Central African Republic,2018,unknown,9
+CF,Central African Republic,2019,delivered,17
+CF,Central African Republic,2019,missing_iu_year,17
+CF,Central African Republic,2019,never_started,15
+CF,Central African Republic,2019,unknown,3
+CF,Central African Republic,2020,missing_iu_year,17
+CF,Central African Republic,2020,never_started,15
+CF,Central African Republic,2020,reported_interruption,17
+CF,Central African Republic,2020,unknown,3
+CF,Central African Republic,2021,delivered,22
+CF,Central African Republic,2021,missing_iu_year,17
+CF,Central African Republic,2021,never_started,5
+CF,Central African Republic,2021,reported_interruption,5
+CF,Central African Republic,2021,unknown,3
+CF,Central African Republic,2022,missing_iu_year,17
+CF,Central African Republic,2022,never_started,5
+CF,Central African Republic,2022,non_delivery_outside_cohort,5
+CF,Central African Republic,2022,reported_interruption,22
+CF,Central African Republic,2022,unknown,3
+CF,Central African Republic,2023,delivered,17
+CF,Central African Republic,2023,missing_iu_year,17
+CF,Central African Republic,2023,never_started,4
+CF,Central African Republic,2023,non_delivery_outside_cohort,5
+CF,Central African Republic,2023,reported_interruption,6
+CF,Central African Republic,2023,unknown,3
+CF,Central African Republic,2024,contradictory,1
+CF,Central African Republic,2024,delivered,22
+CF,Central African Republic,2024,legitimate_pause_IA,1
+CF,Central African Republic,2024,missing_iu_year,17
+CF,Central African Republic,2024,never_started,4
+CF,Central African Republic,2024,non_delivery_outside_cohort,4
+CF,Central African Republic,2024,unknown,3
+CF,Central African Republic,2025,delivered,27
+CF,Central African Republic,2025,missing_iu_year,17
+CF,Central African Republic,2025,reported_interruption,5
+CF,Central African Republic,2025,unknown,3
+CG,Congo,2014,delivered,5
+CG,Congo,2014,missing_iu_year,23
+CG,Congo,2014,never_started,6
+CG,Congo,2014,non_delivery_outside_cohort,1
+CG,Congo,2014,not_endemic,24
+CG,Congo,2014,unknown,3
+CG,Congo,2015,delivered,6
+CG,Congo,2015,missing_iu_year,23
+CG,Congo,2015,never_started,6
+CG,Congo,2015,not_endemic,27
+CG,Congo,2016,delivered,6
+CG,Congo,2016,missing_iu_year,19
+CG,Congo,2016,never_started,6
+CG,Congo,2016,not_endemic,31
+CG,Congo,2017,delivered,6
+CG,Congo,2017,missing_iu_year,19
+CG,Congo,2017,never_started,6
+CG,Congo,2017,not_endemic,31
+CG,Congo,2018,delivered,6
+CG,Congo,2018,missing_iu_year,19
+CG,Congo,2018,never_started,6
+CG,Congo,2018,not_endemic,31
+CG,Congo,2019,delivered,13
+CG,Congo,2019,missing_iu_year,10
+CG,Congo,2019,not_endemic,39
+CG,Congo,2020,delivered,12
+CG,Congo,2020,missing_iu_year,10
+CG,Congo,2020,not_endemic,39
+CG,Congo,2020,reported_interruption,1
+CG,Congo,2021,delivered,13
+CG,Congo,2021,missing_iu_year,10
+CG,Congo,2021,not_endemic,39
+CG,Congo,2022,delivered,13
+CG,Congo,2022,missing_iu_year,10
+CG,Congo,2022,not_endemic,39
+CG,Congo,2023,delivered,13
+CG,Congo,2023,missing_iu_year,10
+CG,Congo,2023,not_endemic,39
+CG,Congo,2024,delivered,13
+CG,Congo,2024,missing_iu_year,10
+CG,Congo,2024,not_endemic,39
+CG,Congo,2025,delivered,13
+CG,Congo,2025,missing_iu_year,10
+CG,Congo,2025,not_endemic,39
+CI,Cote d'Ivoire,2014,delivered,33
+CI,Cote d'Ivoire,2014,missing_JRF,1
+CI,Cote d'Ivoire,2014,missing_iu_year,51
+CI,Cote d'Ivoire,2014,non_delivery_outside_cohort,39
+CI,Cote d'Ivoire,2014,not_endemic,10
+CI,Cote d'Ivoire,2015,delivered,33
+CI,Cote d'Ivoire,2015,missing_JRF,1
+CI,Cote d'Ivoire,2015,missing_iu_year,51
+CI,Cote d'Ivoire,2015,non_delivery_outside_cohort,39
+CI,Cote d'Ivoire,2015,not_endemic,10
+CI,Cote d'Ivoire,2016,delivered,61
+CI,Cote d'Ivoire,2016,missing_JRF,1
+CI,Cote d'Ivoire,2016,missing_iu_year,51
+CI,Cote d'Ivoire,2016,non_delivery_outside_cohort,11
+CI,Cote d'Ivoire,2016,not_endemic,10
+CI,Cote d'Ivoire,2017,delivered,74
+CI,Cote d'Ivoire,2017,missing_iu_year,51
+CI,Cote d'Ivoire,2017,not_endemic,9
+CI,Cote d'Ivoire,2018,delivered,74
+CI,Cote d'Ivoire,2018,missing_iu_year,51
+CI,Cote d'Ivoire,2018,not_endemic,9
+CI,Cote d'Ivoire,2019,delivered,74
+CI,Cote d'Ivoire,2019,missing_iu_year,51
+CI,Cote d'Ivoire,2019,not_endemic,9
+CI,Cote d'Ivoire,2020,delivered,62
+CI,Cote d'Ivoire,2020,missing_iu_year,21
+CI,Cote d'Ivoire,2020,non_delivery_outside_cohort,18
+CI,Cote d'Ivoire,2020,not_endemic,14
+CI,Cote d'Ivoire,2020,reported_interruption,19
+CI,Cote d'Ivoire,2021,delivered,29
+CI,Cote d'Ivoire,2021,missing_iu_year,21
+CI,Cote d'Ivoire,2021,not_endemic,14
+CI,Cote d'Ivoire,2021,reported_interruption,33
+CI,Cote d'Ivoire,2021,surveillance_or_stopped,37
+CI,Cote d'Ivoire,2022,delivered,10
+CI,Cote d'Ivoire,2022,legitimate_pause_IA,20
+CI,Cote d'Ivoire,2022,missing_iu_year,21
+CI,Cote d'Ivoire,2022,not_endemic,14
+CI,Cote d'Ivoire,2022,reported_interruption,1
+CI,Cote d'Ivoire,2022,surveillance_or_stopped,68
+CI,Cote d'Ivoire,2023,delivered,1
+CI,Cote d'Ivoire,2023,missing_iu_year,21
+CI,Cote d'Ivoire,2023,not_endemic,14
+CI,Cote d'Ivoire,2023,surveillance_or_stopped,98
+CI,Cote d'Ivoire,2024,missing_iu_year,21
+CI,Cote d'Ivoire,2024,not_endemic,14
+CI,Cote d'Ivoire,2024,reported_interruption,1
+CI,Cote d'Ivoire,2024,surveillance_or_stopped,98
+CI,Cote d'Ivoire,2025,missing_iu_year,21
+CI,Cote d'Ivoire,2025,not_endemic,14
+CI,Cote d'Ivoire,2025,surveillance_or_stopped,99
+CM,Cameroon,2014,delivered,132
+CM,Cameroon,2014,missing_iu_year,16
+CM,Cameroon,2014,non_delivery_outside_cohort,1
+CM,Cameroon,2014,not_endemic,51
+CM,Cameroon,2014,surveillance_or_stopped,5
+CM,Cameroon,2015,contradictory,3
+CM,Cameroon,2015,delivered,134
+CM,Cameroon,2015,missing_iu_year,16
+CM,Cameroon,2015,not_endemic,51
+CM,Cameroon,2015,surveillance_or_stopped,1
+CM,Cameroon,2016,contradictory,3
+CM,Cameroon,2016,delivered,135
+CM,Cameroon,2016,missing_iu_year,16
+CM,Cameroon,2016,not_endemic,51
+CM,Cameroon,2017,delivered,93
+CM,Cameroon,2017,missing_iu_year,16
+CM,Cameroon,2017,not_endemic,51
+CM,Cameroon,2017,surveillance_or_stopped,45
+CM,Cameroon,2018,delivered,18
+CM,Cameroon,2018,missing_iu_year,16
+CM,Cameroon,2018,not_endemic,51
+CM,Cameroon,2018,surveillance_or_stopped,120
+CM,Cameroon,2019,delivered,1
+CM,Cameroon,2019,missing_iu_year,16
+CM,Cameroon,2019,not_endemic,51
+CM,Cameroon,2019,surveillance_or_stopped,137
+CM,Cameroon,2020,missing_iu_year,16
+CM,Cameroon,2020,not_endemic,51
+CM,Cameroon,2020,reported_interruption,1
+CM,Cameroon,2020,surveillance_or_stopped,137
+CM,Cameroon,2021,delivered,1
+CM,Cameroon,2021,missing_iu_year,8
+CM,Cameroon,2021,not_endemic,53
+CM,Cameroon,2021,surveillance_or_stopped,143
+CM,Cameroon,2022,missing_iu_year,8
+CM,Cameroon,2022,not_endemic,53
+CM,Cameroon,2022,reported_interruption,1
+CM,Cameroon,2022,surveillance_or_stopped,143
+CM,Cameroon,2023,missing_iu_year,2
+CM,Cameroon,2023,not_endemic,55
+CM,Cameroon,2023,surveillance_or_stopped,148
+CM,Cameroon,2024,not_endemic,55
+CM,Cameroon,2024,surveillance_or_stopped,150
+CM,Cameroon,2025,not_endemic,55
+CM,Cameroon,2025,surveillance_or_stopped,150
+CV,Cabo Verde,2014,not_endemic,22
+CV,Cabo Verde,2015,not_endemic,22
+CV,Cabo Verde,2016,not_endemic,22
+CV,Cabo Verde,2017,not_endemic,22
+CV,Cabo Verde,2018,not_endemic,22
+CV,Cabo Verde,2019,not_endemic,22
+CV,Cabo Verde,2020,not_endemic,22
+CV,Cabo Verde,2021,not_endemic,22
+CV,Cabo Verde,2022,not_endemic,22
+CV,Cabo Verde,2023,not_endemic,22
+CV,Cabo Verde,2024,not_endemic,22
+CV,Cabo Verde,2025,not_endemic,22
+DZ,Algeria,2014,not_endemic,48
+DZ,Algeria,2015,not_endemic,48
+DZ,Algeria,2016,not_endemic,48
+DZ,Algeria,2017,not_endemic,48
+DZ,Algeria,2018,not_endemic,48
+DZ,Algeria,2019,not_endemic,48
+DZ,Algeria,2020,not_endemic,48
+DZ,Algeria,2021,not_endemic,48
+DZ,Algeria,2022,not_endemic,48
+DZ,Algeria,2023,not_endemic,48
+DZ,Algeria,2024,not_endemic,48
+DZ,Algeria,2025,not_endemic,48
+ER,Eritrea,2014,never_started,1
+ER,Eritrea,2014,non_delivery_outside_cohort,1
+ER,Eritrea,2014,not_endemic,56
+ER,Eritrea,2015,never_started,1
+ER,Eritrea,2015,non_delivery_outside_cohort,1
+ER,Eritrea,2015,not_endemic,56
+ER,Eritrea,2016,delivered,1
+ER,Eritrea,2016,never_started,1
+ER,Eritrea,2016,not_endemic,56
+ER,Eritrea,2017,delivered,2
+ER,Eritrea,2017,not_endemic,56
+ER,Eritrea,2018,delivered,2
+ER,Eritrea,2018,not_endemic,56
+ER,Eritrea,2019,delivered,2
+ER,Eritrea,2019,not_endemic,56
+ER,Eritrea,2020,delivered,1
+ER,Eritrea,2020,not_endemic,56
+ER,Eritrea,2020,reported_interruption,1
+ER,Eritrea,2021,delivered,2
+ER,Eritrea,2021,not_endemic,56
+ER,Eritrea,2022,delivered,1
+ER,Eritrea,2022,not_endemic,56
+ER,Eritrea,2022,reported_interruption,1
+ER,Eritrea,2023,delivered,2
+ER,Eritrea,2023,not_endemic,56
+ER,Eritrea,2024,not_endemic,55
+ER,Eritrea,2024,surveillance_or_stopped,2
+ER,Eritrea,2024,unknown,1
+ER,Eritrea,2025,not_endemic,55
+ER,Eritrea,2025,surveillance_or_stopped,2
+ER,Eritrea,2025,unknown,1
+ET,Ethiopia,2014,contradictory,6
+ET,Ethiopia,2014,delivered,55
+ET,Ethiopia,2014,missing_JRF,4
+ET,Ethiopia,2014,missing_iu_year,428
+ET,Ethiopia,2014,never_started,6
+ET,Ethiopia,2014,non_delivery_outside_cohort,8
+ET,Ethiopia,2014,not_endemic,753
+ET,Ethiopia,2015,contradictory,7
+ET,Ethiopia,2015,delivered,49
+ET,Ethiopia,2015,missing_JRF,2
+ET,Ethiopia,2015,missing_iu_year,428
+ET,Ethiopia,2015,never_started,6
+ET,Ethiopia,2015,non_delivery_outside_cohort,15
+ET,Ethiopia,2015,not_endemic,753
+ET,Ethiopia,2016,contradictory,1
+ET,Ethiopia,2016,delivered,46
+ET,Ethiopia,2016,missing_JRF,1
+ET,Ethiopia,2016,missing_iu_year,428
+ET,Ethiopia,2016,never_started,7
+ET,Ethiopia,2016,not_endemic,759
+ET,Ethiopia,2016,reported_interruption,18
+ET,Ethiopia,2017,delivered,69
+ET,Ethiopia,2017,missing_iu_year,367
+ET,Ethiopia,2017,never_started,2
+ET,Ethiopia,2017,non_delivery_outside_cohort,2
+ET,Ethiopia,2017,not_endemic,819
+ET,Ethiopia,2017,reported_interruption,1
+ET,Ethiopia,2018,contradictory,1
+ET,Ethiopia,2018,delivered,57
+ET,Ethiopia,2018,missing_iu_year,367
+ET,Ethiopia,2018,never_started,1
+ET,Ethiopia,2018,not_endemic,818
+ET,Ethiopia,2018,reported_interruption,16
+ET,Ethiopia,2019,delivered,41
+ET,Ethiopia,2019,missing_iu_year,367
+ET,Ethiopia,2019,never_started,1
+ET,Ethiopia,2019,not_endemic,819
+ET,Ethiopia,2019,reported_interruption,32
+ET,Ethiopia,2020,delivered,28
+ET,Ethiopia,2020,missing_iu_year,301
+ET,Ethiopia,2020,never_started,1
+ET,Ethiopia,2020,non_delivery_outside_cohort,21
+ET,Ethiopia,2020,not_endemic,873
+ET,Ethiopia,2020,reported_interruption,36
+ET,Ethiopia,2021,delivered,27
+ET,Ethiopia,2021,missing_iu_year,282
+ET,Ethiopia,2021,never_started,7
+ET,Ethiopia,2021,non_delivery_outside_cohort,13
+ET,Ethiopia,2021,not_endemic,882
+ET,Ethiopia,2021,reported_interruption,27
+ET,Ethiopia,2021,surveillance_or_stopped,22
+ET,Ethiopia,2022,delivered,29
+ET,Ethiopia,2022,legitimate_pause_IA,22
+ET,Ethiopia,2022,missing_JRF,1
+ET,Ethiopia,2022,missing_iu_year,251
+ET,Ethiopia,2022,non_delivery_outside_cohort,3
+ET,Ethiopia,2022,not_endemic,903
+ET,Ethiopia,2022,reported_interruption,9
+ET,Ethiopia,2022,surveillance_or_stopped,42
+ET,Ethiopia,2023,contradictory,5
+ET,Ethiopia,2023,delivered,34
+ET,Ethiopia,2023,legitimate_pause_IA,20
+ET,Ethiopia,2023,missing_JRF,1
+ET,Ethiopia,2023,missing_iu_year,245
+ET,Ethiopia,2023,non_delivery_outside_cohort,2
+ET,Ethiopia,2023,not_endemic,907
+ET,Ethiopia,2023,reported_interruption,5
+ET,Ethiopia,2023,surveillance_or_stopped,41
+ET,Ethiopia,2024,delivered,22
+ET,Ethiopia,2024,legitimate_pause_IA,29
+ET,Ethiopia,2024,missing_JRF,2
+ET,Ethiopia,2024,missing_iu_year,124
+ET,Ethiopia,2024,non_delivery_outside_cohort,2
+ET,Ethiopia,2024,not_endemic,1021
+ET,Ethiopia,2024,reported_interruption,12
+ET,Ethiopia,2024,surveillance_or_stopped,48
+ET,Ethiopia,2025,delivered,32
+ET,Ethiopia,2025,legitimate_pause_IA,30
+ET,Ethiopia,2025,missing_JRF,6
+ET,Ethiopia,2025,missing_iu_year,124
+ET,Ethiopia,2025,not_endemic,1018
+ET,Ethiopia,2025,surveillance_or_stopped,50
+GA,Gabon,2014,missing_JRF,51
+GA,Gabon,2015,missing_JRF,51
+GA,Gabon,2016,never_started,18
+GA,Gabon,2016,not_endemic,33
+GA,Gabon,2017,missing_JRF,51
+GA,Gabon,2018,never_started,18
+GA,Gabon,2018,not_endemic,33
+GA,Gabon,2019,missing_JRF,51
+GA,Gabon,2020,never_started,18
+GA,Gabon,2020,not_endemic,33
+GA,Gabon,2021,never_started,18
+GA,Gabon,2021,not_endemic,33
+GA,Gabon,2022,never_started,18
+GA,Gabon,2022,not_endemic,33
+GA,Gabon,2023,missing_JRF,51
+GA,Gabon,2024,never_started,18
+GA,Gabon,2024,not_endemic,33
+GA,Gabon,2025,never_started,18
+GA,Gabon,2025,not_endemic,33
+GH,Ghana,2014,delivered,93
+GH,Ghana,2014,missing_iu_year,76
+GH,Ghana,2014,not_endemic,118
+GH,Ghana,2014,surveillance_or_stopped,5
+GH,Ghana,2015,delivered,29
+GH,Ghana,2015,missing_iu_year,76
+GH,Ghana,2015,not_endemic,118
+GH,Ghana,2015,surveillance_or_stopped,69
+GH,Ghana,2016,delivered,22
+GH,Ghana,2016,missing_iu_year,76
+GH,Ghana,2016,not_endemic,118
+GH,Ghana,2016,surveillance_or_stopped,76
+GH,Ghana,2017,delivered,15
+GH,Ghana,2017,missing_iu_year,76
+GH,Ghana,2017,not_endemic,118
+GH,Ghana,2017,surveillance_or_stopped,83
+GH,Ghana,2018,missing_iu_year,76
+GH,Ghana,2018,not_endemic,118
+GH,Ghana,2018,reported_interruption,15
+GH,Ghana,2018,surveillance_or_stopped,83
+GH,Ghana,2019,delivered,15
+GH,Ghana,2019,missing_iu_year,76
+GH,Ghana,2019,not_endemic,118
+GH,Ghana,2019,surveillance_or_stopped,83
+GH,Ghana,2020,missing_JRF,260
+GH,Ghana,2020,missing_iu_year,32
+GH,Ghana,2021,delivered,11
+GH,Ghana,2021,missing_iu_year,32
+GH,Ghana,2021,not_endemic,142
+GH,Ghana,2021,surveillance_or_stopped,107
+GH,Ghana,2022,delivered,8
+GH,Ghana,2022,missing_iu_year,32
+GH,Ghana,2022,not_endemic,142
+GH,Ghana,2022,surveillance_or_stopped,110
+GH,Ghana,2023,delivered,7
+GH,Ghana,2023,legitimate_pause_IA,3
+GH,Ghana,2023,missing_iu_year,31
+GH,Ghana,2023,not_endemic,141
+GH,Ghana,2023,surveillance_or_stopped,110
+GH,Ghana,2024,delivered,3
+GH,Ghana,2024,missing_iu_year,31
+GH,Ghana,2024,not_endemic,141
+GH,Ghana,2024,surveillance_or_stopped,117
+GH,Ghana,2025,missing_iu_year,31
+GH,Ghana,2025,non_delivery_outside_cohort,4
+GH,Ghana,2025,not_endemic,141
+GH,Ghana,2025,reported_interruption,3
+GH,Ghana,2025,surveillance_or_stopped,113
+GM,Gambia,2014,missing_iu_year,2
+GM,Gambia,2014,not_endemic,42
+GM,Gambia,2015,missing_iu_year,2
+GM,Gambia,2015,not_endemic,42
+GM,Gambia,2016,missing_iu_year,2
+GM,Gambia,2016,not_endemic,42
+GM,Gambia,2017,missing_iu_year,2
+GM,Gambia,2017,not_endemic,42
+GM,Gambia,2018,missing_iu_year,2
+GM,Gambia,2018,not_endemic,42
+GM,Gambia,2019,missing_iu_year,2
+GM,Gambia,2019,not_endemic,42
+GM,Gambia,2020,missing_iu_year,2
+GM,Gambia,2020,not_endemic,42
+GM,Gambia,2021,not_endemic,44
+GM,Gambia,2022,not_endemic,44
+GM,Gambia,2023,not_endemic,44
+GM,Gambia,2024,not_endemic,44
+GM,Gambia,2025,not_endemic,44
+GN,Guinea,2014,missing_JRF,38
+GN,Guinea,2015,delivered,9
+GN,Guinea,2015,non_delivery_outside_cohort,15
+GN,Guinea,2015,not_endemic,14
+GN,Guinea,2016,delivered,24
+GN,Guinea,2016,not_endemic,14
+GN,Guinea,2017,delivered,24
+GN,Guinea,2017,not_endemic,14
+GN,Guinea,2018,delivered,24
+GN,Guinea,2018,not_endemic,14
+GN,Guinea,2019,not_endemic,14
+GN,Guinea,2019,reported_interruption,24
+GN,Guinea,2020,delivered,23
+GN,Guinea,2020,not_endemic,14
+GN,Guinea,2020,reported_interruption,1
+GN,Guinea,2021,contradictory,2
+GN,Guinea,2021,delivered,23
+GN,Guinea,2021,not_endemic,12
+GN,Guinea,2021,reported_interruption,1
+GN,Guinea,2022,delivered,13
+GN,Guinea,2022,not_endemic,14
+GN,Guinea,2022,reported_interruption,11
+GN,Guinea,2023,delivered,12
+GN,Guinea,2023,not_endemic,14
+GN,Guinea,2023,reported_interruption,2
+GN,Guinea,2023,surveillance_or_stopped,10
+GN,Guinea,2024,delivered,3
+GN,Guinea,2024,not_endemic,14
+GN,Guinea,2024,surveillance_or_stopped,21
+GN,Guinea,2025,delivered,1
+GN,Guinea,2025,not_endemic,14
+GN,Guinea,2025,surveillance_or_stopped,23
+GQ,Equatorial Guinea,2014,missing_JRF,18
+GQ,Equatorial Guinea,2015,missing_JRF,18
+GQ,Equatorial Guinea,2016,missing_JRF,18
+GQ,Equatorial Guinea,2017,missing_JRF,18
+GQ,Equatorial Guinea,2018,never_started,15
+GQ,Equatorial Guinea,2018,not_endemic,3
+GQ,Equatorial Guinea,2019,never_started,15
+GQ,Equatorial Guinea,2019,not_endemic,3
+GQ,Equatorial Guinea,2020,never_started,15
+GQ,Equatorial Guinea,2020,not_endemic,3
+GQ,Equatorial Guinea,2021,delivered,15
+GQ,Equatorial Guinea,2021,not_endemic,3
+GQ,Equatorial Guinea,2022,not_endemic,2
+GQ,Equatorial Guinea,2022,reported_interruption,15
+GQ,Equatorial Guinea,2022,unknown,1
+GQ,Equatorial Guinea,2023,contradictory,2
+GQ,Equatorial Guinea,2023,delivered,15
+GQ,Equatorial Guinea,2023,unknown,1
+GQ,Equatorial Guinea,2024,not_endemic,3
+GQ,Equatorial Guinea,2024,reported_interruption,15
+GQ,Equatorial Guinea,2025,not_endemic,2
+GQ,Equatorial Guinea,2025,reported_interruption,15
+GQ,Equatorial Guinea,2025,unknown,1
+GW,Guinea-Bissau,2014,delivered,33
+GW,Guinea-Bissau,2014,missing_JRF,1
+GW,Guinea-Bissau,2014,non_delivery_outside_cohort,75
+GW,Guinea-Bissau,2014,not_endemic,8
+GW,Guinea-Bissau,2015,delivered,15
+GW,Guinea-Bissau,2015,non_delivery_outside_cohort,94
+GW,Guinea-Bissau,2015,not_endemic,8
+GW,Guinea-Bissau,2016,delivered,84
+GW,Guinea-Bissau,2016,non_delivery_outside_cohort,25
+GW,Guinea-Bissau,2016,not_endemic,8
+GW,Guinea-Bissau,2017,delivered,81
+GW,Guinea-Bissau,2017,non_delivery_outside_cohort,1
+GW,Guinea-Bissau,2017,not_endemic,8
+GW,Guinea-Bissau,2017,reported_interruption,27
+GW,Guinea-Bissau,2018,delivered,79
+GW,Guinea-Bissau,2018,not_endemic,8
+GW,Guinea-Bissau,2018,reported_interruption,30
+GW,Guinea-Bissau,2019,delivered,33
+GW,Guinea-Bissau,2019,non_delivery_outside_cohort,27
+GW,Guinea-Bissau,2019,not_endemic,8
+GW,Guinea-Bissau,2019,reported_interruption,49
+GW,Guinea-Bissau,2020,delivered,44
+GW,Guinea-Bissau,2020,non_delivery_outside_cohort,30
+GW,Guinea-Bissau,2020,not_endemic,8
+GW,Guinea-Bissau,2020,reported_interruption,35
+GW,Guinea-Bissau,2021,delivered,27
+GW,Guinea-Bissau,2021,non_delivery_outside_cohort,49
+GW,Guinea-Bissau,2021,not_endemic,8
+GW,Guinea-Bissau,2021,reported_interruption,33
+GW,Guinea-Bissau,2022,delivered,54
+GW,Guinea-Bissau,2022,non_delivery_outside_cohort,30
+GW,Guinea-Bissau,2022,not_endemic,8
+GW,Guinea-Bissau,2022,reported_interruption,25
+GW,Guinea-Bissau,2023,delivered,46
+GW,Guinea-Bissau,2023,not_endemic,38
+GW,Guinea-Bissau,2023,reported_interruption,19
+GW,Guinea-Bissau,2023,surveillance_or_stopped,14
+GW,Guinea-Bissau,2024,delivered,46
+GW,Guinea-Bissau,2024,not_endemic,38
+GW,Guinea-Bissau,2024,surveillance_or_stopped,33
+GW,Guinea-Bissau,2025,delivered,29
+GW,Guinea-Bissau,2025,not_endemic,38
+GW,Guinea-Bissau,2025,reported_interruption,17
+GW,Guinea-Bissau,2025,surveillance_or_stopped,33
+KE,Kenya,2014,missing_iu_year,290
+KE,Kenya,2014,never_started,12
+KE,Kenya,2014,not_endemic,146
+KE,Kenya,2015,delivered,7
+KE,Kenya,2015,missing_iu_year,290
+KE,Kenya,2015,never_started,5
+KE,Kenya,2015,not_endemic,146
+KE,Kenya,2016,delivered,23
+KE,Kenya,2016,missing_iu_year,158
+KE,Kenya,2016,not_endemic,267
+KE,Kenya,2017,delivered,23
+KE,Kenya,2017,missing_iu_year,158
+KE,Kenya,2017,not_endemic,267
+KE,Kenya,2018,delivered,23
+KE,Kenya,2018,missing_iu_year,158
+KE,Kenya,2018,not_endemic,267
+KE,Kenya,2019,delivered,23
+KE,Kenya,2019,missing_iu_year,158
+KE,Kenya,2019,not_endemic,267
+KE,Kenya,2020,delivered,20
+KE,Kenya,2020,missing_iu_year,158
+KE,Kenya,2020,not_endemic,267
+KE,Kenya,2020,reported_interruption,3
+KE,Kenya,2021,missing_iu_year,158
+KE,Kenya,2021,not_endemic,267
+KE,Kenya,2021,reported_interruption,23
+KE,Kenya,2022,delivered,20
+KE,Kenya,2022,missing_iu_year,158
+KE,Kenya,2022,not_endemic,267
+KE,Kenya,2022,surveillance_or_stopped,3
+KE,Kenya,2023,legitimate_pause_IA,8
+KE,Kenya,2023,missing_iu_year,158
+KE,Kenya,2023,not_endemic,267
+KE,Kenya,2023,surveillance_or_stopped,15
+KE,Kenya,2024,delivered,5
+KE,Kenya,2024,missing_iu_year,158
+KE,Kenya,2024,not_endemic,267
+KE,Kenya,2024,surveillance_or_stopped,18
+KE,Kenya,2025,contradictory,7
+KE,Kenya,2025,missing_iu_year,158
+KE,Kenya,2025,not_endemic,267
+KE,Kenya,2025,surveillance_or_stopped,16
+KM,Comoros,2014,missing_JRF,17
+KM,Comoros,2015,missing_JRF,17
+KM,Comoros,2016,non_delivery_outside_cohort,17
+KM,Comoros,2017,delivered,17
+KM,Comoros,2018,reported_interruption,17
+KM,Comoros,2019,delivered,17
+KM,Comoros,2020,delivered,7
+KM,Comoros,2020,surveillance_or_stopped,10
+KM,Comoros,2021,delivered,7
+KM,Comoros,2021,surveillance_or_stopped,10
+KM,Comoros,2022,missing_JRF,17
+KM,Comoros,2023,missing_JRF,17
+KM,Comoros,2024,missing_JRF,17
+KM,Comoros,2025,legitimate_pause_IA,7
+KM,Comoros,2025,surveillance_or_stopped,10
+LR,Liberia,2014,missing_JRF,15
+LR,Liberia,2015,delivered,10
+LR,Liberia,2015,non_delivery_outside_cohort,3
+LR,Liberia,2015,not_endemic,2
+LR,Liberia,2016,delivered,13
+LR,Liberia,2016,not_endemic,2
+LR,Liberia,2017,delivered,13
+LR,Liberia,2017,not_endemic,2
+LR,Liberia,2018,delivered,13
+LR,Liberia,2018,not_endemic,2
+LR,Liberia,2019,delivered,13
+LR,Liberia,2019,not_endemic,2
+LR,Liberia,2020,not_endemic,2
+LR,Liberia,2020,reported_interruption,13
+LR,Liberia,2021,delivered,13
+LR,Liberia,2021,not_endemic,2
+LR,Liberia,2022,delivered,13
+LR,Liberia,2022,not_endemic,2
+LR,Liberia,2023,contradictory,8
+LR,Liberia,2023,delivered,7
+LR,Liberia,2024,delivered,4
+LR,Liberia,2024,not_endemic,2
+LR,Liberia,2024,surveillance_or_stopped,9
+LR,Liberia,2025,delivered,4
+LR,Liberia,2025,not_endemic,2
+LR,Liberia,2025,surveillance_or_stopped,9
+LS,Lesotho,2014,not_endemic,10
+LS,Lesotho,2015,not_endemic,10
+LS,Lesotho,2016,not_endemic,10
+LS,Lesotho,2017,not_endemic,10
+LS,Lesotho,2018,not_endemic,10
+LS,Lesotho,2019,not_endemic,10
+LS,Lesotho,2020,not_endemic,10
+LS,Lesotho,2021,not_endemic,10
+LS,Lesotho,2022,not_endemic,10
+LS,Lesotho,2023,not_endemic,10
+LS,Lesotho,2024,not_endemic,10
+LS,Lesotho,2025,not_endemic,10
+MG,Madagascar,2014,delivered,61
+MG,Madagascar,2014,missing_JRF,2
+MG,Madagascar,2014,never_started,38
+MG,Madagascar,2014,non_delivery_outside_cohort,1
+MG,Madagascar,2014,not_endemic,12
+MG,Madagascar,2015,delivered,61
+MG,Madagascar,2015,missing_JRF,2
+MG,Madagascar,2015,never_started,38
+MG,Madagascar,2015,non_delivery_outside_cohort,1
+MG,Madagascar,2015,not_endemic,12
+MG,Madagascar,2016,delivered,61
+MG,Madagascar,2016,missing_JRF,2
+MG,Madagascar,2016,never_started,38
+MG,Madagascar,2016,non_delivery_outside_cohort,1
+MG,Madagascar,2016,not_endemic,12
+MG,Madagascar,2017,never_started,38
+MG,Madagascar,2017,non_delivery_outside_cohort,1
+MG,Madagascar,2017,not_endemic,14
+MG,Madagascar,2017,reported_interruption,58
+MG,Madagascar,2017,surveillance_or_stopped,3
+MG,Madagascar,2018,missing_JRF,2
+MG,Madagascar,2018,never_started,38
+MG,Madagascar,2018,not_endemic,12
+MG,Madagascar,2018,reported_interruption,58
+MG,Madagascar,2018,surveillance_or_stopped,4
+MG,Madagascar,2019,delivered,18
+MG,Madagascar,2019,never_started,38
+MG,Madagascar,2019,non_delivery_outside_cohort,40
+MG,Madagascar,2019,not_endemic,14
+MG,Madagascar,2019,surveillance_or_stopped,4
+MG,Madagascar,2020,delivered,24
+MG,Madagascar,2020,never_started,20
+MG,Madagascar,2020,non_delivery_outside_cohort,32
+MG,Madagascar,2020,not_endemic,16
+MG,Madagascar,2020,reported_interruption,18
+MG,Madagascar,2020,surveillance_or_stopped,4
+MG,Madagascar,2021,never_started,20
+MG,Madagascar,2021,non_delivery_outside_cohort,32
+MG,Madagascar,2021,not_endemic,16
+MG,Madagascar,2021,reported_interruption,42
+MG,Madagascar,2021,surveillance_or_stopped,4
+MG,Madagascar,2022,delivered,50
+MG,Madagascar,2022,never_started,20
+MG,Madagascar,2022,non_delivery_outside_cohort,17
+MG,Madagascar,2022,not_endemic,16
+MG,Madagascar,2022,reported_interruption,7
+MG,Madagascar,2022,surveillance_or_stopped,4
+MG,Madagascar,2023,delivered,83
+MG,Madagascar,2023,not_endemic,27
+MG,Madagascar,2023,surveillance_or_stopped,4
+MG,Madagascar,2024,delivered,67
+MG,Madagascar,2024,legitimate_pause_IA,16
+MG,Madagascar,2024,not_endemic,27
+MG,Madagascar,2024,surveillance_or_stopped,4
+MG,Madagascar,2025,delivered,24
+MG,Madagascar,2025,legitimate_pause_IA,59
+MG,Madagascar,2025,not_endemic,27
+MG,Madagascar,2025,surveillance_or_stopped,4
+ML,Mali,2014,delivered,13
+ML,Mali,2014,missing_iu_year,12
+ML,Mali,2014,surveillance_or_stopped,50
+ML,Mali,2015,delivered,53
+ML,Mali,2015,missing_iu_year,12
+ML,Mali,2015,surveillance_or_stopped,10
+ML,Mali,2016,delivered,59
+ML,Mali,2016,missing_iu_year,10
+ML,Mali,2016,surveillance_or_stopped,6
+ML,Mali,2017,delivered,16
+ML,Mali,2017,missing_iu_year,10
+ML,Mali,2017,surveillance_or_stopped,49
+ML,Mali,2018,delivered,12
+ML,Mali,2018,surveillance_or_stopped,63
+ML,Mali,2019,surveillance_or_stopped,75
+ML,Mali,2020,surveillance_or_stopped,75
+ML,Mali,2021,surveillance_or_stopped,75
+ML,Mali,2022,surveillance_or_stopped,75
+ML,Mali,2023,surveillance_or_stopped,75
+ML,Mali,2024,surveillance_or_stopped,75
+ML,Mali,2025,not_endemic,75
+MR,Mauritania,2014,missing_iu_year,2
+MR,Mauritania,2014,not_endemic,54
+MR,Mauritania,2015,missing_iu_year,2
+MR,Mauritania,2015,not_endemic,54
+MR,Mauritania,2016,missing_iu_year,2
+MR,Mauritania,2016,not_endemic,54
+MR,Mauritania,2017,missing_iu_year,2
+MR,Mauritania,2017,not_endemic,54
+MR,Mauritania,2018,missing_iu_year,2
+MR,Mauritania,2018,not_endemic,54
+MR,Mauritania,2019,not_endemic,56
+MR,Mauritania,2020,not_endemic,56
+MR,Mauritania,2021,not_endemic,56
+MR,Mauritania,2022,not_endemic,56
+MR,Mauritania,2023,not_endemic,56
+MR,Mauritania,2024,not_endemic,56
+MR,Mauritania,2025,not_endemic,56
+MU,Mauritius,2014,not_endemic,10
+MU,Mauritius,2015,not_endemic,10
+MU,Mauritius,2016,not_endemic,10
+MU,Mauritius,2017,not_endemic,10
+MU,Mauritius,2018,not_endemic,10
+MU,Mauritius,2019,not_endemic,10
+MU,Mauritius,2020,not_endemic,10
+MU,Mauritius,2021,not_endemic,10
+MU,Mauritius,2022,not_endemic,10
+MU,Mauritius,2023,not_endemic,10
+MU,Mauritius,2024,not_endemic,10
+MU,Mauritius,2025,not_endemic,10
+MW,Malawi,2014,missing_JRF,29
+MW,Malawi,2015,not_endemic,1
+MW,Malawi,2015,surveillance_or_stopped,28
+MW,Malawi,2016,not_endemic,1
+MW,Malawi,2016,surveillance_or_stopped,28
+MW,Malawi,2017,not_endemic,1
+MW,Malawi,2017,surveillance_or_stopped,28
+MW,Malawi,2018,not_endemic,1
+MW,Malawi,2018,surveillance_or_stopped,28
+MW,Malawi,2019,not_endemic,1
+MW,Malawi,2019,surveillance_or_stopped,28
+MW,Malawi,2020,not_endemic,1
+MW,Malawi,2020,surveillance_or_stopped,28
+MW,Malawi,2021,not_endemic,1
+MW,Malawi,2021,surveillance_or_stopped,28
+MW,Malawi,2022,not_endemic,1
+MW,Malawi,2022,surveillance_or_stopped,28
+MW,Malawi,2023,not_endemic,1
+MW,Malawi,2023,surveillance_or_stopped,28
+MW,Malawi,2024,not_endemic,1
+MW,Malawi,2024,surveillance_or_stopped,28
+MW,Malawi,2025,not_endemic,1
+MW,Malawi,2025,surveillance_or_stopped,28
+MZ,Mozambique,2014,delivered,104
+MZ,Mozambique,2014,missing_iu_year,14
+MZ,Mozambique,2014,not_endemic,44
+MZ,Mozambique,2015,missing_JRF,161
+MZ,Mozambique,2015,missing_iu_year,1
+MZ,Mozambique,2016,delivered,113
+MZ,Mozambique,2016,missing_JRF,2
+MZ,Mozambique,2016,missing_iu_year,1
+MZ,Mozambique,2016,not_endemic,46
+MZ,Mozambique,2017,delivered,113
+MZ,Mozambique,2017,missing_iu_year,1
+MZ,Mozambique,2017,non_delivery_outside_cohort,1
+MZ,Mozambique,2017,not_endemic,47
+MZ,Mozambique,2018,delivered,114
+MZ,Mozambique,2018,missing_iu_year,1
+MZ,Mozambique,2018,not_endemic,47
+MZ,Mozambique,2019,delivered,60
+MZ,Mozambique,2019,missing_iu_year,1
+MZ,Mozambique,2019,not_endemic,47
+MZ,Mozambique,2019,reported_interruption,39
+MZ,Mozambique,2019,surveillance_or_stopped,15
+MZ,Mozambique,2020,delivered,94
+MZ,Mozambique,2020,missing_iu_year,1
+MZ,Mozambique,2020,not_endemic,47
+MZ,Mozambique,2020,surveillance_or_stopped,20
+MZ,Mozambique,2021,delivered,4
+MZ,Mozambique,2021,missing_iu_year,1
+MZ,Mozambique,2021,non_delivery_outside_cohort,1
+MZ,Mozambique,2021,not_endemic,47
+MZ,Mozambique,2021,reported_interruption,90
+MZ,Mozambique,2021,surveillance_or_stopped,19
+MZ,Mozambique,2022,legitimate_pause_IA,47
+MZ,Mozambique,2022,missing_iu_year,1
+MZ,Mozambique,2022,non_delivery_outside_cohort,1
+MZ,Mozambique,2022,not_endemic,47
+MZ,Mozambique,2022,reported_interruption,47
+MZ,Mozambique,2022,surveillance_or_stopped,19
+MZ,Mozambique,2023,delivered,35
+MZ,Mozambique,2023,legitimate_pause_IA,2
+MZ,Mozambique,2023,missing_iu_year,1
+MZ,Mozambique,2023,non_delivery_outside_cohort,16
+MZ,Mozambique,2023,not_endemic,47
+MZ,Mozambique,2023,reported_interruption,1
+MZ,Mozambique,2023,surveillance_or_stopped,60
+MZ,Mozambique,2024,contradictory,4
+MZ,Mozambique,2024,delivered,33
+MZ,Mozambique,2024,missing_iu_year,1
+MZ,Mozambique,2024,non_delivery_outside_cohort,17
+MZ,Mozambique,2024,not_endemic,45
+MZ,Mozambique,2024,reported_interruption,2
+MZ,Mozambique,2024,surveillance_or_stopped,60
+MZ,Mozambique,2025,delivered,2
+MZ,Mozambique,2025,missing_iu_year,1
+MZ,Mozambique,2025,non_delivery_outside_cohort,17
+MZ,Mozambique,2025,not_endemic,47
+MZ,Mozambique,2025,reported_interruption,33
+MZ,Mozambique,2025,surveillance_or_stopped,62
+NA,Namibia,2014,not_endemic,34
+NA,Namibia,2015,not_endemic,34
+NA,Namibia,2016,not_endemic,34
+NA,Namibia,2017,not_endemic,34
+NA,Namibia,2018,not_endemic,34
+NA,Namibia,2019,not_endemic,34
+NA,Namibia,2020,not_endemic,34
+NA,Namibia,2021,not_endemic,34
+NA,Namibia,2022,not_endemic,34
+NA,Namibia,2023,not_endemic,34
+NA,Namibia,2024,not_endemic,34
+NA,Namibia,2025,not_endemic,34
+NE,Niger,2014,delivered,28
+NE,Niger,2014,missing_iu_year,55
+NE,Niger,2014,not_endemic,11
+NE,Niger,2014,surveillance_or_stopped,3
+NE,Niger,2015,delivered,23
+NE,Niger,2015,missing_iu_year,55
+NE,Niger,2015,not_endemic,11
+NE,Niger,2015,surveillance_or_stopped,8
+NE,Niger,2016,missing_iu_year,55
+NE,Niger,2016,not_endemic,11
+NE,Niger,2016,reported_interruption,12
+NE,Niger,2016,surveillance_or_stopped,19
+NE,Niger,2017,delivered,21
+NE,Niger,2017,missing_iu_year,55
+NE,Niger,2017,not_endemic,11
+NE,Niger,2017,surveillance_or_stopped,10
+NE,Niger,2018,delivered,17
+NE,Niger,2018,missing_iu_year,55
+NE,Niger,2018,not_endemic,11
+NE,Niger,2018,surveillance_or_stopped,14
+NE,Niger,2019,delivered,11
+NE,Niger,2019,missing_iu_year,55
+NE,Niger,2019,not_endemic,11
+NE,Niger,2019,surveillance_or_stopped,20
+NE,Niger,2020,delivered,11
+NE,Niger,2020,missing_iu_year,25
+NE,Niger,2020,not_endemic,17
+NE,Niger,2020,surveillance_or_stopped,44
+NE,Niger,2021,legitimate_pause_IA,10
+NE,Niger,2021,missing_iu_year,25
+NE,Niger,2021,not_endemic,17
+NE,Niger,2021,reported_interruption,1
+NE,Niger,2021,surveillance_or_stopped,44
+NE,Niger,2022,delivered,1
+NE,Niger,2022,missing_iu_year,25
+NE,Niger,2022,not_endemic,17
+NE,Niger,2022,surveillance_or_stopped,54
+NE,Niger,2023,delivered,1
+NE,Niger,2023,missing_iu_year,25
+NE,Niger,2023,not_endemic,17
+NE,Niger,2023,surveillance_or_stopped,54
+NE,Niger,2024,missing_iu_year,25
+NE,Niger,2024,not_endemic,17
+NE,Niger,2024,reported_interruption,1
+NE,Niger,2024,surveillance_or_stopped,54
+NE,Niger,2025,missing_iu_year,25
+NE,Niger,2025,not_endemic,17
+NE,Niger,2025,surveillance_or_stopped,55
+NG,Nigeria,2014,contradictory,3
+NG,Nigeria,2014,delivered,351
+NG,Nigeria,2014,never_started,35
+NG,Nigeria,2014,non_delivery_outside_cohort,167
+NG,Nigeria,2014,not_endemic,188
+NG,Nigeria,2014,surveillance_or_stopped,30
+NG,Nigeria,2015,delivered,428
+NG,Nigeria,2015,never_started,35
+NG,Nigeria,2015,non_delivery_outside_cohort,90
+NG,Nigeria,2015,not_endemic,191
+NG,Nigeria,2015,surveillance_or_stopped,30
+NG,Nigeria,2016,contradictory,1
+NG,Nigeria,2016,delivered,442
+NG,Nigeria,2016,never_started,35
+NG,Nigeria,2016,non_delivery_outside_cohort,26
+NG,Nigeria,2016,not_endemic,190
+NG,Nigeria,2016,reported_interruption,50
+NG,Nigeria,2016,surveillance_or_stopped,30
+NG,Nigeria,2017,delivered,484
+NG,Nigeria,2017,never_started,33
+NG,Nigeria,2017,non_delivery_outside_cohort,4
+NG,Nigeria,2017,not_endemic,191
+NG,Nigeria,2017,reported_interruption,32
+NG,Nigeria,2017,surveillance_or_stopped,30
+NG,Nigeria,2018,delivered,510
+NG,Nigeria,2018,never_started,33
+NG,Nigeria,2018,not_endemic,191
+NG,Nigeria,2018,reported_interruption,10
+NG,Nigeria,2018,surveillance_or_stopped,30
+NG,Nigeria,2019,delivered,506
+NG,Nigeria,2019,never_started,16
+NG,Nigeria,2019,not_endemic,191
+NG,Nigeria,2019,reported_interruption,31
+NG,Nigeria,2019,surveillance_or_stopped,30
+NG,Nigeria,2020,contradictory,1
+NG,Nigeria,2020,delivered,435
+NG,Nigeria,2020,never_started,4
+NG,Nigeria,2020,not_endemic,189
+NG,Nigeria,2020,reported_interruption,108
+NG,Nigeria,2020,surveillance_or_stopped,37
+NG,Nigeria,2021,delivered,118
+NG,Nigeria,2021,never_started,4
+NG,Nigeria,2021,not_endemic,190
+NG,Nigeria,2021,reported_interruption,425
+NG,Nigeria,2021,surveillance_or_stopped,37
+NG,Nigeria,2022,delivered,455
+NG,Nigeria,2022,never_started,3
+NG,Nigeria,2022,non_delivery_outside_cohort,12
+NG,Nigeria,2022,not_endemic,191
+NG,Nigeria,2022,reported_interruption,56
+NG,Nigeria,2022,surveillance_or_stopped,57
+NG,Nigeria,2023,delivered,233
+NG,Nigeria,2023,legitimate_pause_IA,172
+NG,Nigeria,2023,never_started,3
+NG,Nigeria,2023,non_delivery_outside_cohort,4
+NG,Nigeria,2023,not_endemic,192
+NG,Nigeria,2023,reported_interruption,36
+NG,Nigeria,2023,surveillance_or_stopped,134
+NG,Nigeria,2024,contradictory,26
+NG,Nigeria,2024,delivered,104
+NG,Nigeria,2024,legitimate_pause_IA,280
+NG,Nigeria,2024,never_started,3
+NG,Nigeria,2024,non_delivery_outside_cohort,2
+NG,Nigeria,2024,not_endemic,191
+NG,Nigeria,2024,reported_interruption,3
+NG,Nigeria,2024,surveillance_or_stopped,165
+NG,Nigeria,2025,delivered,63
+NG,Nigeria,2025,legitimate_pause_IA,162
+NG,Nigeria,2025,never_started,2
+NG,Nigeria,2025,not_endemic,191
+NG,Nigeria,2025,reported_interruption,8
+NG,Nigeria,2025,surveillance_or_stopped,342
+NG,Nigeria,2025,unknown,6
+RW,Rwanda,2014,not_endemic,30
+RW,Rwanda,2015,not_endemic,30
+RW,Rwanda,2016,not_endemic,30
+RW,Rwanda,2017,not_endemic,30
+RW,Rwanda,2018,not_endemic,30
+RW,Rwanda,2019,not_endemic,30
+RW,Rwanda,2020,not_endemic,30
+RW,Rwanda,2021,not_endemic,30
+RW,Rwanda,2022,not_endemic,30
+RW,Rwanda,2023,not_endemic,30
+RW,Rwanda,2024,not_endemic,30
+RW,Rwanda,2025,not_endemic,30
+SC,Seychelles,2014,not_endemic,26
+SC,Seychelles,2015,not_endemic,26
+SC,Seychelles,2016,not_endemic,26
+SC,Seychelles,2017,not_endemic,26
+SC,Seychelles,2018,not_endemic,26
+SC,Seychelles,2019,not_endemic,26
+SC,Seychelles,2020,not_endemic,26
+SC,Seychelles,2021,not_endemic,26
+SC,Seychelles,2022,not_endemic,26
+SC,Seychelles,2023,not_endemic,26
+SC,Seychelles,2024,not_endemic,26
+SC,Seychelles,2025,not_endemic,26
+SL,Sierra Leone,2014,missing_JRF,14
+SL,Sierra Leone,2014,missing_iu_year,2
+SL,Sierra Leone,2015,delivered,14
+SL,Sierra Leone,2015,missing_iu_year,2
+SL,Sierra Leone,2016,delivered,14
+SL,Sierra Leone,2016,missing_iu_year,2
+SL,Sierra Leone,2017,delivered,6
+SL,Sierra Leone,2017,missing_iu_year,2
+SL,Sierra Leone,2017,surveillance_or_stopped,8
+SL,Sierra Leone,2018,delivered,4
+SL,Sierra Leone,2018,missing_iu_year,2
+SL,Sierra Leone,2018,reported_interruption,2
+SL,Sierra Leone,2018,surveillance_or_stopped,8
+SL,Sierra Leone,2019,delivered,5
+SL,Sierra Leone,2019,missing_iu_year,2
+SL,Sierra Leone,2019,reported_interruption,1
+SL,Sierra Leone,2019,surveillance_or_stopped,8
+SL,Sierra Leone,2020,delivered,4
+SL,Sierra Leone,2020,surveillance_or_stopped,12
+SL,Sierra Leone,2021,delivered,4
+SL,Sierra Leone,2021,surveillance_or_stopped,12
+SL,Sierra Leone,2022,delivered,1
+SL,Sierra Leone,2022,surveillance_or_stopped,15
+SL,Sierra Leone,2023,delivered,1
+SL,Sierra Leone,2023,surveillance_or_stopped,15
+SL,Sierra Leone,2024,legitimate_pause_IA,1
+SL,Sierra Leone,2024,surveillance_or_stopped,15
+SL,Sierra Leone,2025,surveillance_or_stopped,16
+SN,Senegal,2014,delivered,6
+SN,Senegal,2014,missing_iu_year,5
+SN,Senegal,2014,non_delivery_outside_cohort,44
+SN,Senegal,2014,not_endemic,26
+SN,Senegal,2015,delivered,50
+SN,Senegal,2015,missing_iu_year,5
+SN,Senegal,2015,not_endemic,26
+SN,Senegal,2016,delivered,50
+SN,Senegal,2016,missing_iu_year,5
+SN,Senegal,2016,not_endemic,26
+SN,Senegal,2017,delivered,50
+SN,Senegal,2017,missing_iu_year,5
+SN,Senegal,2017,not_endemic,26
+SN,Senegal,2018,delivered,47
+SN,Senegal,2018,missing_iu_year,5
+SN,Senegal,2018,not_endemic,26
+SN,Senegal,2018,reported_interruption,3
+SN,Senegal,2019,delivered,44
+SN,Senegal,2019,missing_iu_year,5
+SN,Senegal,2019,not_endemic,26
+SN,Senegal,2019,reported_interruption,6
+SN,Senegal,2020,delivered,34
+SN,Senegal,2020,missing_iu_year,2
+SN,Senegal,2020,not_endemic,28
+SN,Senegal,2020,surveillance_or_stopped,17
+SN,Senegal,2021,delivered,10
+SN,Senegal,2021,missing_JRF,1
+SN,Senegal,2021,missing_iu_year,3
+SN,Senegal,2021,not_endemic,27
+SN,Senegal,2021,reported_interruption,23
+SN,Senegal,2021,surveillance_or_stopped,17
+SN,Senegal,2022,delivered,3
+SN,Senegal,2022,legitimate_pause_IA,7
+SN,Senegal,2022,missing_JRF,1
+SN,Senegal,2022,missing_iu_year,3
+SN,Senegal,2022,not_endemic,27
+SN,Senegal,2022,surveillance_or_stopped,40
+SN,Senegal,2023,delivered,1
+SN,Senegal,2023,legitimate_pause_IA,2
+SN,Senegal,2023,missing_JRF,1
+SN,Senegal,2023,missing_iu_year,3
+SN,Senegal,2023,not_endemic,27
+SN,Senegal,2023,surveillance_or_stopped,47
+SN,Senegal,2024,missing_JRF,1
+SN,Senegal,2024,missing_iu_year,3
+SN,Senegal,2024,not_endemic,27
+SN,Senegal,2024,surveillance_or_stopped,50
+SN,Senegal,2025,missing_JRF,1
+SN,Senegal,2025,missing_iu_year,3
+SN,Senegal,2025,not_endemic,27
+SN,Senegal,2025,surveillance_or_stopped,50
+SS,South Sudan,2014,never_started,50
+SS,South Sudan,2014,not_endemic,29
+SS,South Sudan,2015,missing_JRF,79
+SS,South Sudan,2016,missing_JRF,75
+SS,South Sudan,2016,never_started,4
+SS,South Sudan,2017,delivered,3
+SS,South Sudan,2017,never_started,47
+SS,South Sudan,2017,not_endemic,29
+SS,South Sudan,2018,contradictory,1
+SS,South Sudan,2018,delivered,6
+SS,South Sudan,2018,never_started,44
+SS,South Sudan,2018,not_endemic,28
+SS,South Sudan,2019,delivered,14
+SS,South Sudan,2019,never_started,34
+SS,South Sudan,2019,not_endemic,29
+SS,South Sudan,2019,reported_interruption,2
+SS,South Sudan,2020,never_started,34
+SS,South Sudan,2020,not_endemic,29
+SS,South Sudan,2020,reported_interruption,16
+SS,South Sudan,2021,contradictory,1
+SS,South Sudan,2021,delivered,34
+SS,South Sudan,2021,never_started,16
+SS,South Sudan,2021,not_endemic,28
+SS,South Sudan,2022,delivered,50
+SS,South Sudan,2022,not_endemic,29
+SS,South Sudan,2023,delivered,35
+SS,South Sudan,2023,not_endemic,29
+SS,South Sudan,2023,reported_interruption,15
+SS,South Sudan,2024,delivered,35
+SS,South Sudan,2024,not_endemic,29
+SS,South Sudan,2024,reported_interruption,15
+SS,South Sudan,2025,delivered,36
+SS,South Sudan,2025,non_delivery_outside_cohort,13
+SS,South Sudan,2025,not_endemic,29
+SS,South Sudan,2025,reported_interruption,1
+ST,Sao Tome and Principe,2014,missing_JRF,7
+ST,Sao Tome and Principe,2015,missing_JRF,7
+ST,Sao Tome and Principe,2016,non_delivery_outside_cohort,7
+ST,Sao Tome and Principe,2017,missing_JRF,7
+ST,Sao Tome and Principe,2018,delivered,7
+ST,Sao Tome and Principe,2019,delivered,7
+ST,Sao Tome and Principe,2020,delivered,7
+ST,Sao Tome and Principe,2021,surveillance_or_stopped,7
+ST,Sao Tome and Principe,2022,surveillance_or_stopped,7
+ST,Sao Tome and Principe,2023,surveillance_or_stopped,7
+ST,Sao Tome and Principe,2024,surveillance_or_stopped,7
+ST,Sao Tome and Principe,2025,surveillance_or_stopped,7
+SZ,Eswatini,2014,missing_iu_year,4
+SZ,Eswatini,2014,not_endemic,55
+SZ,Eswatini,2015,missing_iu_year,4
+SZ,Eswatini,2015,not_endemic,55
+SZ,Eswatini,2016,missing_iu_year,4
+SZ,Eswatini,2016,not_endemic,55
+SZ,Eswatini,2017,missing_iu_year,4
+SZ,Eswatini,2017,not_endemic,55
+SZ,Eswatini,2018,missing_iu_year,4
+SZ,Eswatini,2018,not_endemic,55
+SZ,Eswatini,2019,missing_iu_year,4
+SZ,Eswatini,2019,not_endemic,55
+SZ,Eswatini,2020,missing_iu_year,4
+SZ,Eswatini,2020,not_endemic,55
+SZ,Eswatini,2021,missing_iu_year,4
+SZ,Eswatini,2021,not_endemic,55
+SZ,Eswatini,2022,missing_iu_year,4
+SZ,Eswatini,2022,not_endemic,55
+SZ,Eswatini,2023,not_endemic,59
+SZ,Eswatini,2024,not_endemic,59
+SZ,Eswatini,2025,not_endemic,59
+TD,Chad,2014,missing_JRF,80
+TD,Chad,2014,missing_iu_year,58
+TD,Chad,2014,non_delivery_outside_cohort,14
+TD,Chad,2014,not_endemic,6
+TD,Chad,2015,missing_iu_year,58
+TD,Chad,2015,non_delivery_outside_cohort,22
+TD,Chad,2015,not_endemic,78
+TD,Chad,2016,delivered,13
+TD,Chad,2016,missing_iu_year,58
+TD,Chad,2016,non_delivery_outside_cohort,9
+TD,Chad,2016,not_endemic,78
+TD,Chad,2017,delivered,25
+TD,Chad,2017,missing_iu_year,39
+TD,Chad,2017,non_delivery_outside_cohort,7
+TD,Chad,2017,not_endemic,87
+TD,Chad,2018,delivered,30
+TD,Chad,2018,missing_iu_year,39
+TD,Chad,2018,non_delivery_outside_cohort,1
+TD,Chad,2018,not_endemic,87
+TD,Chad,2018,reported_interruption,1
+TD,Chad,2019,delivered,32
+TD,Chad,2019,missing_iu_year,39
+TD,Chad,2019,not_endemic,87
+TD,Chad,2020,delivered,35
+TD,Chad,2020,missing_iu_year,36
+TD,Chad,2020,not_endemic,87
+TD,Chad,2021,delivered,36
+TD,Chad,2021,missing_iu_year,28
+TD,Chad,2021,not_endemic,94
+TD,Chad,2022,delivered,12
+TD,Chad,2022,missing_iu_year,28
+TD,Chad,2022,not_endemic,94
+TD,Chad,2022,reported_interruption,24
+TD,Chad,2023,legitimate_pause_IA,11
+TD,Chad,2023,missing_iu_year,9
+TD,Chad,2023,non_delivery_outside_cohort,5
+TD,Chad,2023,not_endemic,108
+TD,Chad,2023,reported_interruption,25
+TD,Chad,2024,contradictory,3
+TD,Chad,2024,delivered,32
+TD,Chad,2024,never_started,1
+TD,Chad,2024,non_delivery_outside_cohort,8
+TD,Chad,2024,not_endemic,113
+TD,Chad,2024,reported_interruption,1
+TD,Chad,2025,legitimate_pause_IA,11
+TD,Chad,2025,never_started,1
+TD,Chad,2025,non_delivery_outside_cohort,9
+TD,Chad,2025,not_endemic,115
+TD,Chad,2025,reported_interruption,22
+TG,Togo,2014,missing_iu_year,8
+TG,Togo,2014,not_endemic,32
+TG,Togo,2014,surveillance_or_stopped,8
+TG,Togo,2015,missing_iu_year,8
+TG,Togo,2015,not_endemic,32
+TG,Togo,2015,surveillance_or_stopped,8
+TG,Togo,2016,missing_iu_year,8
+TG,Togo,2016,not_endemic,32
+TG,Togo,2016,surveillance_or_stopped,8
+TG,Togo,2017,missing_iu_year,8
+TG,Togo,2017,not_endemic,32
+TG,Togo,2017,surveillance_or_stopped,8
+TG,Togo,2018,missing_iu_year,8
+TG,Togo,2018,not_endemic,32
+TG,Togo,2018,surveillance_or_stopped,8
+TG,Togo,2019,missing_JRF,1
+TG,Togo,2019,missing_iu_year,7
+TG,Togo,2019,not_endemic,32
+TG,Togo,2019,surveillance_or_stopped,8
+TG,Togo,2020,missing_iu_year,4
+TG,Togo,2020,not_endemic,35
+TG,Togo,2020,surveillance_or_stopped,9
+TG,Togo,2021,missing_iu_year,4
+TG,Togo,2021,not_endemic,35
+TG,Togo,2021,surveillance_or_stopped,9
+TG,Togo,2022,missing_iu_year,9
+TG,Togo,2022,not_endemic,30
+TG,Togo,2022,surveillance_or_stopped,9
+TG,Togo,2023,missing_iu_year,9
+TG,Togo,2023,not_endemic,30
+TG,Togo,2023,surveillance_or_stopped,9
+TG,Togo,2024,missing_iu_year,9
+TG,Togo,2024,not_endemic,30
+TG,Togo,2024,surveillance_or_stopped,9
+TG,Togo,2025,missing_iu_year,9
+TG,Togo,2025,not_endemic,30
+TG,Togo,2025,surveillance_or_stopped,9
+TZ,Tanzania (Mainland),2014,contradictory,5
+TZ,Tanzania (Mainland),2014,delivered,95
+TZ,Tanzania (Mainland),2014,missing_iu_year,20
+TZ,Tanzania (Mainland),2014,not_endemic,63
+TZ,Tanzania (Mainland),2014,surveillance_or_stopped,3
+TZ,Tanzania (Mainland),2015,contradictory,24
+TZ,Tanzania (Mainland),2015,delivered,71
+TZ,Tanzania (Mainland),2015,missing_JRF,20
+TZ,Tanzania (Mainland),2015,non_delivery_outside_cohort,1
+TZ,Tanzania (Mainland),2015,not_endemic,63
+TZ,Tanzania (Mainland),2015,surveillance_or_stopped,7
+TZ,Tanzania (Mainland),2016,contradictory,18
+TZ,Tanzania (Mainland),2016,delivered,44
+TZ,Tanzania (Mainland),2016,not_endemic,66
+TZ,Tanzania (Mainland),2016,surveillance_or_stopped,58
+TZ,Tanzania (Mainland),2017,contradictory,23
+TZ,Tanzania (Mainland),2017,delivered,26
+TZ,Tanzania (Mainland),2017,missing_iu_year,1
+TZ,Tanzania (Mainland),2017,non_delivery_outside_cohort,1
+TZ,Tanzania (Mainland),2017,not_endemic,65
+TZ,Tanzania (Mainland),2017,surveillance_or_stopped,70
+TZ,Tanzania (Mainland),2018,contradictory,5
+TZ,Tanzania (Mainland),2018,delivered,23
+TZ,Tanzania (Mainland),2018,missing_iu_year,1
+TZ,Tanzania (Mainland),2018,not_endemic,65
+TZ,Tanzania (Mainland),2018,surveillance_or_stopped,92
+TZ,Tanzania (Mainland),2019,delivered,9
+TZ,Tanzania (Mainland),2019,missing_iu_year,1
+TZ,Tanzania (Mainland),2019,non_delivery_outside_cohort,1
+TZ,Tanzania (Mainland),2019,not_endemic,65
+TZ,Tanzania (Mainland),2019,reported_interruption,14
+TZ,Tanzania (Mainland),2019,surveillance_or_stopped,96
+TZ,Tanzania (Mainland),2020,missing_iu_year,1
+TZ,Tanzania (Mainland),2020,non_delivery_outside_cohort,1
+TZ,Tanzania (Mainland),2020,not_endemic,65
+TZ,Tanzania (Mainland),2020,reported_interruption,14
+TZ,Tanzania (Mainland),2020,surveillance_or_stopped,105
+TZ,Tanzania (Mainland),2021,delivered,8
+TZ,Tanzania (Mainland),2021,missing_iu_year,1
+TZ,Tanzania (Mainland),2021,non_delivery_outside_cohort,2
+TZ,Tanzania (Mainland),2021,not_endemic,65
+TZ,Tanzania (Mainland),2021,surveillance_or_stopped,110
+TZ,Tanzania (Mainland),2022,delivered,9
+TZ,Tanzania (Mainland),2022,missing_iu_year,1
+TZ,Tanzania (Mainland),2022,non_delivery_outside_cohort,1
+TZ,Tanzania (Mainland),2022,not_endemic,65
+TZ,Tanzania (Mainland),2022,surveillance_or_stopped,110
+TZ,Tanzania (Mainland),2023,delivered,7
+TZ,Tanzania (Mainland),2023,missing_JRF,1
+TZ,Tanzania (Mainland),2023,missing_iu_year,1
+TZ,Tanzania (Mainland),2023,not_endemic,65
+TZ,Tanzania (Mainland),2023,surveillance_or_stopped,112
+TZ,Tanzania (Mainland),2024,delivered,3
+TZ,Tanzania (Mainland),2024,legitimate_pause_IA,4
+TZ,Tanzania (Mainland),2024,missing_JRF,1
+TZ,Tanzania (Mainland),2024,missing_iu_year,1
+TZ,Tanzania (Mainland),2024,not_endemic,65
+TZ,Tanzania (Mainland),2024,surveillance_or_stopped,112
+TZ,Tanzania (Mainland),2025,delivered,1
+TZ,Tanzania (Mainland),2025,legitimate_pause_IA,4
+TZ,Tanzania (Mainland),2025,missing_JRF,1
+TZ,Tanzania (Mainland),2025,missing_iu_year,1
+TZ,Tanzania (Mainland),2025,not_endemic,65
+TZ,Tanzania (Mainland),2025,surveillance_or_stopped,112
+TZ,Tanzania (Mainland),2025,unknown,2
+UG,Uganda,2014,delivered,48
+UG,Uganda,2014,missing_iu_year,34
+UG,Uganda,2014,not_endemic,58
+UG,Uganda,2014,surveillance_or_stopped,6
+UG,Uganda,2015,delivered,36
+UG,Uganda,2015,missing_iu_year,34
+UG,Uganda,2015,non_delivery_outside_cohort,1
+UG,Uganda,2015,not_endemic,58
+UG,Uganda,2015,surveillance_or_stopped,17
+UG,Uganda,2016,missing_iu_year,34
+UG,Uganda,2016,not_endemic,58
+UG,Uganda,2016,reported_interruption,10
+UG,Uganda,2016,surveillance_or_stopped,44
+UG,Uganda,2017,delivered,9
+UG,Uganda,2017,missing_iu_year,30
+UG,Uganda,2017,not_endemic,61
+UG,Uganda,2017,surveillance_or_stopped,46
+UG,Uganda,2018,delivered,6
+UG,Uganda,2018,missing_iu_year,30
+UG,Uganda,2018,not_endemic,61
+UG,Uganda,2018,surveillance_or_stopped,49
+UG,Uganda,2019,delivered,6
+UG,Uganda,2019,missing_iu_year,23
+UG,Uganda,2019,not_endemic,65
+UG,Uganda,2019,surveillance_or_stopped,52
+UG,Uganda,2020,missing_iu_year,12
+UG,Uganda,2020,not_endemic,70
+UG,Uganda,2020,surveillance_or_stopped,64
+UG,Uganda,2021,missing_iu_year,11
+UG,Uganda,2021,not_endemic,70
+UG,Uganda,2021,surveillance_or_stopped,65
+UG,Uganda,2022,missing_iu_year,11
+UG,Uganda,2022,not_endemic,70
+UG,Uganda,2022,surveillance_or_stopped,65
+UG,Uganda,2023,not_endemic,76
+UG,Uganda,2023,surveillance_or_stopped,70
+UG,Uganda,2024,not_endemic,76
+UG,Uganda,2024,surveillance_or_stopped,70
+UG,Uganda,2025,not_endemic,76
+UG,Uganda,2025,surveillance_or_stopped,70
+ZA,South Africa,2014,missing_iu_year,48
+ZA,South Africa,2014,not_endemic,9
+ZA,South Africa,2015,missing_iu_year,48
+ZA,South Africa,2015,not_endemic,9
+ZA,South Africa,2016,missing_iu_year,48
+ZA,South Africa,2016,not_endemic,9
+ZA,South Africa,2017,missing_iu_year,5
+ZA,South Africa,2017,not_endemic,52
+ZA,South Africa,2018,missing_iu_year,5
+ZA,South Africa,2018,not_endemic,52
+ZA,South Africa,2019,missing_iu_year,5
+ZA,South Africa,2019,not_endemic,52
+ZA,South Africa,2020,missing_iu_year,5
+ZA,South Africa,2020,not_endemic,52
+ZA,South Africa,2021,missing_iu_year,5
+ZA,South Africa,2021,not_endemic,52
+ZA,South Africa,2022,missing_iu_year,5
+ZA,South Africa,2022,not_endemic,52
+ZA,South Africa,2023,missing_iu_year,5
+ZA,South Africa,2023,not_endemic,52
+ZA,South Africa,2024,missing_iu_year,5
+ZA,South Africa,2024,not_endemic,52
+ZA,South Africa,2025,missing_iu_year,5
+ZA,South Africa,2025,not_endemic,52
+ZM,Zambia,2014,missing_JRF,103
+ZM,Zambia,2014,missing_iu_year,13
+ZM,Zambia,2015,delivered,83
+ZM,Zambia,2015,missing_iu_year,13
+ZM,Zambia,2015,non_delivery_outside_cohort,2
+ZM,Zambia,2015,not_endemic,18
+ZM,Zambia,2016,missing_iu_year,13
+ZM,Zambia,2016,non_delivery_outside_cohort,2
+ZM,Zambia,2016,not_endemic,18
+ZM,Zambia,2016,reported_interruption,83
+ZM,Zambia,2017,delivered,85
+ZM,Zambia,2017,missing_iu_year,13
+ZM,Zambia,2017,not_endemic,18
+ZM,Zambia,2018,delivered,69
+ZM,Zambia,2018,missing_iu_year,13
+ZM,Zambia,2018,not_endemic,18
+ZM,Zambia,2018,reported_interruption,16
+ZM,Zambia,2019,delivered,33
+ZM,Zambia,2019,missing_iu_year,13
+ZM,Zambia,2019,not_endemic,18
+ZM,Zambia,2019,reported_interruption,52
+ZM,Zambia,2020,delivered,47
+ZM,Zambia,2020,missing_iu_year,13
+ZM,Zambia,2020,non_delivery_outside_cohort,16
+ZM,Zambia,2020,not_endemic,18
+ZM,Zambia,2020,reported_interruption,22
+ZM,Zambia,2021,delivered,35
+ZM,Zambia,2021,missing_iu_year,13
+ZM,Zambia,2021,non_delivery_outside_cohort,3
+ZM,Zambia,2021,not_endemic,18
+ZM,Zambia,2021,reported_interruption,47
+ZM,Zambia,2022,missing_iu_year,13
+ZM,Zambia,2022,non_delivery_outside_cohort,3
+ZM,Zambia,2022,not_endemic,18
+ZM,Zambia,2022,reported_interruption,82
+ZM,Zambia,2023,not_endemic,20
+ZM,Zambia,2023,reported_interruption,16
+ZM,Zambia,2023,surveillance_or_stopped,80
+ZM,Zambia,2024,non_delivery_outside_cohort,16
+ZM,Zambia,2024,not_endemic,20
+ZM,Zambia,2024,surveillance_or_stopped,80
+ZM,Zambia,2025,delivered,1
+ZM,Zambia,2025,not_endemic,22
+ZM,Zambia,2025,surveillance_or_stopped,93
+ZW,Zimbabwe,2014,never_started,39
+ZW,Zimbabwe,2014,not_endemic,24
+ZW,Zimbabwe,2015,never_started,39
+ZW,Zimbabwe,2015,not_endemic,24
+ZW,Zimbabwe,2016,delivered,39
+ZW,Zimbabwe,2016,not_endemic,24
+ZW,Zimbabwe,2017,delivered,39
+ZW,Zimbabwe,2017,not_endemic,24
+ZW,Zimbabwe,2018,not_endemic,24
+ZW,Zimbabwe,2018,reported_interruption,39
+ZW,Zimbabwe,2019,missing_JRF,63
+ZW,Zimbabwe,2020,non_delivery_outside_cohort,39
+ZW,Zimbabwe,2020,not_endemic,24
+ZW,Zimbabwe,2021,missing_JRF,63
+ZW,Zimbabwe,2022,non_delivery_outside_cohort,39
+ZW,Zimbabwe,2022,not_endemic,24
+ZW,Zimbabwe,2023,non_delivery_outside_cohort,2
+ZW,Zimbabwe,2023,not_endemic,61
+ZW,Zimbabwe,2024,delivered,7
+ZW,Zimbabwe,2024,not_endemic,56
+ZW,Zimbabwe,2025,delivered,7
+ZW,Zimbabwe,2025,not_endemic,56
+ZZ,Tanzania (Zanzibar),2014,missing_JRF,10
+ZZ,Tanzania (Zanzibar),2014,missing_iu_year,1
+ZZ,Tanzania (Zanzibar),2015,missing_iu_year,1
+ZZ,Tanzania (Zanzibar),2015,non_delivery_outside_cohort,10
+ZZ,Tanzania (Zanzibar),2016,delivered,10
+ZZ,Tanzania (Zanzibar),2016,missing_iu_year,1
+ZZ,Tanzania (Zanzibar),2017,delivered,10
+ZZ,Tanzania (Zanzibar),2017,missing_iu_year,1
+ZZ,Tanzania (Zanzibar),2018,non_delivery_outside_cohort,1
+ZZ,Tanzania (Zanzibar),2018,reported_interruption,10
+ZZ,Tanzania (Zanzibar),2019,missing_JRF,11
+ZZ,Tanzania (Zanzibar),2020,delivered,11
+ZZ,Tanzania (Zanzibar),2021,delivered,11
+ZZ,Tanzania (Zanzibar),2022,delivered,11
+ZZ,Tanzania (Zanzibar),2023,reported_interruption,11
+ZZ,Tanzania (Zanzibar),2024,delivered,11
+ZZ,Tanzania (Zanzibar),2025,delivered,2
+ZZ,Tanzania (Zanzibar),2025,surveillance_or_stopped,9

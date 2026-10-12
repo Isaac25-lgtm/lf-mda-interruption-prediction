@@ -1,0 +1,9 @@
+endemicity_raw,endemicity_id,status_code,rows,countries,first_year,last_year
+Endemic (MDA not delivered),1.0,ND,5908,32,2014,2025
+Endemic (pending IA),33.0,IA,942,15,2021,2025
+Endemic (under MDA),2.0,MDA,12449,32,2014,2025
+Endemic (under post-intervention surveillance),3.0,PIS,9356,27,2014,2025
+Endemic (under targeted treatment),,TT,8,2,2025,2025
+Endemicity unknown,99.0,UNK,148,5,2014,2025
+Non-endemic,0.0,NE,35131,42,2014,2025
+Not reported,999.0,NR,1512,23,2014,2025

@@ -1,0 +1,100 @@
+# Analysis protocol. FROZEN 2026-10-12, after the label audit and BEFORE any model was
+# fitted or any model performance was seen. Later changes must be appended to
+# `amendments` with a date and reason, and recorded in docs/DECISIONS.md.
+version: "1.0"
+frozen_on: "2026-10-12"
+
+estimand: >
+  Probability that an implementation unit (IU) in the active-programme cohort at the
+  decision date (31 December of year t-1) has the WHO ESPEN status
+  "Endemic (MDA not delivered)" in year t, versus "Endemic (under MDA)".
+label_status: administrative proxy; expert verification pending
+
+cohort:
+  first_target_year: 2016            # needs rows for t-1 and t-2; data start in 2014
+  last_target_year: 2025
+  requires_mda_at_lag1: true         # status at t-1 is "under MDA" or "MDA not delivered"
+  recent_delivery_lags: [1, 2]       # delivered MDA in t-1 or t-2
+  # Expected-round restriction. An IU with >=5 effective rounds is due for impact
+  # assessment, not another round, so non-delivery there is often a legitimate stop.
+  # Uses epiEffMdaN at t-1 (effective rounds observed in the extract, i.e. since 2014).
+  max_observed_effective_rounds_at_lag1: 4
+  sensitivity_cohorts:
+    broad: no effective-round restriction
+    strict: observed effective rounds + rounds delivered before 2014 <= 4
+    incident: delivered MDA at t-1 (excludes IUs already interrupted at t-1)
+
+outcome:
+  positive: [reported_interruption]
+  negative: [delivered]
+  excluded_and_counted: [legitimate_pause_IA, surveillance_or_stopped, missing_JRF,
+                         missing_iu_year, contradictory, unknown]
+
+windows:
+  development: [2016, 2022]
+  rolling_validation_years: [2019, 2020, 2021, 2022]   # train on target years < t
+  covid_stress_years: [2020, 2021]                     # reported separately, not dropped
+  locked_test: [2023, 2024]                            # primary temporal test, opened once
+  shock_stress_test: [2025]                            # robustness only; see rationale
+  rationale_2025: >
+    Decided before modelling. 2025 is treated as a robustness (stress) year, not part of
+    the primary temporal test, because (1) the early-2025 suspension of major external
+    NTD funding is an external shock that could not be anticipated at the December 2024
+    decision point; (2) 2025 ESPEN data were still being released during 2026 and several
+    countries with 2025 rows are absent from the ESPEN release log; (3) 2025
+    non-delivery cannot yet be checked against what the IU did afterwards.
+
+information_scenarios:
+  P:
+    description: programme-information retrospective reconstruction
+    feature_lag: 1          # features use rows up to t-1
+    label_lag: 1            # training labels up to t-1
+  E:
+    description: external analyst using public ESPEN (approximate as-of evaluation)
+    feature_lag: 2          # public release of year y data occurs during y+1 or later
+    label_lag: 2
+    caveat: >
+      Cohort membership still uses t-1 status, which an external analyst would not have.
+      Scenario E therefore measures the loss from delayed features and labels on the same
+      IU-years; it is not a full external-analyst simulation. Values are current corrected
+      values, not historical vintages.
+
+models:
+  baselines: [prevalence, country_prior_rate, history_rule]
+  statistical: [logistic_iu_only, logistic_history, logistic_history_context]
+  feature_groups: >
+    'history' = IU treatment history; 'country' = country and admin1 programme history
+    from ESPEN; 'context' = conflict (UCDP) and population density; 'identity' = country
+    code. 'programme history' models use history + country. logistic_iu_only is an
+    ablation that removes the country-level features.
+  machine_learning: [catboost_history, catboost_history_context, catboost_history_country_id]
+  primary_comparator: history_rule
+  primary_candidate: selected on rolling-origin development folds only
+  history_rule: >
+    Fixed score, defined before modelling: 4 x (not delivered at t-1)
+    + 2 x (any non-delivery in t-2 or t-3) + 1 x (round at t-1 delivered but below 65%
+    epidemiological coverage); ties broken by lower epidemiological coverage at t-1.
+  logistic_grid: {C: [0.01, 0.1, 1.0]}
+  catboost_grid: {depth: [2, 4], l2_leaf_reg: [3, 10]}
+  catboost_fixed: {iterations: 300, learning_rate: 0.05, random_seed: 20261012}
+  selection_metric: pooled rolling-origin log loss
+  max_refinement_rounds: 2
+  calibration: logistic (Platt) recalibration fitted on rolling-origin out-of-fold predictions
+
+evaluation:
+  metrics: [auroc, pr_auc, prevalence, brier, log_loss, calibration_intercept,
+            calibration_slope, observed_expected_ratio, capture_at_10pct, capture_at_20pct,
+            precision_at_10pct, precision_at_20pct, within_country_year_auroc]
+  top_k_tie_policy: expected value under random ordering within tied scores
+  uncertainty: country-cluster bootstrap (2000 resamples) plus leave-one-country-out jackknife
+  meaningful_improvement: >
+    Candidate captures at least 5 percentage points more interruptions than the history
+    rule at 20% capacity on the locked test AND the country-cluster bootstrap 95% interval
+    of the paired difference excludes zero.
+  geographic_transport: >
+    Leave-one-country-out on development years, no country identity features. Reported
+    separately from the temporal test and only described as external-country validation
+    for countries with at least 10 events and 10 non-events.
+
+seed: 20261012
+amendments: []
