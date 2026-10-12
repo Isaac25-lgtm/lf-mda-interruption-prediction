@@ -6,5 +6,64 @@
 - **Primary cohort:** 8,795 IU-years with 1,839 reported interruptions in 32 countries (30 with at least one event).
 - **Clustering:** 40% of interruptions occurred in country-years where every eligible IU missed the round; 61% of outcome variance lies between country-years.
 - **Locked test (2023-2024):** 705 IU-years, 130 interruptions from 11 countries and 14 country-years.
+- **Scale:** in 2021, IUs with a reported interruption held 77 million people requiring treatment (51% of the cohort's population requiring treatment), and 175 million across all active programmes. The figures for 2024 and 2025 were 5 million and 13 million.
+- **Recovery:** after an interruption that began in 2016-2019, 55% of IUs resumed MDA within one year and 75% within three. 23% of IUs had two or more interruptions and accounted for 69% of all interruptions.
+- **Country persistence:** a country where most IUs missed the round did so again the next year in 32% of cases, against 19% otherwise.
 
-No model has been evaluated.
+**Locked test 2023-2024, scenario P (95% country-cluster bootstrap intervals):**
+
+| Approach | AUROC | AUROC within country-year | Captured in top 20% |
+|---|---|---|---|
+| Country prior rate | 0.59 (0.39 to 0.81) | 0.50 (0.50 to 0.50) | 0.36 (0.12 to 0.63) |
+| History rule | 0.65 (0.43 to 0.82) | 0.50 (0.25 to 0.81) | 0.48 (0.20 to 0.68) |
+| Logistic, five predictors | 0.66 (0.44 to 0.81) | 0.68 (0.11 to 0.85) | 0.42 (0.14 to 0.63) |
+| Logistic, IU history only | 0.64 (0.43 to 0.79) | 0.67 (0.17 to 0.84) | 0.38 (0.13 to 0.59) |
+| Logistic, programme history | 0.67 (0.48 to 0.81) | 0.68 (0.19 to 0.83) | 0.41 (0.17 to 0.59) |
+| Logistic, history + context | 0.56 (0.32 to 0.76) | 0.65 (0.18 to 0.80) | 0.18 (0.02 to 0.47) |
+| CatBoost, programme history | 0.62 (0.35 to 0.81) | 0.70 (0.22 to 0.86) | 0.27 (0.01 to 0.50) |
+| CatBoost, history + context | 0.59 (0.33 to 0.78) | 0.69 (0.23 to 0.84) | 0.25 (0.00 to 0.49) |
+| CatBoost, history + country ID | 0.56 (0.31 to 0.77) | 0.73 (0.20 to 0.88) | 0.16 (0.00 to 0.44) |
+
+**Pre-specified test of improvement over the history rule: not met.** The primary candidate, chosen on development folds by pooled log loss, was Logistic, IU history only. Its share of interruptions captured at 20% capacity differed from the history rule by -0.100 (-0.291 to 0.097). The criterion was a gain of at least 0.05 with a 95% interval above zero.
+None of the other 6 approaches cleared that criterion either (exploratory, no adjustment for multiple comparisons).
+
+**Scenario E (public data only, two-year lag), same IU-years:**
+
+| Approach | AUROC | AUROC within country-year | Captured in top 20% |
+|---|---|---|---|
+| Country prior rate | 0.50 (0.32 to 0.72) | 0.50 (0.50 to 0.50) | 0.19 (0.04 to 0.43) |
+| History rule | 0.45 (0.24 to 0.65) | 0.63 (0.39 to 0.70) | 0.20 (0.05 to 0.39) |
+| Logistic, five predictors | 0.53 (0.31 to 0.71) | 0.65 (0.15 to 0.82) | 0.26 (0.05 to 0.43) |
+| Logistic, IU history only | 0.51 (0.31 to 0.69) | 0.55 (0.20 to 0.70) | 0.20 (0.03 to 0.42) |
+| Logistic, programme history | 0.55 (0.34 to 0.73) | 0.58 (0.16 to 0.76) | 0.31 (0.07 to 0.50) |
+| Logistic, history + context | 0.46 (0.24 to 0.69) | 0.55 (0.14 to 0.73) | 0.03 (0.00 to 0.47) |
+| CatBoost, programme history | 0.60 (0.40 to 0.72) | 0.61 (0.36 to 0.74) | 0.24 (0.04 to 0.44) |
+| CatBoost, history + context | 0.54 (0.30 to 0.69) | 0.62 (0.33 to 0.75) | 0.24 (0.02 to 0.44) |
+| CatBoost, history + country ID | 0.52 (0.27 to 0.73) | 0.67 (0.40 to 0.81) | 0.15 (0.00 to 0.44) |
+
+**2025 stress year, scenario P (robustness only, not part of the primary test):**
+
+| Approach | AUROC | AUROC within country-year | Captured in top 20% |
+|---|---|---|---|
+| Country prior rate | 0.73 (0.35 to 0.93) | 0.50 (0.50 to 0.50) | 0.35 (0.00 to 0.65) |
+| History rule | 0.85 (0.62 to 0.95) | 0.77 (0.32 to 0.91) | 0.52 (0.08 to 0.65) |
+| Logistic, five predictors | 0.78 (0.42 to 0.91) | 0.51 (0.12 to 0.90) | 0.47 (0.02 to 0.63) |
+| Logistic, IU history only | 0.77 (0.48 to 0.90) | 0.62 (0.12 to 0.80) | 0.43 (0.06 to 0.60) |
+| Logistic, programme history | 0.77 (0.46 to 0.91) | 0.62 (0.11 to 0.84) | 0.45 (0.05 to 0.61) |
+| Logistic, history + context | 0.70 (0.38 to 0.88) | 0.63 (0.12 to 0.83) | 0.30 (0.00 to 0.56) |
+| CatBoost, programme history | 0.65 (0.36 to 0.84) | 0.65 (0.06 to 0.94) | 0.31 (0.00 to 0.49) |
+| CatBoost, history + context | 0.63 (0.32 to 0.83) | 0.66 (0.00 to 0.96) | 0.25 (0.00 to 0.45) |
+| CatBoost, history + country ID | 0.74 (0.41 to 0.93) | 0.61 (0.12 to 0.84) | 0.32 (0.00 to 0.62) |
+
+**Exploratory, post hoc.** After the locked test was opened, three further approaches built around the country-level structure of the data were tried (a within/between-country logistic model, a country-then-district ranking, and the history rule with a term for fewer cumulative rounds). They were designed with knowledge of the test results, so they prove nothing; 0 of 3 cleared the improvement criterion. See `reports/tables/tableX_exploratory_posthoc.md`.
+
+**Countries excluded from training (leave-one-country-out, development years 2016-2022; 20 of 32 countries have enough events and non-events for a country-specific estimate):**
+
+| Approach | AUROC | AUROC within country-year | Captured in top 20% |
+|---|---|---|---|
+| Country prior rate | 0.59 (0.48 to 0.71) | 0.50 (0.50 to 0.50) | 0.29 (0.14 to 0.41) |
+| History rule | 0.59 (0.47 to 0.67) | 0.69 (0.62 to 0.75) | 0.33 (0.25 to 0.41) |
+| Logistic, IU history only | 0.68 (0.59 to 0.75) | 0.64 (0.35 to 0.66) | 0.38 (0.28 to 0.45) |
+| Logistic, programme history | 0.57 (0.47 to 0.66) | 0.70 (0.36 to 0.73) | 0.29 (0.17 to 0.37) |
+| CatBoost, programme history | 0.59 (0.45 to 0.69) | 0.66 (0.36 to 0.72) | 0.34 (0.23 to 0.45) |
+

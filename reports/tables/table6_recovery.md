@@ -1,0 +1,6 @@
+| era | interruption_onsets | countries | resumed_MDA | moved_to_assessment_or_surveillance | still_not_delivered_at_end_of_data | no_usable_record | median_years_not_delivered_if_resumed |
+|---|---|---|---|---|---|---|---|
+| 2016-2019 | 593.0 | 20.0 | 475.0 | 64.0 | 0.0 | 54.0 | 1.0 |
+| 2020-2021 (COVID-19) | 572.0 | 18.0 | 492.0 | 63.0 | 17.0 | 0.0 | 1.0 |
+| 2022-2024 | 169.0 | 12.0 | 83.0 | 51.0 | 35.0 | 0.0 | 1.0 |
+| 2025 | 51.0 | 7.0 | 0.0 | 0.0 | 51.0 | 0.0 |  |

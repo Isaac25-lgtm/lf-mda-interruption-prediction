@@ -1,0 +1,22 @@
+| approach | metric | estimate (95% CI) |
+|---|---|---|
+| Country prior rate | auroc | 0.592 (0.476 to 0.706) |
+| Country prior rate | brier | 0.171 (0.133 to 0.232) |
+| Country prior rate | capture_at_20pct | 0.286 (0.141 to 0.409) |
+| Country prior rate | within_country_year_auroc | 0.500 (0.500 to 0.500) |
+| History rule | auroc | 0.587 (0.472 to 0.673) |
+| History rule | brier | 0.165 (0.130 to 0.225) |
+| History rule | capture_at_20pct | 0.330 (0.246 to 0.413) |
+| History rule | within_country_year_auroc | 0.690 (0.617 to 0.748) |
+| Logistic, IU history only | auroc | 0.684 (0.593 to 0.746) |
+| Logistic, IU history only | brier | 0.154 (0.125 to 0.209) |
+| Logistic, IU history only | capture_at_20pct | 0.378 (0.279 to 0.451) |
+| Logistic, IU history only | within_country_year_auroc | 0.639 (0.351 to 0.663) |
+| Logistic, programme history | auroc | 0.575 (0.466 to 0.663) |
+| Logistic, programme history | brier | 0.166 (0.128 to 0.229) |
+| Logistic, programme history | capture_at_20pct | 0.286 (0.174 to 0.374) |
+| Logistic, programme history | within_country_year_auroc | 0.698 (0.358 to 0.732) |
+| CatBoost, programme history | auroc | 0.587 (0.452 to 0.688) |
+| CatBoost, programme history | brier | 0.165 (0.129 to 0.229) |
+| CatBoost, programme history | capture_at_20pct | 0.345 (0.232 to 0.445) |
+| CatBoost, programme history | within_country_year_auroc | 0.662 (0.363 to 0.716) |

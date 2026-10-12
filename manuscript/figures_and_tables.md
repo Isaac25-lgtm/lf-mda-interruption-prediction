@@ -54,4 +54,192 @@ Alt text: Horizontal stacked bars, one per country, showing delivered and interr
 
 Derived from: `reports/audit/primary_cohort_by_country.csv`
 
+### fig13_burden: Population affected by reported interruptions
+
+File: `reports/figures/fig13_burden.png`
+
+People requiring LF treatment who lived in implementation units of active programmes where the round was reported not delivered. Labels are totals for all active programmes (peak 175 million in 2021). These are populations of affected units, not counts of confirmed missed doses. Shaded: COVID-19 years.
+
+Alt text: Stacked bars of millions of people in units with reported non-delivery for each year 2016 to 2025, peaking in 2021, above a line chart of the same as a share of the population requiring treatment.
+
+Derived from: `reports/descriptive/burden_by_year.csv`
+
+### fig14_level_by_year: Country-wide versus local interruptions by year
+
+File: `reports/figures/fig14_level_by_year.png`
+
+Reported interruptions in the primary cohort, split by how much of the country missed the round that year.
+
+Alt text: Stacked bars per year showing interruptions from countries where every unit missed, most units missed, or half or fewer missed.
+
+Derived from: `reports/descriptive/level_by_year.csv`
+
+### fig15_recovery: Resumption of MDA after an interruption
+
+File: `reports/figures/fig15_recovery.png`
+
+Share of interruptions (first missed round after a delivered round, primary cohort) followed by resumed MDA within one, two and three years, by year of onset. Units that moved to impact assessment or surveillance did not resume and stay in the denominator. Denominators shrink where follow-up is shorter.
+
+Alt text: Line chart with three lines, one per onset period, rising from zero to the share of interrupted units that resumed treatment within three years.
+
+Derived from: `reports/descriptive/recovery_within_years.csv`
+
+### fig6_model_comparison: Baselines versus models, with country-clustered intervals
+
+File: `reports/figures/fig6_model_comparison.png`
+
+Points are estimates; bars are 95% percentile intervals from a bootstrap that resamples whole countries (20 countries in the locked test). Dashed lines mark no discrimination (0.5) or chance capture (0.2). Top row is development only.
+
+Alt text: Six forest plots comparing eight approaches on AUROC, within-country-year AUROC and capture at 20% capacity, for development folds and for the locked test. Intervals are wide and overlap heavily.
+
+Derived from: `reports/evaluation/development/development_intervals.csv`, `reports/evaluation/locked_test/locked_intervals.csv`
+
+### fig7_roc_pr: ROC and precision-recall curves on the locked test
+
+File: `reports/figures/fig7_roc_pr.png`
+
+Locked test 2023-2024, primary cohort: 705 IU-years, 130 reported interruptions (prevalence 18.4%). Curves use each approach's ranking score.
+
+Alt text: Two line charts. Left: ROC curves for four approaches against the diagonal. Right: precision-recall curves against the prevalence line.
+
+Derived from: `data/processed/predictions_heldout.parquet`
+
+### fig8_calibration: Calibration on the locked test
+
+File: `reports/figures/fig8_calibration.png`
+
+Predicted risk (after the pre-specified recalibration fitted on development folds) against observed share, in fifths of predicted risk. Labels are events / IU-years in each group. With events concentrated in a few country-years, calibration estimates are unstable.
+
+Alt text: Four small panels, one per approach, each plotting observed interruption share against mean predicted risk with a diagonal reference line.
+
+Derived from: `data/processed/predictions_heldout.parquet`
+
+### fig9_capture_curve: Interruptions captured by support capacity
+
+File: `reports/figures/fig9_capture_curve.png`
+
+Share of the 130 locked-test interruptions found among the top-ranked IUs, by the share of IUs flagged. Ties are handled by expected value.
+
+Alt text: Line chart of captured interruptions against the share of IUs flagged, for four approaches and a diagonal for random selection.
+
+Derived from: `data/processed/predictions_heldout.parquet`
+
+### fig10_temporal_stability: Performance by target year
+
+File: `reports/figures/fig10_temporal_stability.png`
+
+Yearly estimates (events / IU-years: 2019: 223/1215, 2020: 338/990, 2021: 363/756, 2022: 198/653, 2023: 87/381, 2024: 43/324, 2025: 71/233). Years 2019-2022 are rolling-origin development folds; 2023-2024 are the locked test; 2025 is the stress year. Shaded bands are stress periods. Single-year estimates rest on few country-years and are shown without intervals; they indicate variability, not trends.
+
+Alt text: Three line charts of yearly AUROC, within-country-year AUROC and capture at 20% for four approaches from 2019 to 2025. Values swing widely between years.
+
+Derived from: `reports/evaluation/development/development_metrics.csv`, `reports/evaluation/locked_test/locked_metrics.csv`
+
+### fig11_country_transport: Performance in countries excluded from training
+
+File: `reports/figures/fig11_country_transport.png`
+
+Each country was held out in turn and predicted by models trained on all other countries (development years 2016-2022, no country identity). Only the 20 countries with at least 10 events and 10 non-events are shown. This is transport across countries within the same calendar years, not a future-year test.
+
+Alt text: Dot plot of held-out-country AUROC for four approaches, one row per country. Results vary widely by country and several fall near or below 0.5.
+
+Derived from: `reports/evaluation/country_transport/transport_by_country.csv`
+
+### fig12_explainability: What the fitted models rely on
+
+File: `reports/figures/fig12_explainability.png`
+
+Left: mean absolute SHAP contribution per predictor for the CatBoost programme-history model on its training data. Right: the twelve largest standardised coefficients of the logistic programme-history model. These describe model associations only; they are not causal effects and must not be read as programme risk factors.
+
+Alt text: Two horizontal bar charts ranking predictors by importance in the CatBoost model and by coefficient size in the logistic model.
+
+Derived from: `reports/evaluation/explain/shap_importance_catboost_history.csv`, `reports/evaluation/explain/coefficients_logistic_history.csv`
+
 ## Tables
+
+### table5_burden_by_year: Reported interruptions and population affected by year
+
+File: `reports/tables/table5_burden_by_year.csv`
+
+IUs and population requiring treatment in units with a reported interruption, for the primary cohort and for all active programmes (broad cohort).
+
+Derived from: `reports/descriptive/burden_by_year.csv`
+
+### table6_recovery: What followed an interruption, by year of onset
+
+File: `reports/tables/table6_recovery.csv`
+
+Interruptions that began after a delivered round (primary cohort) and their exit: resumed MDA, moved to impact assessment or surveillance, or still not delivered when the data end.
+
+Derived from: `reports/descriptive/recovery_summary_by_era.csv`
+
+### table7_level_by_era: Share of variation and events at country level
+
+File: `reports/tables/table7_level_by_era.csv`
+
+Percentage of outcome variance between countries and between country-years, and percentage of events in country-years where every or most eligible IUs missed.
+
+Derived from: `reports/descriptive/level_by_era.csv`
+
+### tableX_exploratory_posthoc: Exploratory models proposed after the locked test was opened
+
+File: `reports/tables/tableX_exploratory_posthoc.csv`
+
+These approaches were designed after the locked-test results were known. Their held-out figures are not an independent test and support no claim of improvement. They indicate what to test on future data. Rows for the history rule and the primary candidate are repeated for reference from a separate 1,000-resample bootstrap, so their intervals differ slightly from Table 3.
+
+Derived from: `reports/evaluation/exploratory_posthoc/exploratory_intervals.csv`
+
+### table1_cohort_by_window: Cohort size, events and clustering by window
+
+File: `reports/tables/table1_cohort_by_window.csv`
+
+IU-years, reported interruptions and the number of countries and country-years contributing events, for the primary and sensitivity cohorts.
+
+Derived from: `reports/audit/events_by_window.csv`
+
+### table2_population_by_country: Study population and events by country
+
+File: `reports/tables/table2_population_by_country.csv`
+
+Primary analysis set by country: IU-years, events, distinct IUs, years covered.
+
+Derived from: `reports/audit/primary_cohort_by_country.csv`
+
+### table3_performance: Discrimination, calibration and capture on held-out years
+
+File: `reports/tables/table3_performance.csv`
+
+Point estimates with 95% percentile intervals from a country-cluster bootstrap (2,000 resamples). Scenario P uses information to t-1; scenario E to t-2. The locked test is the primary evaluation; 2025 is a robustness check only.
+
+Derived from: `reports/evaluation/locked_test/locked_intervals.csv`, `reports/evaluation/locked_test/locked_metrics.csv`
+
+### table3b_differences_vs_rule: Paired differences against the history rule
+
+File: `reports/tables/table3b_differences_vs_rule.csv`
+
+Each approach minus the fixed history rule on the same IU-years, with country-cluster bootstrap intervals. A gain is claimed only where the interval excludes zero.
+
+Derived from: `reports/evaluation/locked_test/locked_differences_vs_rule.csv`
+
+### table4_sensitivity: Sensitivity analyses
+
+File: `reports/tables/table4_sensitivity.csv`
+
+Scenario P point estimates under alternative cohorts, label assumptions and data restrictions. No intervals are shown; these analyses test direction and stability.
+
+Derived from: `reports/evaluation/sensitivity/sensitivity_metrics.csv`
+
+### tableS1_development_performance: Development (rolling-origin) performance
+
+File: `reports/tables/tableS1_development_performance.csv`
+
+Out-of-fold performance on development target years 2019-2022; used for model selection. Country-cluster bootstrap, 500 resamples.
+
+Derived from: `reports/evaluation/development/development_intervals.csv`
+
+### tableS2_country_transport: Leave-one-country-out transport (pooled)
+
+File: `reports/tables/tableS2_country_transport.csv`
+
+Predictions for each country from models trained on all other countries, development years, pooled across held-out countries.
+
+Derived from: `reports/evaluation/country_transport/transport_pooled_intervals.csv`

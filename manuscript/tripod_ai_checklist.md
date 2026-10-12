@@ -9,10 +9,10 @@ Status: Done = reported in the repository; Partial = started; Open = not yet don
 
 | Topic | Status | Where |
 |---|---|---|
-| Title identifies development and evaluation of a prediction model, target population and outcome | Partial | Working title in `manuscript/outline.md` |
-| Structured abstract | Open | Not drafted |
+| Title identifies the study type, target population and outcome | Partial | Title in `manuscript/manuscript_template.md`; it leads with the descriptive findings and names the prediction evaluation |
+| Structured abstract | Done (draft) | `manuscript/manuscript_draft.md` |
 | Background, rationale and existing models | Done | `docs/LITERATURE_MATRIX.md`, `docs/LITERATURE_SEARCH_LOG.md` |
-| Objectives | Done | `manuscript/outline.md` |
+| Objectives | Done | `manuscript/manuscript_draft.md`, Introduction |
 | Data sources, dates and settings | Done | `docs/DATA_DICTIONARY.md`, `data/manifests/` |
 | Participants (units), eligibility | Done | `docs/LABEL_DECISIONS.md`, `config/protocol.yaml` |
 | Data preparation and quality checks | Done | `reports/audit/label_audit.md` |

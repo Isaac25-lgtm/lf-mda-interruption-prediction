@@ -11,15 +11,14 @@ import json
 import matplotlib
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
-import numpy as np  # noqa: E402
-import pandas as pd  # noqa: E402
-from matplotlib.colors import LinearSegmentedColormap  # noqa: E402
-from matplotlib.patches import FancyBboxPatch  # noqa: E402
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from matplotlib.colors import LinearSegmentedColormap
+from matplotlib.patches import FancyBboxPatch
 
-from . import paths  # noqa: E402
-from .evaluate import top_k_counts  # noqa: E402
-from .model import SPEC_BY_NAME  # noqa: E402
+from . import paths
+from .evaluate import top_k_counts
 
 SURFACE, INK, INK2, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#e4e3df"
 # Fixed entity -> colour assignment (categorical slots in validated order).
@@ -411,7 +410,8 @@ def fig_capture_curve() -> None:
         ax.plot(np.r_[0, fracs], np.r_[0, cap], color=MODEL_COLOR[m], label=SHORT[m])
     for k in (0.1, 0.2):
         ax.axvline(k, color=GRID, lw=1)
-        ax.text(k, 1.03, f"{k:.0%} capacity", ha="center", fontsize=7.5, color=INK2)
+        ax.text(k, 1.03, f"{k:.0%}", ha="center", fontsize=7.5, color=INK2)
+    ax.text(0.24, 1.03, "of IUs flagged", ha="left", fontsize=7.5, color=INK2)
     ax.set(xlim=(0, 1), ylim=(0, 1.08), xlabel="Share of eligible IUs flagged for support",
            ylabel="Share of reported interruptions captured",
            title="Capture curve, locked test 2023-2024")
@@ -522,6 +522,162 @@ def fig_explain() -> None:
           "by coefficient size in the logistic model.",
           ["reports/evaluation/explain/shap_importance_catboost_history.csv",
            "reports/evaluation/explain/coefficients_logistic_history.csv"])
+
+
+DESC = paths.REPORTS / "descriptive"
+EXPLO = paths.EVALUATION / "exploratory_posthoc"
+
+
+def fig_burden() -> None:
+    f = DESC / "burden_by_year.csv"
+    if not f.exists():
+        return
+    b = pd.read_csv(f)
+    p = b[b["cohort"] == "primary"].set_index("year")
+    br = b[b["cohort"] == "broad"].set_index("year")
+    extra = (br["population_in_interrupted_ius_millions"]
+             - p["population_in_interrupted_ius_millions"]).clip(lower=0)
+    fig, axes = plt.subplots(2, 1, figsize=(7.6, 5.8), sharex=True,
+                             gridspec_kw={"height_ratios": [2, 1]})
+    axes[0].bar(p.index, p["population_in_interrupted_ius_millions"], color="#eb6834",
+                width=0.7, label="Primary cohort (fewer than 5 effective rounds)")
+    axes[0].bar(p.index, extra, bottom=p["population_in_interrupted_ius_millions"],
+                color="#f6c3ad", width=0.7, edgecolor=SURFACE, linewidth=1.5,
+                label="Additional in units with 5+ effective rounds (may include legitimate pauses)")
+    for x in p.index:
+        tot = br.loc[x, "population_in_interrupted_ius_millions"]
+        axes[0].text(x, tot + 3, f"{tot:.0f}", ha="center", fontsize=7.5, color=INK2)
+    axes[0].set_ylabel("People requiring treatment, millions")
+    axes[0].set_title("Population living where the LF round was reported not delivered")
+    axes[0].set_ylim(0, br["population_in_interrupted_ius_millions"].max() * 1.32)
+    axes[0].legend(loc="upper left", fontsize=7.5)
+    axes[0].grid(axis="x", visible=False)
+    axes[1].plot(p.index, p["share_population_in_interrupted_ius"] * 100, "-o", color="#eb6834",
+                 label="Primary cohort")
+    axes[1].plot(br.index, br["share_population_in_interrupted_ius"] * 100, "-o",
+                 color="#2a78d6", label="All active programmes")
+    axes[1].set_ylabel("Share of population\nrequiring treatment, %")
+    axes[1].set_ylim(0, 75)
+    axes[1].set_xticks(p.index)
+    axes[1].legend(loc="upper left", fontsize=7.5)
+    for ax in axes:
+        ax.axvspan(2019.5, 2021.5, color=GRID, alpha=0.5, lw=0, zorder=0)
+    peak = br["population_in_interrupted_ius_millions"].idxmax()
+    _save(fig, "fig13_burden", "Population affected by reported interruptions",
+          f"People requiring LF treatment who lived in implementation units of active "
+          f"programmes where the round was reported not delivered. Labels are totals for all "
+          f"active programmes (peak {br.loc[peak, 'population_in_interrupted_ius_millions']:.0f} "
+          f"million in {peak}). These are populations of affected units, not counts of "
+          f"confirmed missed doses. Shaded: COVID-19 years.",
+          "Stacked bars of millions of people in units with reported non-delivery for each "
+          "year 2016 to 2025, peaking in 2021, above a line chart of the same as a share of "
+          "the population requiring treatment.", ["reports/descriptive/burden_by_year.csv"])
+
+
+def fig_level_by_year() -> None:
+    f = DESC / "level_by_year.csv"
+    if not f.exists():
+        return
+    t = pd.read_csv(f).set_index("year")
+    parts = [("events_where_every_IU_missed", "Every eligible IU in the country missed", "#0d366b"),
+             ("events_where_most_IUs_missed", "Most IUs in the country missed", "#3987e5"),
+             ("events_where_half_or_fewer_IUs_missed", "Half or fewer missed", "#b7d3f6")]
+    fig, ax = plt.subplots(figsize=(7.6, 3.9))
+    bottom = np.zeros(len(t))
+    for col, label, color in parts:
+        ax.bar(t.index, t[col], bottom=bottom, color=color, width=0.7, edgecolor=SURFACE,
+               linewidth=1.5, label=label)
+        bottom += t[col].to_numpy()
+    ax.set_xticks(t.index)
+    ax.set_ylabel("Reported interruptions (IUs)")
+    ax.set_title("Most interruptions come from country-wide failures")
+    ax.legend(loc="upper right", fontsize=8)
+    ax.grid(axis="x", visible=False)
+    _save(fig, "fig14_level_by_year", "Country-wide versus local interruptions by year",
+          "Reported interruptions in the primary cohort, split by how much of the country "
+          "missed the round that year.",
+          "Stacked bars per year showing interruptions from countries where every unit "
+          "missed, most units missed, or half or fewer missed.",
+          ["reports/descriptive/level_by_year.csv"])
+
+
+def fig_recovery() -> None:
+    f = DESC / "recovery_within_years.csv"
+    if not f.exists():
+        return
+    r = pd.read_csv(f)
+    eras = [e for e in r["era"].unique()]
+    colors = ["#2a78d6", "#eb6834", "#1baf7a"]
+    fig, ax = plt.subplots(figsize=(6.6, 4.0))
+    for era, color in zip(eras, colors):
+        s = r[r["era"] == era]
+        ax.plot(np.r_[0, s["years_since_onset"]], np.r_[0, s["share_resumed"] * 100], "-o",
+                color=color, label=f"Onset {era}")
+        last = s.iloc[-1]
+        ax.text(last["years_since_onset"] + 0.06, last["share_resumed"] * 100,
+                f"{last['share_resumed']:.0%} (n={int(last['onsets_with_follow_up'])})",
+                va="center", fontsize=7.5, color=INK2)
+    ax.set(xlim=(0, 3.75), ylim=(0, 100), xlabel="Years since the first missed round",
+           ylabel="Resumed MDA, % of interruptions",
+           title="Recovery after an interruption began")
+    ax.set_xticks([0, 1, 2, 3])
+    ax.legend(loc="lower right", fontsize=8)
+    _save(fig, "fig15_recovery", "Resumption of MDA after an interruption",
+          "Share of interruptions (first missed round after a delivered round, primary cohort) "
+          "followed by resumed MDA within one, two and three years, by year of onset. Units "
+          "that moved to impact assessment or surveillance did not resume and stay in the "
+          "denominator. Denominators shrink where follow-up is shorter.",
+          "Line chart with three lines, one per onset period, rising from zero to the share "
+          "of interrupted units that resumed treatment within three years.",
+          ["reports/descriptive/recovery_within_years.csv"])
+
+
+def descriptive_tables() -> None:
+    f = DESC / "burden_by_year.csv"
+    if not f.exists():
+        return
+    b = pd.read_csv(f)
+    for c in ("share_ius_interrupted", "share_population_in_interrupted_ius"):
+        b[c] = (b[c] * 100).round(1)
+    for c in ("population_requiring_millions", "population_in_interrupted_ius_millions"):
+        b[c] = b[c].round(1)
+    _table(b, "table5_burden_by_year", "Reported interruptions and population affected by year",
+           "IUs and population requiring treatment in units with a reported interruption, for "
+           "the primary cohort and for all active programmes (broad cohort).",
+           ["reports/descriptive/burden_by_year.csv"])
+    r = pd.read_csv(DESC / "recovery_summary_by_era.csv")
+    _table(r, "table6_recovery", "What followed an interruption, by year of onset",
+           "Interruptions that began after a delivered round (primary cohort) and their exit: "
+           "resumed MDA, moved to impact assessment or surveillance, or still not delivered "
+           "when the data end.", ["reports/descriptive/recovery_summary_by_era.csv"])
+    le = pd.read_csv(DESC / "level_by_era.csv")
+    for c in le.columns[4:]:
+        le[c] = (le[c] * 100).round(1)
+    _table(le, "table7_level_by_era", "Share of variation and events at country level",
+           "Percentage of outcome variance between countries and between country-years, and "
+           "percentage of events in country-years where every or most eligible IUs missed.",
+           ["reports/descriptive/level_by_era.csv"])
+    f = EXPLO / "exploratory_intervals.csv"
+    if f.exists():
+        e = pd.read_csv(f)
+        e = e[e["metric"].isin(["auroc", "within_country_year_auroc", "capture_at_20pct"])].copy()
+        names = SHORT | {"within_between_logistic": "X1 within/between-country logistic",
+                         "two_level_rank": "X2 country then district ranking",
+                         "rule_plus_rounds": "X3 history rule + fewer cumulative rounds"}
+        e["approach"] = e["model"].map(names)
+        e["estimate (95% CI)"] = [_fmt_ci(a, lo, hi) for a, lo, hi in
+                                  zip(e["estimate"], e["ci_low"], e["ci_high"])]
+        wide = e.pivot_table(index=["evaluation", "approach"], columns="metric",
+                             values="estimate (95% CI)", aggfunc="first").reset_index()
+        wide.insert(0, "status", "EXPLORATORY, POST HOC")
+        _table(wide, "tableX_exploratory_posthoc",
+               "Exploratory models proposed after the locked test was opened",
+               "These approaches were designed after the locked-test results were known. "
+               "Their held-out figures are not an independent test and support no claim of "
+               "improvement. They indicate what to test on future data. Rows for the history "
+               "rule and the primary candidate are repeated for reference from a separate "
+               "1,000-resample bootstrap, so their intervals differ slightly from Table 3.",
+               ["reports/evaluation/exploratory_posthoc/exploratory_intervals.csv"])
 
 
 # ------------------------------------------------------------------ tables
@@ -646,6 +802,52 @@ def write_captions() -> None:
                 lines += [f"Alt text: {c['alt']}", ""]
             lines += ["Derived from: " + ", ".join(f"`{s}`" for s in c["sources"]), ""]
     out.write_text("\n".join(lines), encoding="utf-8")
+    write_traceability()
+
+
+COMMAND_FOR = {"reports/audit": "lf-mda audit", "config": "(configuration file)",
+               "reports/evaluation/development": "lf-mda develop",
+               "reports/evaluation/locked_test": "lf-mda lock",
+               "reports/evaluation/country_transport": "lf-mda loco",
+               "reports/evaluation/sensitivity": "lf-mda sensitivity",
+               "reports/evaluation/explain": "lf-mda explain",
+               "reports/descriptive": "lf-mda describe",
+               "reports/evaluation/exploratory_posthoc": "lf-mda exploratory",
+               "data/processed/predictions_heldout.parquet": "lf-mda lock"}
+
+
+def write_traceability() -> None:
+    """Map every figure and table to the result files, command and run records behind it."""
+    runs = sorted(p.name for p in paths.RUNS.glob("*.json")) if paths.RUNS.exists() else []
+    rows = []
+    for c in CAPTIONS:
+        cmds = sorted({cmd for s in c["sources"] for key, cmd in COMMAND_FOR.items()
+                       if s.startswith(key)})
+        rows.append({"Artifact": c["id"], "Kind": c["kind"],
+                     "Result files it is drawn from": "; ".join(f"`{s}`" for s in c["sources"]),
+                     "Produced by": "; ".join(cmds) + "; lf-mda report"})
+    lines = ["# Results traceability", "",
+             "Generated by `lf-mda report`. Every figure and table is drawn from the result "
+             "files listed, which are written by the command shown. No number in a figure, "
+             "table or the README results block is typed by hand.", "",
+             _md(pd.DataFrame(rows)), "",
+             "## Run records", "",
+             "Each pipeline step writes a record to `reports/runs/` with the Git commit, "
+             "package versions and SHA-256 of the protocol, feature manifest, status map and "
+             "raw-data manifest.", ""]
+    lines += [f"- `reports/runs/{r}`" for r in runs]
+    lock = LOCK / "LOCK.json"
+    if lock.exists():
+        info = json.loads(lock.read_text("utf-8"))
+        lines += ["", "## Locked test", "",
+                  f"- First opened: {info['first_opened_utc']}",
+                  f"- Times run: {info['times_run']} (re-runs with an identical fingerprint "
+                  f"reproduce the same numbers)",
+                  f"- Primary candidate fixed beforehand: `{info['primary_candidate']}`; "
+                  f"comparator: `{info['primary_comparator']}`",
+                  f"- Protocol SHA-256: `{info['fingerprint']['protocol_sha256']}`"]
+    (paths.ROOT / "manuscript" / "results_traceability.md").write_text(
+        "\n".join(lines) + "\n", encoding="utf-8")
 
 
 def results_summary() -> str:
@@ -668,6 +870,24 @@ def results_summary() -> str:
         f"- **Locked test (2023-2024):** {m['test_n']} IU-years, {m['test_events']} "
         f"interruptions from {m['test_event_countries']} countries and "
         f"{m['test_event_country_years']} country-years.", ""]
+    if (DESC / "burden_by_year.csv").exists() and (LOCK / "LOCK.json").exists():
+        from .manuscript import build_facts
+        k = build_facts()
+        lines[-1:-1] = [
+            f"- **Scale:** in {k['peak_year']}, IUs with a reported interruption held "
+            f"{k['primary_pop_2021']} million people requiring treatment "
+            f"({k['primary_popshare_2021']} of the cohort's population requiring treatment), "
+            f"and {k['broad_pop_2021']} million across all active programmes. The figures for "
+            f"2024 and 2025 were {k['primary_pop_2024']} million and {k['primary_pop_2025']} "
+            f"million.",
+            f"- **Recovery:** after an interruption that began in 2016-2019, {k['rec_pre_1']} of "
+            f"IUs resumed MDA within one year and {k['rec_pre_3']} within three. "
+            f"{k['repeat_ius_pct']} of IUs had two or more interruptions and accounted for "
+            f"{k['repeat_events_pct']} of all interruptions.",
+            f"- **Country persistence:** a country where most IUs missed the round did so again "
+            f"the next year in {k['persist_after_failure']} of cases, against "
+            f"{k['persist_after_ok']} otherwise.",
+        ]
     if not (LOCK / "locked_intervals.csv").exists():
         lines.append("No model has been evaluated.")
         return NL.join(lines)
@@ -719,6 +939,19 @@ def results_summary() -> str:
               _md(block("E", "locked_test_2023_2024")).rstrip(), "",
               "**2025 stress year, scenario P (robustness only, not part of the primary "
               "test):**", "", _md(block("P", "stress_2025")).rstrip(), ""]
+    if (EXPLO / "exploratory_differences_vs_rule.csv").exists():
+        x = pd.read_csv(EXPLO / "exploratory_differences_vs_rule.csv")
+        x = x[(x["metric"] == "capture_at_20pct") & x["evaluation"].str.startswith("locked test")
+              & x["model"].isin(["within_between_logistic", "two_level_rank",
+                                 "rule_plus_rounds"])]
+        n_clear = int(((x["difference"] >= 0.05) & (x["ci_low"] > 0)).sum())
+        lines += ["**Exploratory, post hoc.** After the locked test was opened, three further "
+                  "approaches built around the country-level structure of the data were tried "
+                  "(a within/between-country logistic model, a country-then-district ranking, "
+                  "and the history rule with a term for fewer cumulative rounds). They were "
+                  f"designed with knowledge of the test results, so they prove nothing; "
+                  f"{n_clear} of 3 cleared the improvement criterion. See "
+                  "`reports/tables/tableX_exploratory_posthoc.md`.", ""]
     f = LOCO / "transport_pooled_intervals.csv"
     if f.exists():
         lo = pd.read_csv(f)
@@ -761,6 +994,10 @@ def render_all() -> None:
     fig_outcomes_by_year()
     fig_country_year_heatmap()
     fig_country_contribution()
+    fig_burden()
+    fig_level_by_year()
+    fig_recovery()
+    descriptive_tables()
     have_models = (LOCK / "locked_intervals.csv").exists()
     if have_models:
         fig_model_comparison()

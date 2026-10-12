@@ -1,0 +1,13 @@
+cohort,window,n,events,prevalence,distinct_ius,countries,event_countries,event_country_years,event_ius
+primary,development,7857,1638,20.8,2051,32,30,75,1021
+primary,locked_test,705,130,18.4,450,20,11,14,114
+primary,shock_stress_2025,233,71,30.5,233,14,8,8,71
+broad,development,9559,2413,25.2,2071,32,30,79,1535
+broad,locked_test,1363,197,14.5,883,24,16,21,178
+broad,shock_stress_2025,504,149,29.6,504,17,10,10,149
+strict,development,3166,894,28.2,1233,28,18,51,547
+strict,locked_test,481,94,19.5,295,14,9,11,79
+strict,shock_stress_2025,183,56,30.6,183,12,6,6,56
+incident,development,6705,1255,18.7,2049,32,30,62,1018
+incident,locked_test,596,79,13.3,412,19,8,11,79
+incident,shock_stress_2025,206,51,24.8,206,13,7,7,51
