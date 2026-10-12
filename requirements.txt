@@ -1,0 +1,9 @@
+# Runtime for the Streamlit dashboard only (Streamlit Community Cloud reads this file).
+# The dashboard reads stored results and never trains a model, so the modelling stack
+# is not needed here. For the full research pipeline use:  pip install -e ".[dev]"
+streamlit>=1.50
+pandas>=2.2,<3
+numpy>=1.26,<3
+pyarrow>=15
+plotly>=5.18
+scipy>=1.11

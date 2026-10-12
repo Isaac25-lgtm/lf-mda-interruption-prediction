@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below. This is research software for a study that has not been peer reviewed."
+title: "lf-mda-interruption-prediction: feasibility audit and prediction of reported lymphatic filariasis MDA interruptions using public WHO ESPEN data"
+type: software
+authors:
+  - family-names: Omoding
+    given-names: Isaac
+    affiliation: "To be confirmed"
+repository-code: "https://github.com/Isaac25-lgtm/lf-mda-interruption-prediction"
+license: MIT
+version: 0.1.0
+date-released: "2026-10-12"
+keywords:
+  - lymphatic filariasis
+  - mass drug administration
+  - neglected tropical diseases
+  - prediction model
+  - WHO ESPEN

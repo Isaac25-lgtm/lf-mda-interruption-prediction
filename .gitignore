@@ -1,0 +1,43 @@
+# --- data: raw downloads and row-level derivatives are never committed ---
+data/raw/*/*
+!data/raw/*/.gitkeep
+data/processed/**
+!data/processed/.gitkeep
+data/restricted/
+
+# --- secrets and local config ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.streamlit/secrets.toml
+
+# --- python ---
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+catboost_info/
+
+# --- editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- fitted model binaries (rebuilt deterministically; digests are committed) ---
+models/*.cbm
+models/*.joblib
+
+# --- large or uncertain-rights artifacts ---
+*.shp
+*.shx
+*.dbf
+*.tif
+*.tiff
+*.zip
